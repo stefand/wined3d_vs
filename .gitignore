@@ -1,4 +1,4 @@
-perftest.sdf
+wined3d.sdf
 ipch/
 Release/
 d3d8/Release
@@ -13,3 +13,4 @@ libport/Release
 libwine/Release
 winecrt0/Release
 wined3d/Release
+make_ctests/Release

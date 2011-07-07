@@ -29,10 +29,19 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3d8", "d3d8\d3d8.vcxproj",
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3d9_tests", "d3d9_tests\d3d9_tests.vcxproj", "{153CB3F2-846E-453E-9E4F-72388AC2F24C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C439AF01-73AE-4CEA-996A-64D54B3BE4A9} = {C439AF01-73AE-4CEA-996A-64D54B3BE4A9}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3d8_test", "d3d8_test\d3d8_test.vcxproj", "{EE6A2F82-6BB0-410F-8862-48C5E5EFF466}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C439AF01-73AE-4CEA-996A-64D54B3BE4A9} = {C439AF01-73AE-4CEA-996A-64D54B3BE4A9}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ddraw_test", "ddraw_test\ddraw_test.vcxproj", "{2F8E2FB9-F78B-44B9-AB27-7E52C67FDF36}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C439AF01-73AE-4CEA-996A-64D54B3BE4A9} = {C439AF01-73AE-4CEA-996A-64D54B3BE4A9}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ddraw", "ddraw\ddraw.vcxproj", "{40C59165-9EB1-424B-9D69-0F19678033B0}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -52,6 +61,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "winecrt0", "winecrt0\winecr
 		{BEE0310B-2BDE-47D4-BC06-6B95CABC354F} = {BEE0310B-2BDE-47D4-BC06-6B95CABC354F}
 		{0496AECD-CBE7-4502-BDDF-0C76649B2FFF} = {0496AECD-CBE7-4502-BDDF-0C76649B2FFF}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "make_ctests", "make_ctests\make_ctests.vcxproj", "{C439AF01-73AE-4CEA-996A-64D54B3BE4A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +118,10 @@ Global
 		{0611EAEF-2789-4A47-BC36-F5BD9A9167B1}.Debug|Win32.Build.0 = Debug|Win32
 		{0611EAEF-2789-4A47-BC36-F5BD9A9167B1}.Release|Win32.ActiveCfg = Release|Win32
 		{0611EAEF-2789-4A47-BC36-F5BD9A9167B1}.Release|Win32.Build.0 = Release|Win32
+		{C439AF01-73AE-4CEA-996A-64D54B3BE4A9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C439AF01-73AE-4CEA-996A-64D54B3BE4A9}.Debug|Win32.Build.0 = Debug|Win32
+		{C439AF01-73AE-4CEA-996A-64D54B3BE4A9}.Release|Win32.ActiveCfg = Release|Win32
+		{C439AF01-73AE-4CEA-996A-64D54B3BE4A9}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
