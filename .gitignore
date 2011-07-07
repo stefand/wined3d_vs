@@ -1,0 +1,15 @@
+perftest.sdf
+ipch/
+Release/
+d3d8/Release
+d3d8_test/Release
+d3d9/Release
+d3d9_tests/Release
+d3dx9_36/Release
+ddraw/Release
+ddraw_test/Release
+dxguid/Release
+libport/Release
+libwine/Release
+winecrt0/Release
+wined3d/Release

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\wine\libs\wine\casemap.c" />
+    <ClCompile Include="..\..\wine\libs\wine\collation.c" />
+    <ClCompile Include="..\..\wine\libs\wine\compose.c" />
+    <ClCompile Include="..\..\wine\libs\wine\config.c" />
+    <ClCompile Include="..\..\wine\libs\wine\cptable.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_037.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10000.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10006.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10007.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10029.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_1006.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10079.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10081.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_1026.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_1250.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_1251.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_1252.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_1253.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_1254.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_1255.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_1256.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_1257.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_1258.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_1361.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_20127.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_20866.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_20932.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_21866.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28591.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28592.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28593.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28594.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28595.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28596.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28597.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28598.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28599.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28600.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28603.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28604.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28605.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_28606.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_424.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_437.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_500.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_737.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_775.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_850.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_852.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_855.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_856.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_857.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_860.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_861.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_862.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_863.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_864.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_865.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_866.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_869.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_874.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_875.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_878.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_932.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_936.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_949.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_950.c" />
+    <ClCompile Include="..\..\wine\libs\wine\debug.c" />
+    <ClCompile Include="..\..\wine\libs\wine\fold.c" />
+    <ClCompile Include="..\..\wine\libs\wine\ldt.c" />
+    <ClCompile Include="..\..\wine\libs\wine\loader.c" />
+    <ClCompile Include="..\..\wine\libs\wine\mbtowc.c" />
+    <ClCompile Include="..\..\wine\libs\wine\mmap.c" />
+    <ClCompile Include="..\..\wine\libs\wine\port.c" />
+    <ClCompile Include="..\..\wine\libs\wine\sortkey.c" />
+    <ClCompile Include="..\..\wine\libs\wine\string.c" />
+    <ClCompile Include="..\..\wine\libs\wine\utf8.c" />
+    <ClCompile Include="..\..\wine\libs\wine\version.c" />
+    <ClCompile Include="..\..\wine\libs\wine\wctomb.c" />
+    <ClCompile Include="..\..\wine\libs\wine\wctype.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0496AECD-CBE7-4502-BDDF-0C76649B2FFF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libwine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\wined3d;C:\Users\stefan\src\wine\include;$(IncludePath)</IncludePath>
+    <GenerateManifest>false</GenerateManifest>
+    <LibraryPath>C:\Users\stefan\src\wined3d\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\wined3d;C:\Users\stefan\src\wine\include;$(IncludePath)</IncludePath>
+    <GenerateManifest>false</GenerateManifest>
+    <LibraryPath>C:\Users\stefan\src\wined3d\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;DLLDIR=".";LIB_TO_BINDIR=".";LIB_TO_DLLDIR=".";BIN_TO_DLLDIR=".";BIN_TO_DATADIR=".";PACKAGE_VERSION=".";BINDIR=".";_DEBUG;_WINDOWS;_USRDLL;LIBWINE_EXPORTS;_CRT_NONSTDC_NO_DEPRECATE;_POSIX_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/wd4996 /wd4244 /wd4146 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/EXPORT:wine_dbg_log /EXPORT:wine_dbg_printf /EXPORT:wine_dbg_sprintf /EXPORT:__wine_dbg_get_channel_flags /EXPORT:wine_dbgstr_an /EXPORT:wine_dbgstr_wn /ignore:4049</AdditionalOptions>
+      <AdditionalDependencies>libport.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;DLLDIR=".";LIB_TO_BINDIR=".";LIB_TO_DLLDIR=".";BIN_TO_DLLDIR=".";BIN_TO_DATADIR=".";PACKAGE_VERSION=".";BINDIR=".";_DEBUG;_WINDOWS;_USRDLL;LIBWINE_EXPORTS;_CRT_NONSTDC_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/wd4996 /wd4244 /wd4146 %(AdditionalOptions)</AdditionalOptions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>/EXPORT:wine_dbg_log /EXPORT:wine_dbg_printf /EXPORT:wine_dbg_sprintf /EXPORT:__wine_dbg_get_channel_flags /EXPORT:wine_dbgstr_an /EXPORT:wine_dbgstr_wn /ignore:4049</AdditionalOptions>
+      <AdditionalDependencies>libport.lib</AdditionalDependencies>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

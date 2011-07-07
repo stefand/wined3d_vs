@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BEE0310B-2BDE-47D4-BC06-6B95CABC354F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libport</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\wined3d;..\..\wine\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\wined3d;..\..\wine\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;__i386__;_DEBUG;_WINDOWS;_USRDLL;LIBPORT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/wd4996 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalOptions>/EXPORT:isnan /EXPORT:isinf /EXPORT:interlocked_xchg_add %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;__i386__;NDEBUG;_WINDOWS;_USRDLL;LIBPORT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/wd4996 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalOptions>/EXPORT:isnan /EXPORT:isinf /EXPORT:interlocked_xchg_add %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\wine\libs\port\getopt.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\wine\libs\port\ffs.c" />
+    <ClCompile Include="..\..\wine\libs\port\fstatvfs.c" />
+    <ClCompile Include="..\..\wine\libs\port\futimes.c" />
+    <ClCompile Include="..\..\wine\libs\port\getopt.c" />
+    <ClCompile Include="..\..\wine\libs\port\getopt1.c" />
+    <ClCompile Include="..\..\wine\libs\port\getpagesize.c" />
+    <ClCompile Include="..\..\wine\libs\port\interlocked.c" />
+    <ClCompile Include="..\..\wine\libs\port\isinf.c" />
+    <ClCompile Include="..\..\wine\libs\port\isnan.c" />
+    <ClCompile Include="..\..\wine\libs\port\lstat.c" />
+    <ClCompile Include="..\..\wine\libs\port\memcpy_unaligned.c" />
+    <ClCompile Include="..\..\wine\libs\port\memmove.c" />
+    <ClCompile Include="..\..\wine\libs\port\mkstemps.c" />
+    <ClCompile Include="..\..\wine\libs\port\poll.c" />
+    <ClCompile Include="..\..\wine\libs\port\pread.c" />
+    <ClCompile Include="..\..\wine\libs\port\pwrite.c" />
+    <ClCompile Include="..\..\wine\libs\port\readlink.c" />
+    <ClCompile Include="..\..\wine\libs\port\spawn.c" />
+    <ClCompile Include="..\..\wine\libs\port\statvfs.c" />
+    <ClCompile Include="..\..\wine\libs\port\strcasecmp.c" />
+    <ClCompile Include="..\..\wine\libs\port\strerror.c" />
+    <ClCompile Include="..\..\wine\libs\port\strncasecmp.c" />
+    <ClCompile Include="..\..\wine\libs\port\symlink.c" />
+    <ClCompile Include="..\..\wine\libs\port\usleep.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
