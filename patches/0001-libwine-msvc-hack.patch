@@ -1,0 +1,25 @@
+From 9c54131e283caf63e07d2369615b3a3050dec722 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Stefan=20D=C3=B6singer?= <stefan@codeweavers.com>
+Date: Fri, 30 Jul 2010 06:31:40 +0200
+Subject: [PATCH 1/4] libwine: msvc hack
+
+---
+ libs/wine/loader.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/libs/wine/loader.c b/libs/wine/loader.c
+index df0a6b5..ad0ce61 100644
+--- a/libs/wine/loader.c
++++ b/libs/wine/loader.c
+@@ -50,7 +50,7 @@
+ #define environ (*_NSGetEnviron())
+ #include <CoreFoundation/CoreFoundation.h>
+ #include <pthread.h>
+-#else
++#elif !defined(_MSC_VER)
+ extern char **environ;
+ #endif
+ 
+-- 
+1.7.0.2.msysgit.0
+
