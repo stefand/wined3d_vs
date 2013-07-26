@@ -84,18 +84,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\wine\dlls\d3d9\tests\buffer.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\d3d9ex.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\device.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d9\tests\query.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d9\tests\shader.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\stateblock.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d9\tests\surface.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\testlist.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d9\tests\texture.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\vertexdeclaration.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\visual.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d9\tests\volume.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

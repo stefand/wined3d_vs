@@ -89,10 +89,8 @@
   <ItemGroup>
     <ClCompile Include="..\..\wine\libs\port\ffs.c" />
     <ClCompile Include="..\..\wine\libs\port\fstatvfs.c" />
-    <ClCompile Include="..\..\wine\libs\port\futimes.c" />
     <ClCompile Include="..\..\wine\libs\port\getopt.c" />
     <ClCompile Include="..\..\wine\libs\port\getopt1.c" />
-    <ClCompile Include="..\..\wine\libs\port\getpagesize.c" />
     <ClCompile Include="..\..\wine\libs\port\interlocked.c" />
     <ClCompile Include="..\..\wine\libs\port\isinf.c" />
     <ClCompile Include="..\..\wine\libs\port\isnan.c" />

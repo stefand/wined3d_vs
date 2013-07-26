@@ -12,7 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\d3d8\buffer.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d8\cubetexture.c" />
     <ClCompile Include="..\..\wine\dlls\d3d8\d3d8_main.c" />
     <ClCompile Include="..\..\wine\dlls\d3d8\device.c" />
     <ClCompile Include="..\..\wine\dlls\d3d8\directx.c" />
@@ -22,7 +21,6 @@
     <ClCompile Include="..\..\wine\dlls\d3d8\texture.c" />
     <ClCompile Include="..\..\wine\dlls\d3d8\vertexdeclaration.c" />
     <ClCompile Include="..\..\wine\dlls\d3d8\volume.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d8\volumetexture.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\wine\dlls\d3d8\d3d8_private.h" />

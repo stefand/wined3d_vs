@@ -104,7 +104,7 @@
 /EXPORT:CLSID_DirectDrawClipper
 /EXPORT:CLSID_DirectDraw7
 /EXPORT:CLSID_DirectDraw
-</AdditionalOptions>
+/EXPORT:IID_IDirectDrawColorControl</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -164,7 +164,7 @@
 /EXPORT:CLSID_DirectDrawClipper
 /EXPORT:CLSID_DirectDraw7
 /EXPORT:CLSID_DirectDraw
-</AdditionalOptions>
+/EXPORT:IID_IDirectDrawColorControl</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -38,9 +38,6 @@
     <ClCompile Include="..\..\wine\dlls\wined3d\buffer.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\wined3d\clipper.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\wined3d\context.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -108,6 +105,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\wined3d\wined3d_main.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\wined3d\sampler.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

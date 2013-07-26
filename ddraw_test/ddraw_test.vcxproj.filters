@@ -18,6 +18,18 @@
     <ClCompile Include="..\..\wine\dlls\ddraw\tests\d3d.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\ddraw\tests\ddraw1.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\ddraw\tests\ddraw2.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\ddraw\tests\ddraw4.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\ddraw\tests\ddraw7.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\ddraw\tests\ddrawmodes.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>

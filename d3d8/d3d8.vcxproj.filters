@@ -18,9 +18,6 @@
     <ClCompile Include="..\..\wine\dlls\d3d8\buffer.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d8\cubetexture.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3d8\d3d8_main.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -46,9 +43,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3d8\volume.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d8\volumetexture.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

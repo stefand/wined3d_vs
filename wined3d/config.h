@@ -9,6 +9,7 @@
 
 #define HAVE_STRING_H
 #define HAVE_SPAWNVP
+#define HAVE__SPAWNVP
 #define HAVE_IO_H
 #define HAVE_POLL
 #define HAVE_PROCESS_H

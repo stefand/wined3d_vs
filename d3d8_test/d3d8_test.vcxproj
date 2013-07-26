@@ -76,15 +76,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\wine\dlls\d3d8\tests\buffer.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d8\tests\d3d8_main.c" />
     <ClCompile Include="..\..\wine\dlls\d3d8\tests\device.c" />
     <ClCompile Include="..\..\wine\dlls\d3d8\tests\stateblock.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d8\tests\surface.c" />
     <ClCompile Include="..\..\wine\dlls\d3d8\tests\testlist.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d8\tests\texture.c" />
     <ClCompile Include="..\..\wine\dlls\d3d8\tests\visual.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d8\tests\volume.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
