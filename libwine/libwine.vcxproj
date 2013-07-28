@@ -18,12 +18,20 @@
     <ClCompile Include="..\..\wine\libs\wine\cptable.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_037.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_10000.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10001.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10002.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10003.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_10006.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_10007.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10008.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10010.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10017.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10021.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_10029.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_1006.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_10079.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_10081.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10082.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_1026.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_1250.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_1251.c" />
@@ -88,7 +96,6 @@
     <ClCompile Include="..\..\wine\libs\wine\sortkey.c" />
     <ClCompile Include="..\..\wine\libs\wine\string.c" />
     <ClCompile Include="..\..\wine\libs\wine\utf8.c" />
-    <ClCompile Include="..\..\wine\libs\wine\version.c" />
     <ClCompile Include="..\..\wine\libs\wine\wctomb.c" />
     <ClCompile Include="..\..\wine\libs\wine\wctype.c" />
   </ItemGroup>
@@ -102,12 +109,14 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">

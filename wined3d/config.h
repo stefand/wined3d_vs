@@ -20,3 +20,5 @@
 
 #include <direct.h>
 #define snprintf _snprintf
+
+static const char wine_build[] = "msvc_hack";

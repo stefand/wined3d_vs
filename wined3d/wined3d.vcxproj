@@ -20,12 +20,14 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -39,12 +41,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>.;C:\Users\stefan\src\wine\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\stefan\Desktop\PerfKit_3.0.1.13135\inc;.;C:\Users\stefan\src\wine\include;$(VCInstallDir)include</IncludePath>
     <LibraryPath>C:\Users\stefan\src\wined3d\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>.;C:\Users\stefan\src\wine\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\stefan\Desktop\PerfKit_3.0.1.13135\inc;.;C:\Users\stefan\src\wine\include;$(VCInstallDir)include</IncludePath>
     <LibraryPath>C:\Users\stefan\src\wined3d\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -581,6 +583,7 @@
     <ClCompile Include="..\..\wine\dlls\wined3d\view.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\volume.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\wined3d_main.c" />
+    <ClCompile Include="perfkit.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
