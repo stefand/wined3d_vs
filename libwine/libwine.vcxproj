@@ -94,7 +94,10 @@
     <ClCompile Include="..\..\wine\libs\wine\mmap.c" />
     <ClCompile Include="..\..\wine\libs\wine\port.c" />
     <ClCompile Include="..\..\wine\libs\wine\sortkey.c" />
-    <ClCompile Include="..\..\wine\libs\wine\string.c" />
+    <ClCompile Include="..\..\wine\libs\wine\string.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/wd4018 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/wd4018 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\wine\libs\wine\utf8.c" />
     <ClCompile Include="..\..\wine\libs\wine\wctomb.c" />
     <ClCompile Include="..\..\wine\libs\wine\wctype.c" />
