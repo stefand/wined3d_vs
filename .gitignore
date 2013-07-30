@@ -15,7 +15,6 @@ libwine/Release
 winecrt0/Release
 wined3d/Release
 make_ctests/Release
-wined3d/*idl*
-wined3d/unknwn*
-wined3d/wtypes.h
+idls/*.h
+idls/*.c
 wined3d/dlldata.c

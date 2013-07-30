@@ -41,12 +41,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\..\wine\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <IncludePath>$(VCInstallDir)include;..\idls;..\..\wine\include</IncludePath>
     <TargetName>d3d9_test</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\..\wine\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <IncludePath>$(VCInstallDir)include;..\idls;..\..\wine\include</IncludePath>
     <TargetName>d3d9_test</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -89,9 +89,9 @@
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\d3d9ex.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\device.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\stateblock.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d9\tests\testlist.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\vertexdeclaration.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\visual.c" />
+    <ClCompile Include="testlist.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

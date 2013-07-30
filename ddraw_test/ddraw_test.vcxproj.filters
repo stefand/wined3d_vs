@@ -42,10 +42,10 @@
     <ClCompile Include="..\..\wine\dlls\ddraw\tests\refcount.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\ddraw\tests\testlist.c">
+    <ClCompile Include="..\..\wine\dlls\ddraw\tests\visual.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\ddraw\tests\visual.c">
+    <ClCompile Include="testlist.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

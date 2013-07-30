@@ -114,33 +114,4 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <Midl Include="..\..\wine\include\oaidl.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\objidl.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\propidl.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\unknwn.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\wtypes.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\urlmon.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\oleidl.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\servprov.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\msxml.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-  </ItemGroup>
 </Project>
