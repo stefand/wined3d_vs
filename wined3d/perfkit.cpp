@@ -1,3 +1,4 @@
+#if 0
 #define NVPM_INITGUID
 #include "NvPmApi.Manager.h"
 
@@ -108,3 +109,4 @@ int MyEnumFunc(NVPMCounterID unCounterIndex, const char *pcCounterName)
 
     return(NVPM_OK);
 }
+#endif
