@@ -41,11 +41,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;C:\Program Files\Microsoft DirectX SDK %28June 2010%29\Include;..\..\wine\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(VCInstallDir)include;..\wined3d;..\..\wine\include</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\..\wine\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(VCInstallDir)include;..\wined3d;..\..\wine\include</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -80,8 +80,8 @@
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\d3d8\tests\device.c" />
     <ClCompile Include="..\..\wine\dlls\d3d8\tests\stateblock.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d8\tests\testlist.c" />
     <ClCompile Include="..\..\wine\dlls\d3d8\tests\visual.c" />
+    <ClCompile Include="testlist.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -24,7 +24,7 @@
     <ClCompile Include="..\..\wine\dlls\d3d8\tests\visual.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d8\tests\testlist.c">
+    <ClCompile Include="testlist.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
