@@ -18,3 +18,4 @@ make_ctests/Release
 wined3d/*idl*
 wined3d/unknwn*
 wined3d/wtypes.h
+wined3d/dlldata.c
