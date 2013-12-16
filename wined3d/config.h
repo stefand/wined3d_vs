@@ -25,3 +25,5 @@
 #define snprintf _snprintf
 
 static const char wine_build[] = "msvc_hack";
+
+#pragma warning(disable:4756)

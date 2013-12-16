@@ -113,5 +113,8 @@
     <ClCompile Include="perfkit.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\wined3d\cs.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
