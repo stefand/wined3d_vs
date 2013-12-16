@@ -17,6 +17,9 @@
 #define HAVE__ISNAN 1
 #define HAVE__FINITE 1
 #define HAVE__STRICMP 1
+#define HAVE_ISFINITE 1
+#define HAVE_ISINF 1
+#define HAVE_ISNAN 1
 
 #include <direct.h>
 #define snprintf _snprintf

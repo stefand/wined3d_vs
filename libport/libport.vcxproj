@@ -61,7 +61,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <AdditionalOptions>/EXPORT:isnan /EXPORT:isinf /EXPORT:interlocked_xchg_add %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/EXPORT:interlocked_xchg_add %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -82,7 +82,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>
       </AdditionalDependencies>
-      <AdditionalOptions>/EXPORT:isnan /EXPORT:isinf /EXPORT:interlocked_xchg_add %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/EXPORT:interlocked_xchg_add %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
