@@ -21,6 +21,8 @@
     <ClCompile Include="..\..\wine\libs\wine\c_10001.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_10002.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_10003.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10004.c" />
+    <ClCompile Include="..\..\wine\libs\wine\c_10005.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_10006.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_10007.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_10008.c" />
@@ -149,7 +151,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;DLLDIR=".";LIB_TO_BINDIR=".";LIB_TO_DLLDIR=".";BIN_TO_DLLDIR=".";BIN_TO_DATADIR=".";PACKAGE_VERSION=".";BINDIR=".";_DEBUG;_WINDOWS;_USRDLL;LIBWINE_EXPORTS;_CRT_NONSTDC_NO_DEPRECATE;__WINESRC__;_POSIX_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;DLLDIR=".";DLLPREFIX="";LIB_TO_BINDIR=".";LIB_TO_DLLDIR=".";BIN_TO_DLLDIR=".";BIN_TO_DATADIR=".";PACKAGE_VERSION=".";BINDIR=".";_DEBUG;_WINDOWS;_USRDLL;LIBWINE_EXPORTS;_CRT_NONSTDC_NO_DEPRECATE;__WINESRC__;_POSIX_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/wd4996 /wd4244 /wd4146 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -164,7 +166,7 @@
       <WarningLevel>Level3</WarningLevel>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;DLLDIR=".";LIB_TO_BINDIR=".";LIB_TO_DLLDIR=".";BIN_TO_DLLDIR=".";BIN_TO_DATADIR=".";PACKAGE_VERSION=".";BINDIR=".";_DEBUG;_WINDOWS;_USRDLL;LIBWINE_EXPORTS;_CRT_NONSTDC_NO_DEPRECATE;__WINESRC__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;DLLDIR=".";DLLPREFIX="";LIB_TO_BINDIR=".";LIB_TO_DLLDIR=".";BIN_TO_DLLDIR=".";BIN_TO_DATADIR=".";PACKAGE_VERSION=".";BINDIR=".";_DEBUG;_WINDOWS;_USRDLL;LIBWINE_EXPORTS;_CRT_NONSTDC_NO_DEPRECATE;__WINESRC__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/wd4996 /wd4244 /wd4146 %(AdditionalOptions)</AdditionalOptions>
       <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
