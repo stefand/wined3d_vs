@@ -55,7 +55,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_WIN32_OPENGL;COM_NO_WINDOWS_H;_DEBUG;_WINDOWS;_USRDLL;WINED3D_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions> /wd4018 /wd4723 /wd4056</AdditionalOptions>
+      <AdditionalOptions>/wd4244 /wd4018 /wd4056</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
