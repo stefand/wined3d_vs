@@ -80,6 +80,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Midl Include="..\..\wine\include\atliface.idl" />
+    <Midl Include="..\..\wine\include\d3dcommon.idl" />
     <Midl Include="..\..\wine\include\msxml.idl" />
     <Midl Include="..\..\wine\include\oaidl.idl" />
     <Midl Include="..\..\wine\include\objidl.idl" />

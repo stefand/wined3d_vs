@@ -51,5 +51,8 @@
     <Midl Include="..\..\wine\include\wincodec.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
+    <Midl Include="..\..\wine\include\d3dcommon.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
   </ItemGroup>
 </Project>
