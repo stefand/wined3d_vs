@@ -76,6 +76,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "idls", "idls\idls.vcxproj", "{71521DAF-90A8-45F7-81C1-F4A5CE8707DA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "make_xftmpl", "make_xftmpl\make_xftmpl.vcxproj", "{99DA6755-2929-4F59-AD98-F4900094C61E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BEE0310B-2BDE-47D4-BC06-6B95CABC354F} = {BEE0310B-2BDE-47D4-BC06-6B95CABC354F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
