@@ -93,6 +93,17 @@
     <Midl Include="..\..\wine\include\wincodec.idl" />
     <Midl Include="..\..\wine\include\wtypes.idl" />
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\wine\include\rmxftmpl.x">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">echo ..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)
+..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).h</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">echo ..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)
+..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)</Command>
+    </CustomBuild>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

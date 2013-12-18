@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="xftmpls">
+      <UniqueIdentifier>{73e4043a-d275-4027-9415-c1005d0dce73}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="..\..\wine\include\msxml.idl">
@@ -54,5 +57,10 @@
     <Midl Include="..\..\wine\include\d3dcommon.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\wine\include\rmxftmpl.x">
+      <Filter>xftmpls</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
