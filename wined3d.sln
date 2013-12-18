@@ -58,6 +58,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ddraw", "ddraw\ddraw.vcxpro
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3dx9_36", "d3dx9_36\d3dx9_36.vcxproj", "{9EE85FCA-A974-4A1A-8EEA-D1BF0856EDE2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9903B653-72B9-41A1-85F9-DD81AD13AE6D} = {9903B653-72B9-41A1-85F9-DD81AD13AE6D}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dxguid", "dxguid\dxguid.vcxproj", "{B9D2EE27-0166-4A59-8564-5A0ABAD9402B}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -81,6 +84,12 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "make_xftmpl", "make_xftmpl\make_xftmpl.vcxproj", "{99DA6755-2929-4F59-AD98-F4900094C61E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{BEE0310B-2BDE-47D4-BC06-6B95CABC354F} = {BEE0310B-2BDE-47D4-BC06-6B95CABC354F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3dxof", "d3dxof\d3dxof.vcxproj", "{9903B653-72B9-41A1-85F9-DD81AD13AE6D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BEE0310B-2BDE-47D4-BC06-6B95CABC354F} = {BEE0310B-2BDE-47D4-BC06-6B95CABC354F}
+		{0496AECD-CBE7-4502-BDDF-0C76649B2FFF} = {0496AECD-CBE7-4502-BDDF-0C76649B2FFF}
 	EndProjectSection
 EndProject
 Global
@@ -145,6 +154,10 @@ Global
 		{99DA6755-2929-4F59-AD98-F4900094C61E}.Debug|Win32.Build.0 = Debug|Win32
 		{99DA6755-2929-4F59-AD98-F4900094C61E}.Release|Win32.ActiveCfg = Release|Win32
 		{99DA6755-2929-4F59-AD98-F4900094C61E}.Release|Win32.Build.0 = Release|Win32
+		{9903B653-72B9-41A1-85F9-DD81AD13AE6D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9903B653-72B9-41A1-85F9-DD81AD13AE6D}.Debug|Win32.Build.0 = Debug|Win32
+		{9903B653-72B9-41A1-85F9-DD81AD13AE6D}.Release|Win32.ActiveCfg = Release|Win32
+		{9903B653-72B9-41A1-85F9-DD81AD13AE6D}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
