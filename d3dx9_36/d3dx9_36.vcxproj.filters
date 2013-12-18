@@ -60,6 +60,9 @@
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\xfile.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\idls\wincodec_i.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\wine\dlls\d3dx9_36\d3dx9_36_private.h">
