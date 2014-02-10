@@ -273,14 +273,12 @@
 /EXPORT:wined3d_surface_get_pitch
 /EXPORT:wined3d_surface_get_overlay_position
 /EXPORT:wined3d_surface_set_palette
-/EXPORT:wined3d_surface_set_mem
 /EXPORT:wined3d_surface_is_lost
 /EXPORT:wined3d_surface_update_overlay_z_order
 /EXPORT:wined3d_resource_set_private_data
 /EXPORT:wined3d_resource_get_private_data
 /EXPORT:wined3d_resource_free_private_data
 /EXPORT:wined3d_texture_get_resource
-/EXPORT:wined3d_surface_set_color_key
 /EXPORT:wined3d_surface_get_render_target_data
 /EXPORT:wined3d_swapchain_get_desc
 /EXPORT:wined3d_surface_update_desc
@@ -290,7 +288,7 @@
 /EXPORT:wined3d_surface_from_resource
 /EXPORT:wined3d_texture_create
 /EXPORT:wined3d_resource_set_parent
-
+/EXPORT:wined3d_texture_set_color_key
 </AdditionalOptions>
     </Link>
     <Midl>
@@ -525,14 +523,12 @@
 /EXPORT:wined3d_surface_get_pitch
 /EXPORT:wined3d_surface_get_overlay_position
 /EXPORT:wined3d_surface_set_palette
-/EXPORT:wined3d_surface_set_mem
 /EXPORT:wined3d_surface_is_lost
 /EXPORT:wined3d_surface_update_overlay_z_order
 /EXPORT:wined3d_resource_set_private_data
 /EXPORT:wined3d_resource_get_private_data
 /EXPORT:wined3d_resource_free_private_data
 /EXPORT:wined3d_texture_get_resource
-/EXPORT:wined3d_surface_set_color_key
 /EXPORT:wined3d_surface_get_render_target_data
 /EXPORT:wined3d_swapchain_get_desc
 /EXPORT:wined3d_surface_update_desc
@@ -542,7 +538,7 @@
 /EXPORT:wined3d_surface_from_resource
 /EXPORT:wined3d_texture_create
 /EXPORT:wined3d_resource_set_parent
-
+/EXPORT:wined3d_texture_set_color_key
 </AdditionalOptions>
     </Link>
     <Midl>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wined3d", "wined3d\wined3d.vcxproj", "{B697AFDB-BA64-4D7D-8486-5E6726253359}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -95,6 +95,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3dxof", "d3dxof\d3dxof.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3dx9_tests", "d3dx9_tests\d3dx9_tests.vcxproj", "{E2F1EF1D-AA22-46F2-A0AE-C31840A84508}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "badmojo", "badmojo\badmojo.vcxproj", "{A1FB2179-1DC5-4338-88A6-958E02016FF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -167,6 +169,10 @@ Global
 		{E2F1EF1D-AA22-46F2-A0AE-C31840A84508}.Debug|Win32.Build.0 = Debug|Win32
 		{E2F1EF1D-AA22-46F2-A0AE-C31840A84508}.Release|Win32.ActiveCfg = Release|Win32
 		{E2F1EF1D-AA22-46F2-A0AE-C31840A84508}.Release|Win32.Build.0 = Release|Win32
+		{A1FB2179-1DC5-4338-88A6-958E02016FF7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A1FB2179-1DC5-4338-88A6-958E02016FF7}.Debug|Win32.Build.0 = Debug|Win32
+		{A1FB2179-1DC5-4338-88A6-958E02016FF7}.Release|Win32.ActiveCfg = Release|Win32
+		{A1FB2179-1DC5-4338-88A6-958E02016FF7}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
