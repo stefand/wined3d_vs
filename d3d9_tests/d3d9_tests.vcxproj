@@ -64,15 +64,13 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <PreBuildEvent>
-      <Command>..\$(Configuration)\make_ctests.exe -o testlist.c d3d9ex.c device.c stateblock.c vertexdeclaration.c visual.c
-</Command>
-    </PreBuildEvent>
+    <PreBuildEvent />
     <CustomBuildStep>
       <Command>
       </Command>
     </CustomBuildStep>
     <CustomBuildStep />
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -93,10 +91,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
-    <PreBuildEvent>
-      <Command>..\$(Configuration)\make_ctests.exe -o testlist.c d3d9ex.c device.c stateblock.c vertexdeclaration.c visual.c
-</Command>
-    </PreBuildEvent>
+    <PreBuildEvent />
     <CustomBuildStep>
       <Command>
       </Command>

@@ -10,12 +10,10 @@ d3d8_test/Release
 d3d8_test/Debug
 d3d9/Release
 d3d9/Debug
-d3d9_tests/testlist.c
 d3d9_tests/Release
 d3d9_tests/Debug
 d3dx9_36/Release
 d3dx9_36/Debug
-d3dx9_tests/testlist.c
 ddraw/Release
 ddraw/Debug
 ddraw_test/Release

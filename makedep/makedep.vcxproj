@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E2F1EF1D-AA22-46F2-A0AE-C31840A84508}</ProjectGuid>
+    <ProjectGuid>{600A84E5-46BA-4D21-AB2F-5EF05457CCE2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>d3dx9_tests</RootNamespace>
+    <RootNamespace>makedep</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -41,69 +41,46 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VCInstallDir)include;..\idls;..\..\wine\include</IncludePath>
-    <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>../wined3d;../../wine/include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\stefan\src\wined3d\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VCInstallDir)include;..\idls;..\..\wine\include</IncludePath>
-    <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>../wined3d;../../wine/include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\stefan\src\wined3d\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/wd4018 /wd4244 /wd4305 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;__i386__;__WINESRC__;_USE_MATH_DEFINESNDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>d3dx9_36.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libport.lib</AdditionalDependencies>
     </Link>
-    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/wd4018 /wd4244 /wd4305 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;__i386__;__WINESRC__;_USE_MATH_DEFINESNDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>d3dx9_36.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libport.lib</AdditionalDependencies>
     </Link>
-    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\tests\asm.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\tests\core.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\tests\effect.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\tests\line.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\tests\math.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\tests\mesh.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\tests\shader.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\tests\surface.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\tests\texture.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\tests\volume.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\tests\xfile.c" />
-    <ClCompile Include="testlist.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\wine\dlls\d3dx9_36\tests\resources.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="..\..\wine\dlls\d3dx9_36\tests\rsrc.rc" />
+    <ClCompile Include="..\..\wine\tools\makedep.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
