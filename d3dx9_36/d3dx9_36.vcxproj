@@ -569,16 +569,28 @@
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\core.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\d3dx9_36_main.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\effect.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\font.c" />
+    <ClCompile Include="..\..\wine\dlls\d3dx9_36\font.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/wd4244 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/wd4244 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\line.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\math.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\mesh.c" />
+    <ClCompile Include="..\..\wine\dlls\d3dx9_36\mesh.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\render.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\shader.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\skin.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\sprite.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\surface.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\texture.c" />
+    <ClCompile Include="..\..\wine\dlls\d3dx9_36\surface.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\d3dx9_36\texture.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\util.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\volume.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\xfile.c" />

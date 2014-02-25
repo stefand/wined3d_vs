@@ -134,13 +134,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\wined3d;C:\Users\stefan\src\wine\include;$(IncludePath)</IncludePath>
     <GenerateManifest>false</GenerateManifest>
     <LibraryPath>C:\Users\stefan\src\wined3d\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\wined3d;C:\Users\stefan\src\wine\include;$(IncludePath)</IncludePath>
     <GenerateManifest>false</GenerateManifest>
     <LibraryPath>C:\Users\stefan\src\wined3d\Release;$(LibraryPath)</LibraryPath>
@@ -167,8 +165,8 @@
       <PrecompiledHeader>
       </PrecompiledHeader>
       <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;DLLDIR=".";DLLPREFIX="";LIB_TO_BINDIR=".";LIB_TO_DLLDIR=".";BIN_TO_DLLDIR=".";BIN_TO_DATADIR=".";PACKAGE_VERSION=".";BINDIR=".";_DEBUG;_WINDOWS;_USRDLL;LIBWINE_EXPORTS;_CRT_NONSTDC_NO_DEPRECATE;__WINESRC__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalOptions>/wd4244 /wd4146 %(AdditionalOptions)</AdditionalOptions>
       <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalOptions>/wd4244 /wd4146 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
