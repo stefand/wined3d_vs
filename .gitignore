@@ -32,4 +32,8 @@ make_ctests/Release
 make_ctests/Debug
 idls/*.h
 idls/*.c
+idls/wine/*.h
+idls/wine/*.c
+idls/wine/Release
+idls/wine/Debug
 wined3d/dlldata.c

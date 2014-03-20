@@ -18,5 +18,8 @@
     <ClCompile Include="..\..\wine\dlls\d3d10core\tests\device.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="testlist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

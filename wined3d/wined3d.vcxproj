@@ -289,6 +289,9 @@
 /EXPORT:wined3d_texture_create
 /EXPORT:wined3d_resource_set_parent
 /EXPORT:wined3d_texture_set_color_key
+/EXPORT:wined3d_incref
+/EXPORT:wined3d_resource_set_parent
+/EXPORT:wined3d_swapchain_get_device
 </AdditionalOptions>
     </Link>
     <Midl>
@@ -539,6 +542,9 @@
 /EXPORT:wined3d_texture_create
 /EXPORT:wined3d_resource_set_parent
 /EXPORT:wined3d_texture_set_color_key
+/EXPORT:wined3d_incref
+/EXPORT:wined3d_resource_set_parent
+/EXPORT:wined3d_swapchain_get_device
 </AdditionalOptions>
     </Link>
     <Midl>
