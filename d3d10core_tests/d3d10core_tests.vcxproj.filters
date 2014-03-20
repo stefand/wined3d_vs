@@ -21,5 +21,8 @@
     <ClCompile Include="testlist.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\idls\dxgi_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

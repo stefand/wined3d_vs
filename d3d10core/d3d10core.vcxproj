@@ -11,22 +11,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{71521DAF-90A8-45F7-81C1-F4A5CE8707DA}</ProjectGuid>
-    <RootNamespace>idls</RootNamespace>
+    <ProjectGuid>{EFD5E7AA-151F-412C-A1BF-C4D68E18968C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>d3d10core</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -39,77 +40,67 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>.;C:\Users\stefan\src\wine\include;$(VCInstallDir)include</IncludePath>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\wine\include;..\wined3d;..\idls;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>.;C:\Users\stefan\src\wine\include;$(VCInstallDir)include</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\..\wine\include;..\wined3d;..\idls;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalOptions>/EXPORT:D3D10CoreCreateDevice /EXPORT:D3D10CoreRegisterLayers %(AdditionalOptions)</AdditionalOptions>
     </Link>
-    <Midl>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <GenerateClientFiles>None</GenerateClientFiles>
-      <GenerateServerFiles>None</GenerateServerFiles>
-      <AdditionalOptions>/cpp_opt "/wd4005 /E /nologo" %(AdditionalOptions)</AdditionalOptions>
-    </Midl>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalOptions>/EXPORT:D3D10CoreCreateDevice /EXPORT:D3D10CoreRegisterLayers %(AdditionalOptions)</AdditionalOptions>
     </Link>
-    <Midl>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <GenerateClientFiles>None</GenerateClientFiles>
-      <GenerateServerFiles>None</GenerateServerFiles>
-      <AdditionalOptions>/cpp_opt "/wd4005 /E /nologo" %(AdditionalOptions)</AdditionalOptions>
-    </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Midl Include="..\..\wine\include\atliface.idl" />
-    <Midl Include="..\..\wine\include\d3d10.idl" />
-    <Midl Include="..\..\wine\include\d3d10_1.idl" />
-    <Midl Include="..\..\wine\include\d3dcommon.idl" />
-    <Midl Include="..\..\wine\include\dxgi.idl" />
-    <Midl Include="..\..\wine\include\msxml.idl" />
-    <Midl Include="..\..\wine\include\oaidl.idl" />
-    <Midl Include="..\..\wine\include\objidl.idl" />
-    <Midl Include="..\..\wine\include\ocidl.idl" />
-    <Midl Include="..\..\wine\include\oleidl.idl" />
-    <Midl Include="..\..\wine\include\propidl.idl" />
-    <Midl Include="..\..\wine\include\servprov.idl" />
-    <Midl Include="..\..\wine\include\unknwn.idl" />
-    <Midl Include="..\..\wine\include\urlmon.idl" />
-    <Midl Include="..\..\wine\include\wincodec.idl" />
-    <Midl Include="..\..\wine\include\wine\winedxgi.idl">
-      <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">wine</OutputDirectory>
-      <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">wine</OutputDirectory>
-    </Midl>
-    <Midl Include="..\..\wine\include\wtypes.idl" />
+    <ClInclude Include="..\..\wine\dlls\d3d10core\d3d10core_private.h" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\wine\include\rmxftmpl.x">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">echo ..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)
-..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).h</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).h</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">echo ..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)
-..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)</Command>
-    </CustomBuild>
+    <ResourceCompile Include="..\..\wine\dlls\d3d10core\version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\wine\dlls\d3d10core\async.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d10core\buffer.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d10core\d3d10core_main.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d10core\device.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d10core\inputlayout.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d10core\shader.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d10core\state.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d10core\texture.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d10core\utils.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d10core\view.c" />
+    <ClCompile Include="..\idls\d3d10_1_i.c" />
+    <ClCompile Include="..\idls\d3d10_i.c" />
+    <ClCompile Include="..\idls\wine\winedxgi_i.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
