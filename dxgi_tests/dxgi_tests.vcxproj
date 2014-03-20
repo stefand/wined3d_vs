@@ -11,22 +11,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{71521DAF-90A8-45F7-81C1-F4A5CE8707DA}</ProjectGuid>
-    <RootNamespace>idls</RootNamespace>
+    <ProjectGuid>{B8472579-A59D-4B54-AAE4-72FF8EAE87C4}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>dxgi_tests</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -39,79 +40,54 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>.;C:\Users\stefan\src\wine\include;$(VCInstallDir)include</IncludePath>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VCInstallDir)include;..\idls;..\..\wine\include</IncludePath>
+    <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>.;C:\Users\stefan\src\wine\include;$(VCInstallDir)include</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VCInstallDir)include;..\idls;..\..\wine\include</IncludePath>
+    <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>gdi32.lib;user32.lib;uuid.lib;d3d10.lib;dxgi.lib</AdditionalDependencies>
     </Link>
-    <Midl>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <GenerateClientFiles>None</GenerateClientFiles>
-      <GenerateServerFiles>None</GenerateServerFiles>
-      <AdditionalOptions>/cpp_opt "/wd4005 /E /nologo" %(AdditionalOptions)</AdditionalOptions>
-    </Midl>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>gdi32.lib;user32.lib;uuid.lib;d3d10.lib;dxgi.lib</AdditionalDependencies>
     </Link>
-    <Midl>
-      <HeaderFileName>%(Filename).h</HeaderFileName>
-      <GenerateClientFiles>None</GenerateClientFiles>
-      <GenerateServerFiles>None</GenerateServerFiles>
-      <AdditionalOptions>/cpp_opt "/wd4005 /E /nologo" %(AdditionalOptions)</AdditionalOptions>
-    </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Midl Include="..\..\wine\include\atliface.idl" />
-    <Midl Include="..\..\wine\include\d3d10.idl" />
-    <Midl Include="..\..\wine\include\d3d10_1.idl" />
-    <Midl Include="..\..\wine\include\d3d11.idl" />
-    <Midl Include="..\..\wine\include\d3d11sdklayers.idl" />
-    <Midl Include="..\..\wine\include\d3dcommon.idl" />
-    <Midl Include="..\..\wine\include\dxgi.idl" />
-    <Midl Include="..\..\wine\include\msxml.idl" />
-    <Midl Include="..\..\wine\include\oaidl.idl" />
-    <Midl Include="..\..\wine\include\objidl.idl" />
-    <Midl Include="..\..\wine\include\ocidl.idl" />
-    <Midl Include="..\..\wine\include\oleidl.idl" />
-    <Midl Include="..\..\wine\include\propidl.idl" />
-    <Midl Include="..\..\wine\include\servprov.idl" />
-    <Midl Include="..\..\wine\include\unknwn.idl" />
-    <Midl Include="..\..\wine\include\urlmon.idl" />
-    <Midl Include="..\..\wine\include\wincodec.idl" />
-    <Midl Include="..\..\wine\include\wine\winedxgi.idl">
-      <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">wine</OutputDirectory>
-      <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">wine</OutputDirectory>
-    </Midl>
-    <Midl Include="..\..\wine\include\wtypes.idl" />
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="..\..\wine\include\rmxftmpl.x">
-      <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">echo ..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)
-..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).h</Outputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).h</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">echo ..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)
-..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)</Command>
-    </CustomBuild>
+    <ClCompile Include="..\..\wine\dlls\dxgi\tests\device.c" />
+    <ClCompile Include="..\idls\d3d10_1_i.c" />
+    <ClCompile Include="..\idls\d3d10_i.c" />
+    <ClCompile Include="..\idls\d3d11_i.c" />
+    <ClCompile Include="..\idls\dxgi_i.c" />
+    <ClCompile Include="testlist.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

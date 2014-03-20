@@ -119,6 +119,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3d10core", "d3d10core\d3d1
 		{B697AFDB-BA64-4D7D-8486-5E6726253359} = {B697AFDB-BA64-4D7D-8486-5E6726253359}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dxgi_tests", "dxgi_tests\dxgi_tests.vcxproj", "{B8472579-A59D-4B54-AAE4-72FF8EAE87C4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{71521DAF-90A8-45F7-81C1-F4A5CE8707DA} = {71521DAF-90A8-45F7-81C1-F4A5CE8707DA}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -203,6 +208,10 @@ Global
 		{EFD5E7AA-151F-412C-A1BF-C4D68E18968C}.Debug|Win32.Build.0 = Debug|Win32
 		{EFD5E7AA-151F-412C-A1BF-C4D68E18968C}.Release|Win32.ActiveCfg = Release|Win32
 		{EFD5E7AA-151F-412C-A1BF-C4D68E18968C}.Release|Win32.Build.0 = Release|Win32
+		{B8472579-A59D-4B54-AAE4-72FF8EAE87C4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B8472579-A59D-4B54-AAE4-72FF8EAE87C4}.Debug|Win32.Build.0 = Debug|Win32
+		{B8472579-A59D-4B54-AAE4-72FF8EAE87C4}.Release|Win32.ActiveCfg = Release|Win32
+		{B8472579-A59D-4B54-AAE4-72FF8EAE87C4}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

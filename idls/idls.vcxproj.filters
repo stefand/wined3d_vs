@@ -69,6 +69,12 @@
     <Midl Include="..\..\wine\include\d3d10_1.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
+    <Midl Include="..\..\wine\include\d3d11.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
+    <Midl Include="..\..\wine\include\d3d11sdklayers.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\wine\include\rmxftmpl.x">
