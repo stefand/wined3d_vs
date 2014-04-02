@@ -275,9 +275,6 @@
 /EXPORT:wined3d_surface_set_palette
 /EXPORT:wined3d_surface_is_lost
 /EXPORT:wined3d_surface_update_overlay_z_order
-/EXPORT:wined3d_resource_set_private_data
-/EXPORT:wined3d_resource_get_private_data
-/EXPORT:wined3d_resource_free_private_data
 /EXPORT:wined3d_texture_get_resource
 /EXPORT:wined3d_surface_get_render_target_data
 /EXPORT:wined3d_swapchain_get_desc
@@ -555,9 +552,6 @@
 /EXPORT:wined3d_surface_set_palette
 /EXPORT:wined3d_surface_is_lost
 /EXPORT:wined3d_surface_update_overlay_z_order
-/EXPORT:wined3d_resource_set_private_data
-/EXPORT:wined3d_resource_get_private_data
-/EXPORT:wined3d_resource_free_private_data
 /EXPORT:wined3d_texture_get_resource
 /EXPORT:wined3d_surface_get_render_target_data
 /EXPORT:wined3d_swapchain_get_desc
