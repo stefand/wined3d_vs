@@ -75,6 +75,30 @@
     <Midl Include="..\..\wine\include\d3d11sdklayers.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
+    <Midl Include="..\..\wine\include\mmdeviceapi.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
+    <Midl Include="..\..\wine\include\audioclient.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
+    <Midl Include="..\..\wine\include\propsys.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
+    <Midl Include="..\..\wine\include\shtypes.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
+    <Midl Include="..\..\wine\include\structuredquerycondition.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
+    <Midl Include="..\..\wine\include\shobjidl.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
+    <Midl Include="..\..\wine\include\docobj.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
+    <Midl Include="..\..\wine\include\comcat.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\wine\include\rmxftmpl.x">

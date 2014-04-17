@@ -123,6 +123,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dxgi_tests", "dxgi_tests\dx
 		{71521DAF-90A8-45F7-81C1-F4A5CE8707DA} = {71521DAF-90A8-45F7-81C1-F4A5CE8707DA}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dsound", "dsound\dsound.vcxproj", "{E6274277-D8C5-486E-A750-85093B89875C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{71521DAF-90A8-45F7-81C1-F4A5CE8707DA} = {71521DAF-90A8-45F7-81C1-F4A5CE8707DA}
+		{0496AECD-CBE7-4502-BDDF-0C76649B2FFF} = {0496AECD-CBE7-4502-BDDF-0C76649B2FFF}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -211,6 +217,10 @@ Global
 		{B8472579-A59D-4B54-AAE4-72FF8EAE87C4}.Debug|Win32.Build.0 = Debug|Win32
 		{B8472579-A59D-4B54-AAE4-72FF8EAE87C4}.Release|Win32.ActiveCfg = Release|Win32
 		{B8472579-A59D-4B54-AAE4-72FF8EAE87C4}.Release|Win32.Build.0 = Release|Win32
+		{E6274277-D8C5-486E-A750-85093B89875C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E6274277-D8C5-486E-A750-85093B89875C}.Debug|Win32.Build.0 = Debug|Win32
+		{E6274277-D8C5-486E-A750-85093B89875C}.Release|Win32.ActiveCfg = Release|Win32
+		{E6274277-D8C5-486E-A750-85093B89875C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

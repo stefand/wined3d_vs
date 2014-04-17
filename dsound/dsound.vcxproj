@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E6274277-D8C5-486E-A750-85093B89875C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>dsound</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\wine\include;..\wined3d;..\idls;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\..\wine\include;..\wined3d;..\idls;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_COMPILER_EXCEPTIONS;_DEBUG;_WINDOWS;_USRDLL;DSOUND_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>dxguid.lib;uuid.lib;winmm.lib;ole32.lib;advapi32.lib;user32.lib;libwine.lib;ntdll.lib;winecrt0.lib</AdditionalDependencies>
+      <AdditionalOptions>/EXPORT:DirectSoundCreate
+/EXPORT:DirectSoundEnumerateA
+/EXPORT:DirectSoundEnumerateW
+/EXPORT:DirectSoundCaptureCreate
+/EXPORT:DirectSoundCaptureEnumerateA
+/EXPORT:DirectSoundCaptureEnumerateW
+/EXPORT:GetDeviceID
+/EXPORT:DirectSoundFullDuplexCreate
+/EXPORT:DirectSoundCreate8
+/EXPORT:DirectSoundCaptureCreate8
+/EXPORT:DllCanUnloadNow,private
+/EXPORT:DllGetClassObject,private
+/EXPORT:DllRegisterServer,private
+/EXPORT:DllUnregisterServer,private %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_COMPILER_EXCEPTIONS;NDEBUG;_WINDOWS;_USRDLL;DSOUND_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>dxguid.lib;uuid.lib;winmm.lib;ole32.lib;advapi32.lib;user32.lib;libwine.lib;ntdll.lib;winecrt0.lib</AdditionalDependencies>
+      <AdditionalOptions>/EXPORT:DirectSoundCreate
+/EXPORT:DirectSoundEnumerateA
+/EXPORT:DirectSoundEnumerateW
+/EXPORT:DirectSoundCaptureCreate
+/EXPORT:DirectSoundCaptureEnumerateA
+/EXPORT:DirectSoundCaptureEnumerateW
+/EXPORT:GetDeviceID
+/EXPORT:DirectSoundFullDuplexCreate
+/EXPORT:DirectSoundCreate8
+/EXPORT:DirectSoundCaptureCreate8
+/EXPORT:DllCanUnloadNow,private
+/EXPORT:DllGetClassObject,private
+/EXPORT:DllRegisterServer,private
+/EXPORT:DllUnregisterServer,private %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\wine\dlls\dsound\dsound_private.h" />
+    <ClInclude Include="..\..\wine\dlls\dsound\fir.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\wine\dlls\dsound\buffer.c" />
+    <ClCompile Include="..\..\wine\dlls\dsound\capture.c" />
+    <ClCompile Include="..\..\wine\dlls\dsound\dsound.c" />
+    <ClCompile Include="..\..\wine\dlls\dsound\dsound_convert.c" />
+    <ClCompile Include="..\..\wine\dlls\dsound\dsound_main.c" />
+    <ClCompile Include="..\..\wine\dlls\dsound\duplex.c" />
+    <ClCompile Include="..\..\wine\dlls\dsound\mixer.c" />
+    <ClCompile Include="..\..\wine\dlls\dsound\primary.c" />
+    <ClCompile Include="..\..\wine\dlls\dsound\propset.c" />
+    <ClCompile Include="..\..\wine\dlls\dsound\sound3d.c" />
+    <ClCompile Include="..\idls\audioclient_i.c" />
+    <ClCompile Include="..\idls\mmdeviceapi_i.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\wine\dlls\dsound\version.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
