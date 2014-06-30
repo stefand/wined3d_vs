@@ -24,9 +24,6 @@
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\stateblock.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d9\tests\vertexdeclaration.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\visual.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>

@@ -104,7 +104,6 @@
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\d3d9ex.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\device.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\stateblock.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d9\tests\vertexdeclaration.c" />
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\visual.c" />
     <ClCompile Include="testlist.c" />
   </ItemGroup>
