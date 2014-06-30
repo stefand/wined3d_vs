@@ -267,7 +267,6 @@
 /EXPORT:wined3d_swapchain_set_window
 /EXPORT:wined3d_surface_set_overlay_position
 /EXPORT:wined3d_surface_get_flip_status
-/EXPORT:wined3d_surface_get_palette
 /EXPORT:wined3d_surface_get_blt_status
 /EXPORT:wined3d_surface_update_overlay
 /EXPORT:wined3d_surface_get_pitch
@@ -544,7 +543,6 @@
 /EXPORT:wined3d_swapchain_set_window
 /EXPORT:wined3d_surface_set_overlay_position
 /EXPORT:wined3d_surface_get_flip_status
-/EXPORT:wined3d_surface_get_palette
 /EXPORT:wined3d_surface_get_blt_status
 /EXPORT:wined3d_surface_update_overlay
 /EXPORT:wined3d_surface_get_pitch
