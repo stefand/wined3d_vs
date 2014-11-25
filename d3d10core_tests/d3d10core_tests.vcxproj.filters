@@ -24,5 +24,8 @@
     <ClCompile Include="..\idls\dxgi_i.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\idls\d3d10_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

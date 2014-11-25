@@ -83,6 +83,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\d3d10core\tests\device.c" />
+    <ClCompile Include="..\idls\d3d10_i.c" />
     <ClCompile Include="..\idls\dxgi_i.c" />
     <ClCompile Include="testlist.c" />
   </ItemGroup>
