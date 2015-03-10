@@ -41,13 +41,13 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../wined3d;../../wine/include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\stefan\src\wined3d\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\wined3d;..\..\wine\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>../wined3d;../../wine/include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\stefan\src\wined3d\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\wined3d;..\..\wine\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
