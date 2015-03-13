@@ -61,6 +61,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>libwine.lib;libport.lib;d3dxof.lib;dxguid.lib;d3dcompiler.lib;ole32.lib;gdi32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3DXAssembleShader
+/EXPORT:D3DXCreatePolygon
+/EXPORT:D3DXCreateTorus
 /EXPORT:D3DXAssembleShaderFromFileA
 /EXPORT:D3DXAssembleShaderFromFileW
 /EXPORT:D3DXAssembleShaderFromResourceA
@@ -321,6 +323,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>libwine.lib;libport.lib;d3dxof.lib;dxguid.lib;d3dcompiler.lib;ole32.lib;gdi32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3DXAssembleShader
+/EXPORT:D3DXCreatePolygon
+/EXPORT:D3DXCreateTorus
 /EXPORT:D3DXAssembleShaderFromFileA
 /EXPORT:D3DXAssembleShaderFromFileW
 /EXPORT:D3DXAssembleShaderFromResourceA
