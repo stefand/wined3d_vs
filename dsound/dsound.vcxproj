@@ -116,7 +116,10 @@
     <ClCompile Include="..\..\wine\dlls\dsound\capture.c" />
     <ClCompile Include="..\..\wine\dlls\dsound\dsound.c" />
     <ClCompile Include="..\..\wine\dlls\dsound\dsound_convert.c" />
-    <ClCompile Include="..\..\wine\dlls\dsound\dsound_main.c" />
+    <ClCompile Include="..\..\wine\dlls\dsound\dsound_main.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">INITGUID=;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">INITGUID=;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\dsound\duplex.c" />
     <ClCompile Include="..\..\wine\dlls\dsound\mixer.c" />
     <ClCompile Include="..\..\wine\dlls\dsound\primary.c" />
