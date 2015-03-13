@@ -96,7 +96,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\d3dxof\d3dxof.c" />
-    <ClCompile Include="..\..\wine\dlls\d3dxof\main.c" />
+    <ClCompile Include="..\..\wine\dlls\d3dxof\main.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NONAMELESSUNION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NONAMELESSUNION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3dxof\mszip.c" />
     <ClCompile Include="..\..\wine\dlls\d3dxof\parsing.c" />
   </ItemGroup>
