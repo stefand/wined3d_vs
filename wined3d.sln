@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wined3d", "wined3d\wined3d.vcxproj", "{B697AFDB-BA64-4D7D-8486-5E6726253359}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -129,6 +129,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dsound", "dsound\dsound.vcx
 		{0496AECD-CBE7-4502-BDDF-0C76649B2FFF} = {0496AECD-CBE7-4502-BDDF-0C76649B2FFF}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3drm", "d3drm\d3drm.vcxproj", "{81104733-823F-43B4-9104-32869F92F108}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9903B653-72B9-41A1-85F9-DD81AD13AE6D} = {9903B653-72B9-41A1-85F9-DD81AD13AE6D}
+		{0496AECD-CBE7-4502-BDDF-0C76649B2FFF} = {0496AECD-CBE7-4502-BDDF-0C76649B2FFF}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -221,6 +227,10 @@ Global
 		{E6274277-D8C5-486E-A750-85093B89875C}.Debug|Win32.Build.0 = Debug|Win32
 		{E6274277-D8C5-486E-A750-85093B89875C}.Release|Win32.ActiveCfg = Release|Win32
 		{E6274277-D8C5-486E-A750-85093B89875C}.Release|Win32.Build.0 = Release|Win32
+		{81104733-823F-43B4-9104-32869F92F108}.Debug|Win32.ActiveCfg = Debug|Win32
+		{81104733-823F-43B4-9104-32869F92F108}.Debug|Win32.Build.0 = Debug|Win32
+		{81104733-823F-43B4-9104-32869F92F108}.Release|Win32.ActiveCfg = Release|Win32
+		{81104733-823F-43B4-9104-32869F92F108}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
