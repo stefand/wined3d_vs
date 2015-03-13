@@ -135,6 +135,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3drm", "d3drm\d3drm.vcxpro
 		{0496AECD-CBE7-4502-BDDF-0C76649B2FFF} = {0496AECD-CBE7-4502-BDDF-0C76649B2FFF}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3drm_tests", "d3drm_tests\d3drm_tests.vcxproj", "{1E4889AB-7B33-407E-98D9-E47743E9026F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{81104733-823F-43B4-9104-32869F92F108} = {81104733-823F-43B4-9104-32869F92F108}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -231,6 +236,10 @@ Global
 		{81104733-823F-43B4-9104-32869F92F108}.Debug|Win32.Build.0 = Debug|Win32
 		{81104733-823F-43B4-9104-32869F92F108}.Release|Win32.ActiveCfg = Release|Win32
 		{81104733-823F-43B4-9104-32869F92F108}.Release|Win32.Build.0 = Release|Win32
+		{1E4889AB-7B33-407E-98D9-E47743E9026F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1E4889AB-7B33-407E-98D9-E47743E9026F}.Debug|Win32.Build.0 = Debug|Win32
+		{1E4889AB-7B33-407E-98D9-E47743E9026F}.Release|Win32.ActiveCfg = Release|Win32
+		{1E4889AB-7B33-407E-98D9-E47743E9026F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
