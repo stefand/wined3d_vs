@@ -59,6 +59,9 @@
     <ClCompile Include="..\idls\mmdeviceapi_i.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\idls\mediaobj_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\wine\dlls\dsound\version.rc">
