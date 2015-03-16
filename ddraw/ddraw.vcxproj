@@ -63,7 +63,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wined3d.lib;libwine.lib;dxguid.lib;user32.lib;advapi32.lib;gdi32.lib;winecrt0.lib</AdditionalDependencies>
+      <AdditionalDependencies>wined3d.lib;libwine.lib;dxguid.lib;user32.lib;advapi32.lib;gdi32.lib;winecrt0.lib;uuid.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:DirectDrawCreate
 /EXPORT:DirectDrawCreate
 /EXPORT:DirectDrawCreateClipper
@@ -96,7 +96,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>wined3d.lib;libwine.lib;dxguid.lib;user32.lib;advapi32.lib;gdi32.lib;winecrt0.lib</AdditionalDependencies>
+      <AdditionalDependencies>wined3d.lib;libwine.lib;dxguid.lib;user32.lib;advapi32.lib;gdi32.lib;winecrt0.lib;uuid.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:DirectDrawCreate
 /EXPORT:DirectDrawCreate
 /EXPORT:DirectDrawCreateClipper

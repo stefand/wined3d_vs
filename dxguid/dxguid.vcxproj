@@ -23,13 +23,13 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
@@ -47,11 +47,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\wined3d;..\..\wine\include;$(IncludePath)</IncludePath>
+    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\wined3d;..\..\wine\include;$(IncludePath)</IncludePath>
+    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -108,6 +108,32 @@
 /EXPORT:CLSID_DirectDraw
 /EXPORT:IID_IDirectDrawColorControl</AdditionalOptions>
     </Link>
+    <Lib>
+      <AdditionalOptions>/export:IID_IDirectSoundNotify
+/export:IID_IDirectSoundBuffer
+/export:IID_IDirectSound3DListener
+/export:IID_IDirectSoundBuffer8
+/export:IID_IDirectSound3DBuffer
+/export:IID_IKsPropertySet
+/export:GUID_All_Objects
+/export:IID_IDirectSoundCapture
+/export:DSDEVID_DefaultCapture
+/export:DSDEVID_DefaultVoicePlayback
+/export:IID_IDirectSoundCaptureBuffer8
+/export:DSDEVID_DefaultPlayback
+/export:IID_IDirectSoundCaptureBuffer
+/export:IID_IDirectSound8
+/export:IID_IDirectSound
+/export:DSDEVID_DefaultVoiceCapture
+/export:CLSID_DirectSoundPrivate
+/export:CLSID_DirectSoundFullDuplex
+/export:CLSID_DirectSoundCapture
+/export:CLSID_DirectSound8
+/export:CLSID_DirectSoundCapture8
+/export:CLSID_DirectSound
+/export:IID_IDirectSoundFullDuplex
+/export:DSPROPSETID_DirectSoundDevice %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -168,6 +194,32 @@
 /EXPORT:CLSID_DirectDraw
 /EXPORT:IID_IDirectDrawColorControl</AdditionalOptions>
     </Link>
+    <Lib>
+      <AdditionalOptions>/export:IID_IDirectSoundNotify
+/export:IID_IDirectSoundBuffer
+/export:IID_IDirectSound3DListener
+/export:IID_IDirectSoundBuffer8
+/export:IID_IDirectSound3DBuffer
+/export:IID_IKsPropertySet
+/export:GUID_All_Objects
+/export:IID_IDirectSoundCapture
+/export:DSDEVID_DefaultCapture
+/export:DSDEVID_DefaultVoicePlayback
+/export:IID_IDirectSoundCaptureBuffer8
+/export:DSDEVID_DefaultPlayback
+/export:IID_IDirectSoundCaptureBuffer
+/export:IID_IDirectSound8
+/export:IID_IDirectSound
+/export:DSDEVID_DefaultVoiceCapture
+/export:CLSID_DirectSoundPrivate
+/export:CLSID_DirectSoundFullDuplex
+/export:CLSID_DirectSoundCapture
+/export:CLSID_DirectSound8
+/export:CLSID_DirectSoundCapture8
+/export:CLSID_DirectSound
+/export:IID_IDirectSoundFullDuplex
+/export:DSPROPSETID_DirectSoundDevice %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
