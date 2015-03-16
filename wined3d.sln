@@ -90,6 +90,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3dxof", "d3dxof\d3dxof.vcx
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3dx9_tests", "d3dx9_tests\d3dx9_tests.vcxproj", "{E2F1EF1D-AA22-46F2-A0AE-C31840A84508}"
+	ProjectSection(ProjectDependencies) = postProject
+		{71521DAF-90A8-45F7-81C1-F4A5CE8707DA} = {71521DAF-90A8-45F7-81C1-F4A5CE8707DA}
+		{9EE85FCA-A974-4A1A-8EEA-D1BF0856EDE2} = {9EE85FCA-A974-4A1A-8EEA-D1BF0856EDE2}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "makedep", "makedep\makedep.vcxproj", "{600A84E5-46BA-4D21-AB2F-5EF05457CCE2}"
 	ProjectSection(ProjectDependencies) = postProject
