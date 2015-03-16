@@ -61,11 +61,13 @@
     <LinkIncremental>true</LinkIncremental>
     <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
     <IncludePath>..\..\wine\include;..\wined3d;..\idls;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)$(Configuration)_dll\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
     <IncludePath>..\..\wine\include;..\wined3d;..\idls;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)$(Configuration)_dll\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -81,6 +83,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>libwine.lib;wined3d.lib;uuid.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3D8GetSWInfo /EXPORT:DebugSetMute /EXPORT:Direct3DCreate8 /EXPORT:ValidatePixelShader /EXPORT:ValidateVertexShader %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -101,6 +104,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>libwine.lib;wined3d.lib;uuid.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3D8GetSWInfo /EXPORT:DebugSetMute /EXPORT:Direct3DCreate8 /EXPORT:ValidatePixelShader /EXPORT:ValidateVertexShader %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

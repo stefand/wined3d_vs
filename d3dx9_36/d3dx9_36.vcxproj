@@ -43,11 +43,13 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\Debug;$(LibraryPath);$(DXSDK_DIR)\lib\x86</LibraryPath>
+    <OutDir>$(SolutionDir)$(Configuration)_dll\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\Release;$(LibraryPath);$(LibraryPath);$(DXSDK_DIR)\lib\x86</LibraryPath>
+    <OutDir>$(SolutionDir)$(Configuration)_dll\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -305,6 +307,7 @@
 /EXPORT:D3DXVec4TransformArray
 /EXPORT:D3DXWeldVertices
  %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -567,6 +570,7 @@
 /EXPORT:D3DXVec4TransformArray
 /EXPORT:D3DXWeldVertices
  %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

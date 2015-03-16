@@ -4,6 +4,8 @@ wined3d.v12.suo
 ipch/
 Release/
 Debug/
+Release_dll/
+Debug_dll/
 d3d8/Release
 d3d8/Debug
 d3d8_test/Release
