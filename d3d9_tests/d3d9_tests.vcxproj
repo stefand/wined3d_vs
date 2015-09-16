@@ -41,12 +41,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VCInstallDir)include;..\idls;..\..\wine\include</IncludePath>
+    <IncludePath>..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <TargetName>d3d9_test</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VCInstallDir)include;..\idls;..\..\wine\include</IncludePath>
+    <IncludePath>..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <TargetName>d3d9_test</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

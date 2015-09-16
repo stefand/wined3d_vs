@@ -42,12 +42,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VCInstallDir)include;..\idls;..\..\wine\include</IncludePath>
+    <IncludePath>..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
-    <IncludePath>$(VCInstallDir)include;..\idls;..\..\wine\include</IncludePath>
+    <IncludePath>..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
