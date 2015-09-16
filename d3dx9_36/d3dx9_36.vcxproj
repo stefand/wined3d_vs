@@ -306,6 +306,8 @@
 /EXPORT:D3DXVec4Transform
 /EXPORT:D3DXVec4TransformArray
 /EXPORT:D3DXWeldVertices
+/EXPORT:D3DXComputeTangentFrameEx
+/EXPORT:D3DXComputeNormals
  %(AdditionalOptions)</AdditionalOptions>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
@@ -569,6 +571,8 @@
 /EXPORT:D3DXVec4Transform
 /EXPORT:D3DXVec4TransformArray
 /EXPORT:D3DXWeldVertices
+/EXPORT:D3DXComputeTangentFrameEx
+/EXPORT:D3DXComputeNormals
  %(AdditionalOptions)</AdditionalOptions>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
