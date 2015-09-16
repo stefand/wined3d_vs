@@ -41,12 +41,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VCInstallDir)include;C:\Users\stefan\Desktop\PerfKit_3.0.1.13135\inc;..\..\wine\include;.;..\idls</IncludePath>
+    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(VCInstallDir)include;C:\Users\stefan\Desktop\PerfKit_3.0.1.13135\inc;..\..\wine\include;.;..\idls</IncludePath>
+    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
