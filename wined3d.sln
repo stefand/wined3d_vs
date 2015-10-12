@@ -148,6 +148,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3drm_tests", "d3drm_tests\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3d11", "d3d11\d3d11.vcxproj", "{8D27D969-10CA-4215-A040-3EF49CDA088D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3d11_tests", "d3d11_tests\d3d11_tests.vcxproj", "{0CF96EE6-1B61-43EC-9756-611B8C4FE329}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -306,6 +308,14 @@ Global
 		{8D27D969-10CA-4215-A040-3EF49CDA088D}.Release|Win32.Build.0 = Release|Win32
 		{8D27D969-10CA-4215-A040-3EF49CDA088D}.Release|x64.ActiveCfg = Release|x64
 		{8D27D969-10CA-4215-A040-3EF49CDA088D}.Release|x64.Build.0 = Release|x64
+		{0CF96EE6-1B61-43EC-9756-611B8C4FE329}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0CF96EE6-1B61-43EC-9756-611B8C4FE329}.Debug|Win32.Build.0 = Debug|Win32
+		{0CF96EE6-1B61-43EC-9756-611B8C4FE329}.Debug|x64.ActiveCfg = Debug|x64
+		{0CF96EE6-1B61-43EC-9756-611B8C4FE329}.Debug|x64.Build.0 = Debug|x64
+		{0CF96EE6-1B61-43EC-9756-611B8C4FE329}.Release|Win32.ActiveCfg = Release|Win32
+		{0CF96EE6-1B61-43EC-9756-611B8C4FE329}.Release|Win32.Build.0 = Release|Win32
+		{0CF96EE6-1B61-43EC-9756-611B8C4FE329}.Release|x64.ActiveCfg = Release|x64
+		{0CF96EE6-1B61-43EC-9756-611B8C4FE329}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
