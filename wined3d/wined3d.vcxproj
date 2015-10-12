@@ -123,7 +123,6 @@
 /EXPORT:wined3d_swapchain_present
 /EXPORT:wined3d_vertex_declaration_incref
 /EXPORT:wined3d_volume_map
-/EXPORT:wined3d_volume_get_resource
 /EXPORT:wined3d_volume_unmap
 /EXPORT:wined3d_buffer_create_vb
 /EXPORT:wined3d_buffer_create_ib
@@ -296,7 +295,6 @@
 /EXPORT:wined3d_shader_create_gs
 /EXPORT:wined3d_sampler_decref
 /EXPORT:wined3d_sampler_create
-/EXPORT:wined3d_volume_from_resource
 /EXPORT:wined3d_rendertarget_view_decref
 /EXPORT:wined3d_rendertarget_view_create
 /EXPORT:wined3d_resource_get_priority
@@ -328,6 +326,11 @@
 /EXPORT:wined3d_device_set_vs_resource_view
 /EXPORT:wined3d_device_get_vs_resource_view
 /EXPORT:wined3d_swapchain_resize_buffers
+/EXPORT:wined3d_texture_map
+/EXPORT:wined3d_texture_unmap
+/EXPORT:wined3d_device_copy_sub_resource_region
+/EXPORT:wined3d_device_draw_primitive_instanced
+/EXPORT:wined3d_device_update_sub_resource
 </AdditionalOptions>
     </Link>
     <Midl>
@@ -412,7 +415,6 @@
 /EXPORT:wined3d_swapchain_present
 /EXPORT:wined3d_vertex_declaration_incref
 /EXPORT:wined3d_volume_map
-/EXPORT:wined3d_volume_get_resource
 /EXPORT:wined3d_volume_unmap
 /EXPORT:wined3d_buffer_create_vb
 /EXPORT:wined3d_buffer_create_ib
@@ -585,7 +587,6 @@
 /EXPORT:wined3d_shader_create_gs
 /EXPORT:wined3d_sampler_decref
 /EXPORT:wined3d_sampler_create
-/EXPORT:wined3d_volume_from_resource
 /EXPORT:wined3d_rendertarget_view_decref
 /EXPORT:wined3d_rendertarget_view_create
 /EXPORT:wined3d_resource_get_priority
@@ -617,6 +618,11 @@
 /EXPORT:wined3d_device_set_vs_resource_view
 /EXPORT:wined3d_device_get_vs_resource_view
 /EXPORT:wined3d_swapchain_resize_buffers
+/EXPORT:wined3d_texture_map
+/EXPORT:wined3d_texture_unmap
+/EXPORT:wined3d_device_copy_sub_resource_region
+/EXPORT:wined3d_device_draw_primitive_instanced
+/EXPORT:wined3d_device_update_sub_resource
 </AdditionalOptions>
     </Link>
     <Midl>
