@@ -105,6 +105,12 @@
     <Midl Include="..\..\wine\include\mediaobj.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
+    <Midl Include="..\..\wine\include\d3d11_1.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
+    <Midl Include="..\..\wine\include\dxgi1_2.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\wine\include\rmxftmpl.x">
