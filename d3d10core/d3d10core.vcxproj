@@ -86,25 +86,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\wine\dlls\d3d10core\d3d10core_private.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="..\..\wine\dlls\d3d10core\version.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\wine\dlls\d3d10core\async.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d10core\buffer.c" />
     <ClCompile Include="..\..\wine\dlls\d3d10core\d3d10core_main.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d10core\device.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d10core\inputlayout.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d10core\shader.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d10core\state.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d10core\texture.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d10core\utils.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d10core\view.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d11\async.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d11\buffer.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d11\d3d11_main.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d11\device.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d11\inputlayout.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d11\shader.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d11\state.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d11\texture.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d11\utils.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d11\view.c" />
     <ClCompile Include="..\idls\d3d10_1_i.c" />
     <ClCompile Include="..\idls\d3d10_i.c" />
+    <ClCompile Include="..\idls\d3d11_1_i.c" />
+    <ClCompile Include="..\idls\d3d11_i.c" />
+    <ClCompile Include="..\idls\dxgi_i.c" />
     <ClCompile Include="..\idls\wine\winedxgi_i.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\wine\dlls\d3d11\d3d11_private.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
