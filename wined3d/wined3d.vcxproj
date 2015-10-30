@@ -165,7 +165,6 @@
 /EXPORT:wined3d_device_set_vs_consts_i
 /EXPORT:wined3d_device_set_npatch_mode
 /EXPORT:wined3d_device_get_texture_stage_state
-/EXPORT:wined3d_device_present
 /EXPORT:wined3d_device_set_vertex_declaration
 /EXPORT:wined3d_device_set_transform
 /EXPORT:wined3d_device_decref
@@ -206,7 +205,6 @@
 /EXPORT:wined3d_device_get_material
 /EXPORT:wined3d_device_end_stateblock
 /EXPORT:wined3d_device_begin_stateblock
-/EXPORT:wined3d_device_get_front_buffer_data
 /EXPORT:wined3d_device_set_vs_consts_f
 /EXPORT:wined3d_device_end_scene
 /EXPORT:wined3d_device_set_stream_source
@@ -258,7 +256,6 @@
 /EXPORT:wined3d_surface_is_lost
 /EXPORT:wined3d_surface_update_overlay_z_order
 /EXPORT:wined3d_texture_get_resource
-/EXPORT:wined3d_surface_get_render_target_data
 /EXPORT:wined3d_swapchain_get_desc
 /EXPORT:wined3d_surface_update_desc
 /EXPORT:wined3d_get_adapter_raster_status
@@ -331,7 +328,10 @@
 /EXPORT:wined3d_device_copy_sub_resource_region
 /EXPORT:wined3d_device_draw_primitive_instanced
 /EXPORT:wined3d_device_update_sub_resource
-</AdditionalOptions>
+/EXPORT:wined3d_texture_blt
+/EXPORT:wined3d_texture_get_dc
+/EXPORT:wined3d_texture_release_dc
+/EXPORT:wined3d_rendertarget_view_create_from_sub_resource</AdditionalOptions>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
@@ -457,7 +457,6 @@
 /EXPORT:wined3d_device_set_vs_consts_i
 /EXPORT:wined3d_device_set_npatch_mode
 /EXPORT:wined3d_device_get_texture_stage_state
-/EXPORT:wined3d_device_present
 /EXPORT:wined3d_device_set_vertex_declaration
 /EXPORT:wined3d_device_set_transform
 /EXPORT:wined3d_device_decref
@@ -498,7 +497,6 @@
 /EXPORT:wined3d_device_get_material
 /EXPORT:wined3d_device_end_stateblock
 /EXPORT:wined3d_device_begin_stateblock
-/EXPORT:wined3d_device_get_front_buffer_data
 /EXPORT:wined3d_device_set_vs_consts_f
 /EXPORT:wined3d_device_end_scene
 /EXPORT:wined3d_device_set_stream_source
@@ -550,7 +548,6 @@
 /EXPORT:wined3d_surface_is_lost
 /EXPORT:wined3d_surface_update_overlay_z_order
 /EXPORT:wined3d_texture_get_resource
-/EXPORT:wined3d_surface_get_render_target_data
 /EXPORT:wined3d_swapchain_get_desc
 /EXPORT:wined3d_surface_update_desc
 /EXPORT:wined3d_get_adapter_raster_status
@@ -623,7 +620,10 @@
 /EXPORT:wined3d_device_copy_sub_resource_region
 /EXPORT:wined3d_device_draw_primitive_instanced
 /EXPORT:wined3d_device_update_sub_resource
-</AdditionalOptions>
+/EXPORT:wined3d_texture_blt
+/EXPORT:wined3d_texture_get_dc
+/EXPORT:wined3d_texture_release_dc
+/EXPORT:wined3d_rendertarget_view_create_from_sub_resource</AdditionalOptions>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
