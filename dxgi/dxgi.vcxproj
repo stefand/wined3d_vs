@@ -97,6 +97,8 @@
     <ClCompile Include="..\..\wine\dlls\dxgi\surface.c" />
     <ClCompile Include="..\..\wine\dlls\dxgi\swapchain.c" />
     <ClCompile Include="..\..\wine\dlls\dxgi\utils.c" />
+    <ClCompile Include="..\idls\d3d10_1_i.c" />
+    <ClCompile Include="..\idls\d3d10_i.c" />
     <ClCompile Include="..\idls\dxgi_i.c" />
     <ClCompile Include="..\idls\wine\winedxgi_i.c" />
   </ItemGroup>
