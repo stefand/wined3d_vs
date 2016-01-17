@@ -108,7 +108,6 @@
 /EXPORT:wined3d_check_device_multisample_type
 /EXPORT:wined3d_register_software_device
 /EXPORT:wined3d_get_adapter_count
-/EXPORT:wined3d_get_adapter_monitor
 /EXPORT:wined3d_get_adapter_mode_count
 /EXPORT:wined3d_query_get_data_size
 /EXPORT:wined3d_query_get_type
@@ -246,14 +245,12 @@
 /EXPORT:wined3d_palette_set_entries
 /EXPORT:wined3d_palette_create
 /EXPORT:wined3d_palette_decref
-/EXPORT:wined3d_surface_restore
 /EXPORT:wined3d_swapchain_set_window
 /EXPORT:wined3d_surface_set_overlay_position
 /EXPORT:wined3d_surface_update_overlay
 /EXPORT:wined3d_surface_get_pitch
 /EXPORT:wined3d_surface_get_overlay_position
 /EXPORT:wined3d_swapchain_set_palette
-/EXPORT:wined3d_surface_is_lost
 /EXPORT:wined3d_surface_update_overlay_z_order
 /EXPORT:wined3d_texture_get_resource
 /EXPORT:wined3d_swapchain_get_desc
@@ -331,7 +328,8 @@
 /EXPORT:wined3d_texture_blt
 /EXPORT:wined3d_texture_get_dc
 /EXPORT:wined3d_texture_release_dc
-/EXPORT:wined3d_rendertarget_view_create_from_sub_resource</AdditionalOptions>
+/EXPORT:wined3d_rendertarget_view_create_from_sub_resource
+/EXPORT:wined3d_get_output_desc</AdditionalOptions>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
@@ -400,7 +398,6 @@
 /EXPORT:wined3d_check_device_multisample_type
 /EXPORT:wined3d_register_software_device
 /EXPORT:wined3d_get_adapter_count
-/EXPORT:wined3d_get_adapter_monitor
 /EXPORT:wined3d_get_adapter_mode_count
 /EXPORT:wined3d_query_get_data_size
 /EXPORT:wined3d_query_get_type
@@ -538,14 +535,12 @@
 /EXPORT:wined3d_palette_set_entries
 /EXPORT:wined3d_palette_create
 /EXPORT:wined3d_palette_decref
-/EXPORT:wined3d_surface_restore
 /EXPORT:wined3d_swapchain_set_window
 /EXPORT:wined3d_surface_set_overlay_position
 /EXPORT:wined3d_surface_update_overlay
 /EXPORT:wined3d_surface_get_pitch
 /EXPORT:wined3d_surface_get_overlay_position
 /EXPORT:wined3d_swapchain_set_palette
-/EXPORT:wined3d_surface_is_lost
 /EXPORT:wined3d_surface_update_overlay_z_order
 /EXPORT:wined3d_texture_get_resource
 /EXPORT:wined3d_swapchain_get_desc
@@ -623,7 +618,8 @@
 /EXPORT:wined3d_texture_blt
 /EXPORT:wined3d_texture_get_dc
 /EXPORT:wined3d_texture_release_dc
-/EXPORT:wined3d_rendertarget_view_create_from_sub_resource</AdditionalOptions>
+/EXPORT:wined3d_rendertarget_view_create_from_sub_resource
+/EXPORT:wined3d_get_output_desc</AdditionalOptions>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
