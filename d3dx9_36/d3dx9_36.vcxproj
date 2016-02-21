@@ -308,6 +308,7 @@
 /EXPORT:D3DXWeldVertices
 /EXPORT:D3DXComputeTangentFrameEx
 /EXPORT:D3DXComputeNormals
+/EXPORT:D3DXCreateAnimationController
  %(AdditionalOptions)</AdditionalOptions>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
@@ -573,11 +574,13 @@
 /EXPORT:D3DXWeldVertices
 /EXPORT:D3DXComputeTangentFrameEx
 /EXPORT:D3DXComputeNormals
+/EXPORT:D3DXCreateAnimationController
  %(AdditionalOptions)</AdditionalOptions>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\wine\dlls\d3dx9_36\animation.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\core.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\d3dx9_36_main.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\effect.c" />
