@@ -18,7 +18,6 @@
     <ClCompile Include="..\..\wine\dlls\ddraw\tests\ddraw7.c" />
     <ClCompile Include="..\..\wine\dlls\ddraw\tests\ddrawmodes.c" />
     <ClCompile Include="..\..\wine\dlls\ddraw\tests\dsurface.c" />
-    <ClCompile Include="..\..\wine\dlls\ddraw\tests\overlay.c" />
     <ClCompile Include="..\..\wine\dlls\ddraw\tests\refcount.c" />
     <ClCompile Include="..\..\wine\dlls\ddraw\tests\visual.c" />
     <ClCompile Include="testlist.c" />

@@ -13,7 +13,6 @@ extern void func_ddraw4(void);
 extern void func_ddraw7(void);
 extern void func_ddrawmodes(void);
 extern void func_dsurface(void);
-extern void func_overlay(void);
 extern void func_refcount(void);
 extern void func_visual(void);
 
@@ -26,7 +25,6 @@ const struct test winetest_testlist[] =
     { "ddraw7", func_ddraw7 },
     { "ddrawmodes", func_ddrawmodes },
     { "dsurface", func_dsurface },
-    { "overlay", func_overlay },
     { "refcount", func_refcount },
     { "visual", func_visual },
     { 0, 0 }

@@ -36,9 +36,6 @@
     <ClCompile Include="..\..\wine\dlls\ddraw\tests\dsurface.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\ddraw\tests\overlay.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\ddraw\tests\refcount.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>

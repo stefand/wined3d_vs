@@ -130,11 +130,9 @@
 /EXPORT:wined3d_shader_create_vs
 /EXPORT:wined3d_surface_unmap
 /EXPORT:wined3d_surface_map
-/EXPORT:wined3d_surface_create
 /EXPORT:wined3d_swapchain_create
 /EXPORT:wined3d_vertex_declaration_create
 /EXPORT:wined3d_vertex_declaration_create_from_fvf
-/EXPORT:wined3d_volume_create
 /EXPORT:wined3d_surface_blt
 /EXPORT:wined3d_query_create
 /EXPORT:wined3d_swapchain_get_raster_status
@@ -321,7 +319,8 @@
 /EXPORT:wined3d_texture_set_overlay_position
 /EXPORT:wined3d_texture_update_overlay
 /EXPORT:wined3d_device_get_wined3d
-</AdditionalOptions>
+/EXPORT:wined3d_texture_get_sub_resource_desc
+/EXPORT:wined3d_texture_set_sub_resource_parent</AdditionalOptions>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
@@ -412,11 +411,9 @@
 /EXPORT:wined3d_shader_create_vs
 /EXPORT:wined3d_surface_unmap
 /EXPORT:wined3d_surface_map
-/EXPORT:wined3d_surface_create
 /EXPORT:wined3d_swapchain_create
 /EXPORT:wined3d_vertex_declaration_create
 /EXPORT:wined3d_vertex_declaration_create_from_fvf
-/EXPORT:wined3d_volume_create
 /EXPORT:wined3d_surface_blt
 /EXPORT:wined3d_query_create
 /EXPORT:wined3d_swapchain_get_raster_status
@@ -603,7 +600,8 @@
 /EXPORT:wined3d_texture_set_overlay_position
 /EXPORT:wined3d_texture_update_overlay
 /EXPORT:wined3d_device_get_wined3d
-</AdditionalOptions>
+/EXPORT:wined3d_texture_get_sub_resource_desc
+/EXPORT:wined3d_texture_set_sub_resource_parent</AdditionalOptions>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
