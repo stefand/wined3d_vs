@@ -594,6 +594,7 @@
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\d3dx9_36\preshader.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\render.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\shader.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\skin.c" />
