@@ -33,5 +33,8 @@
     <ClCompile Include="..\idls\d3d11_i.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\idls\d3d11sdklayers_i.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
