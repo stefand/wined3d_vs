@@ -65,21 +65,16 @@
       <AdditionalOptions>/EXPORT:wined3d_mutex_lock
 /EXPORT:wined3d_mutex_unlock
 /EXPORT:wined3d_buffer_incref
-/EXPORT:wined3d_buffer_unmap
-/EXPORT:wined3d_buffer_map
 /EXPORT:wined3d_shader_set_local_constants_float
 /EXPORT:wined3d_resource_get_desc
 /EXPORT:wined3d_buffer_get_resource
-/EXPORT:wined3d_buffer_preload
 /EXPORT:wined3d_buffer_decref
 /EXPORT:wined3d_texture_get_autogen_filter_type
 /EXPORT:wined3d_texture_get_level_count
 /EXPORT:wined3d_texture_set_lod
-/EXPORT:wined3d_texture_preload
 /EXPORT:wined3d_texture_get_lod
 /EXPORT:wined3d_texture_generate_mipmaps
 /EXPORT:wined3d_texture_set_autogen_filter_type
-/EXPORT:wined3d_texture_get_sub_resource
 /EXPORT:wined3d_resource_get_parent
 /EXPORT:wined3d_texture_decref
 /EXPORT:wined3d_texture_add_dirty_region
@@ -317,7 +312,21 @@
 /EXPORT:wined3d_texture_set_sub_resource_parent
 /EXPORT:wined3d_texture_from_resource
 /EXPORT:wined3d_shader_create_ds
-/EXPORT:wined3d_shader_create_hs</AdditionalOptions>
+/EXPORT:wined3d_resource_preload
+/EXPORT:wined3d_shader_create_hs
+/EXPORT:wined3d_find_closest_matching_adapter_mode
+/EXPORT:wined3d_swapchain_resize_target
+/EXPORT:wined3d_swapchain_set_fullscreen
+/EXPORT:wined3d_device_set_compute_shader
+/EXPORT:wined3d_device_set_cs_cb
+/EXPORT:wined3d_device_set_rasterizer_state
+/EXPORT:wined3d_device_set_unordered_access_view
+/EXPORT:wined3d_shader_create_cs
+/EXPORT:wined3d_rasterizer_state_create
+/EXPORT:wined3d_rasterizer_state_decref
+/EXPORT:wined3d_unordered_access_view_create
+/EXPORT:wined3d_unordered_access_view_decref
+</AdditionalOptions>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
@@ -343,21 +352,16 @@
       <AdditionalOptions>/EXPORT:wined3d_mutex_lock
 /EXPORT:wined3d_mutex_unlock
 /EXPORT:wined3d_buffer_incref
-/EXPORT:wined3d_buffer_unmap
-/EXPORT:wined3d_buffer_map
 /EXPORT:wined3d_shader_set_local_constants_float
 /EXPORT:wined3d_resource_get_desc
 /EXPORT:wined3d_buffer_get_resource
-/EXPORT:wined3d_buffer_preload
 /EXPORT:wined3d_buffer_decref
 /EXPORT:wined3d_texture_get_autogen_filter_type
 /EXPORT:wined3d_texture_get_level_count
 /EXPORT:wined3d_texture_set_lod
-/EXPORT:wined3d_texture_preload
 /EXPORT:wined3d_texture_get_lod
 /EXPORT:wined3d_texture_generate_mipmaps
 /EXPORT:wined3d_texture_set_autogen_filter_type
-/EXPORT:wined3d_texture_get_sub_resource
 /EXPORT:wined3d_resource_get_parent
 /EXPORT:wined3d_texture_decref
 /EXPORT:wined3d_texture_add_dirty_region
@@ -595,7 +599,21 @@
 /EXPORT:wined3d_texture_set_sub_resource_parent
 /EXPORT:wined3d_texture_from_resource
 /EXPORT:wined3d_shader_create_ds
-/EXPORT:wined3d_shader_create_hs</AdditionalOptions>
+/EXPORT:wined3d_resource_preload
+/EXPORT:wined3d_shader_create_hs
+/EXPORT:wined3d_find_closest_matching_adapter_mode
+/EXPORT:wined3d_swapchain_resize_target
+/EXPORT:wined3d_swapchain_set_fullscreen
+/EXPORT:wined3d_device_set_compute_shader
+/EXPORT:wined3d_device_set_cs_cb
+/EXPORT:wined3d_device_set_rasterizer_state
+/EXPORT:wined3d_device_set_unordered_access_view
+/EXPORT:wined3d_shader_create_cs
+/EXPORT:wined3d_rasterizer_state_create
+/EXPORT:wined3d_rasterizer_state_decref
+/EXPORT:wined3d_unordered_access_view_create
+/EXPORT:wined3d_unordered_access_view_decref
+</AdditionalOptions>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
@@ -634,7 +652,6 @@
     <ClCompile Include="..\..\wine\dlls\wined3d\utils.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\vertexdeclaration.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\view.c" />
-    <ClCompile Include="..\..\wine\dlls\wined3d\volume.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\wined3d_main.c" />
     <ClCompile Include="perfkit.cpp" />
   </ItemGroup>

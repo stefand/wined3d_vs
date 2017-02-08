@@ -101,9 +101,6 @@
     <ClCompile Include="..\..\wine\dlls\wined3d\view.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\wined3d\volume.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\wined3d\wined3d_main.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
