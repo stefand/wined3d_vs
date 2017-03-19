@@ -72,6 +72,7 @@
 /EXPORT:DirectDrawEnumerateExA
 /EXPORT:DirectDrawEnumerateExW
 /EXPORT:DirectDrawEnumerateW
+/EXPORT:GetSurfaceFromDC
 /EXPORT:DllCanUnloadNow,PRIVATE
 /EXPORT:DllGetClassObject,PRIVATE
 /EXPORT:DllRegisterServer,PRIVATE
@@ -105,6 +106,7 @@
 /EXPORT:DirectDrawEnumerateExA
 /EXPORT:DirectDrawEnumerateExW
 /EXPORT:DirectDrawEnumerateW
+/EXPORT:GetSurfaceFromDC
 /EXPORT:DllCanUnloadNow,PRIVATE
 /EXPORT:DllGetClassObject,PRIVATE
 /EXPORT:DllRegisterServer,PRIVATE
