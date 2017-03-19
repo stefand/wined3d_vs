@@ -309,7 +309,12 @@
 /EXPORT:D3DXComputeTangentFrameEx
 /EXPORT:D3DXComputeNormals
 /EXPORT:D3DXCreateAnimationController
- %(AdditionalOptions)</AdditionalOptions>
+/EXPORT:D3DXCreateTextureShader
+/EXPORT:D3DXFillVolumeTexture
+/EXPORT:D3DXFillVolumeTextureTX
+/EXPORT:D3DXFillTexture
+/EXPORT:D3DXFillTextureTX
+/EXPORT:D3DXFillCubeTextureTX %(AdditionalOptions)</AdditionalOptions>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
@@ -575,7 +580,12 @@
 /EXPORT:D3DXComputeTangentFrameEx
 /EXPORT:D3DXComputeNormals
 /EXPORT:D3DXCreateAnimationController
- %(AdditionalOptions)</AdditionalOptions>
+/EXPORT:D3DXCreateTextureShader
+/EXPORT:D3DXFillVolumeTexture
+/EXPORT:D3DXFillVolumeTextureTX
+/EXPORT:D3DXFillTexture
+/EXPORT:D3DXFillTextureTX
+/EXPORT:D3DXFillCubeTextureTX %(AdditionalOptions)</AdditionalOptions>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
