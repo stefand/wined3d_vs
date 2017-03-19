@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\wine\dlls\comctl32\comctl32.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\wine\dlls\comctl32\animate.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\comboex.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\comctl32undoc.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\commctrl.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\datetime.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\dpa.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\draglist.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\dsa.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\flatsb.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\header.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\hotkey.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\imagelist.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\ipaddress.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\listview.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\monthcal.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\nativefont.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\pager.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\progress.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\propsheet.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\rebar.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\smoothscroll.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\status.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\string.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\syslink.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\tab.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\taskdialog.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\theme_button.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\theme_combo.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\theme_dialog.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\theme_edit.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\theme_listbox.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\theme_scrollbar.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\theming.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\toolbar.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\tooltips.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\trackbar.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\treeview.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\updown.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\wine\dlls\comctl32\comctl32.rc">
+      <Filter>Ressourcendateien</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\wine\dlls\comctl32\idc_copy.cur">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="..\..\wine\dlls\comctl32\idc_divider.cur">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="..\..\wine\dlls\comctl32\idc_divideropen.cur">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="..\..\wine\dlls\comctl32\idc_movebutton.cur">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="..\..\wine\dlls\comctl32\idb_hist_large.svg">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="..\..\wine\dlls\comctl32\idb_hist_small.svg">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="..\..\wine\dlls\comctl32\idb_std_large.svg">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="..\..\wine\dlls\comctl32\idb_std_small.svg">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="..\..\wine\dlls\comctl32\idb_view_large.svg">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="..\..\wine\dlls\comctl32\idb_view_small.svg">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\wine\dlls\comctl32\idb_hist_large.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\..\wine\dlls\comctl32\idb_hist_small.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\..\wine\dlls\comctl32\idb_std_large.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\..\wine\dlls\comctl32\idb_std_small.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\..\wine\dlls\comctl32\idb_view_large.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\..\wine\dlls\comctl32\idb_view_small.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="..\..\wine\dlls\comctl32\idt_check.bmp">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\..\wine\dlls\comctl32\comctl32.manifest" />
+  </ItemGroup>
+</Project>

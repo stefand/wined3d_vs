@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8D637744-05F2-425C-B569-9ABEDF91527D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>comctl32</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)_dll\</OutDir>
+    <IncludePath>..\..\wine\include;..\wined3d;..\idls;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)_dll\</OutDir>
+    <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\wine\include;..\wined3d;..\idls;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_COMPILER_EXCEPTIONS;_COMCTL32_;_DEBUG;_WINDOWS;_USRDLL;COMCTL32_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4018;4146</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>uuid.lib;user32.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libwine.lib;libport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;COMCTL32_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_COMPILER_EXCEPTIONS;_COMCTL32_;NDEBUG;_WINDOWS;_USRDLL;COMCTL32_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4018;4146</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>uuid.lib;user32.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libwine.lib;libport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;COMCTL32_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\wine\dlls\comctl32\comctl32.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\wine\dlls\comctl32\animate.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\comboex.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\comctl32undoc.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\commctrl.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\datetime.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\dpa.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\draglist.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\dsa.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\flatsb.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\header.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\hotkey.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\imagelist.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\ipaddress.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\listview.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\monthcal.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\nativefont.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\pager.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\progress.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\propsheet.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\rebar.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\smoothscroll.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\status.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\string.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\syslink.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\tab.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\taskdialog.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\theme_button.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\theme_combo.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\theme_dialog.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\theme_edit.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\theme_listbox.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\theme_scrollbar.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\theming.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\toolbar.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\tooltips.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\trackbar.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\treeview.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\updown.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\wine\dlls\comctl32\comctl32.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\wine\dlls\comctl32\idb_hist_large.svg" />
+    <None Include="..\..\wine\dlls\comctl32\idb_hist_small.svg" />
+    <None Include="..\..\wine\dlls\comctl32\idb_std_large.svg" />
+    <None Include="..\..\wine\dlls\comctl32\idb_std_small.svg" />
+    <None Include="..\..\wine\dlls\comctl32\idb_view_large.svg" />
+    <None Include="..\..\wine\dlls\comctl32\idb_view_small.svg" />
+    <None Include="..\..\wine\dlls\comctl32\idc_copy.cur" />
+    <None Include="..\..\wine\dlls\comctl32\idc_divider.cur" />
+    <None Include="..\..\wine\dlls\comctl32\idc_divideropen.cur" />
+    <None Include="..\..\wine\dlls\comctl32\idc_movebutton.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\wine\dlls\comctl32\idb_hist_large.bmp" />
+    <Image Include="..\..\wine\dlls\comctl32\idb_hist_small.bmp" />
+    <Image Include="..\..\wine\dlls\comctl32\idb_std_large.bmp" />
+    <Image Include="..\..\wine\dlls\comctl32\idb_std_small.bmp" />
+    <Image Include="..\..\wine\dlls\comctl32\idb_view_large.bmp" />
+    <Image Include="..\..\wine\dlls\comctl32\idb_view_small.bmp" />
+    <Image Include="..\..\wine\dlls\comctl32\idt_check.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\..\wine\dlls\comctl32\comctl32.manifest" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

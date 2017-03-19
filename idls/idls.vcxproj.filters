@@ -123,6 +123,9 @@
     <Midl Include="..\..\wine\include\d2d1.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
+    <Midl Include="..\..\wine\include\commoncontrols.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\wine\include\rmxftmpl.x">
