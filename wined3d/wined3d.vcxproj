@@ -60,7 +60,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libwine.lib;libport.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libwine.lib;libport.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/EXPORT:wined3d_mutex_lock
 /EXPORT:wined3d_mutex_unlock
@@ -347,7 +347,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libwine.lib;libport.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib</AdditionalDependencies>
+      <AdditionalDependencies>libwine.lib;libport.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/EXPORT:wined3d_mutex_lock
 /EXPORT:wined3d_mutex_unlock
