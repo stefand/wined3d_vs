@@ -135,26 +135,26 @@
     <Midl Include="..\..\wine\include\dxgi1_6.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
-    <Midl Include="..\..\wine\include\d3d11_2.idl">
-      <Filter>Quelldateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\d3d11_3.idl">
-      <Filter>Quelldateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\d3d11_4.idl">
-      <Filter>Quelldateien</Filter>
-    </Midl>
     <Midl Include="..\..\wine\include\d3d12.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
     <Midl Include="..\..\wine\include\dxgitype.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
+    <Midl Include="..\..\wine\include\d3d11_2.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
+    <Midl Include="..\..\wine\include\d3d11_3.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
+    <Midl Include="..\..\wine\include\d3d11_4.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
     <Midl Include="..\..\wine\include\dxgicommon.idl">
-      <Filter>Quelldateien</Filter>
+      <Filter>Headerdateien</Filter>
     </Midl>
     <Midl Include="..\..\wine\include\dxgiformat.idl">
-      <Filter>Quelldateien</Filter>
+      <Filter>Headerdateien</Filter>
     </Midl>
   </ItemGroup>
   <ItemGroup>
