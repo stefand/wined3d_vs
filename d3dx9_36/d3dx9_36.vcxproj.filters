@@ -18,9 +18,6 @@
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\core.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3dx9_36\d3dx9_36_main.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\effect.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -70,6 +67,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\preshader.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\d3dx9_36\main.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
