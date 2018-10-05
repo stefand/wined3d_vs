@@ -56,6 +56,24 @@
     <ClCompile Include="..\idls\d3d10_i.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\idls\dxgi1_2_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\dxgi1_3_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\dxgi1_4_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\dxgi1_5_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\dxgi1_6_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\d3d12_i.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\wine\dlls\dxgi\version.rc">

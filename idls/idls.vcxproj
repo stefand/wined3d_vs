@@ -89,12 +89,15 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </Midl>
     <Midl Include="..\..\wine\include\d3d10.idl" />
-    <Midl Include="..\..\wine\include\d3d10misc.idl" />
     <Midl Include="..\..\wine\include\d3d10sdklayers.idl" />
     <Midl Include="..\..\wine\include\d3d10_1.idl" />
     <Midl Include="..\..\wine\include\d3d11.idl" />
     <Midl Include="..\..\wine\include\d3d11sdklayers.idl" />
     <Midl Include="..\..\wine\include\d3d11_1.idl" />
+    <Midl Include="..\..\wine\include\d3d11_2.idl" />
+    <Midl Include="..\..\wine\include\d3d11_3.idl" />
+    <Midl Include="..\..\wine\include\d3d11_4.idl" />
+    <Midl Include="..\..\wine\include\d3d12.idl" />
     <Midl Include="..\..\wine\include\d3dcommon.idl" />
     <Midl Include="..\..\wine\include\d3dx10core.idl">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -103,6 +106,13 @@
     <Midl Include="..\..\wine\include\docobj.idl" />
     <Midl Include="..\..\wine\include\dxgi.idl" />
     <Midl Include="..\..\wine\include\dxgi1_2.idl" />
+    <Midl Include="..\..\wine\include\dxgi1_3.idl" />
+    <Midl Include="..\..\wine\include\dxgi1_4.idl" />
+    <Midl Include="..\..\wine\include\dxgi1_5.idl" />
+    <Midl Include="..\..\wine\include\dxgi1_6.idl" />
+    <Midl Include="..\..\wine\include\dxgicommon.idl" />
+    <Midl Include="..\..\wine\include\dxgiformat.idl" />
+    <Midl Include="..\..\wine\include\dxgitype.idl" />
     <Midl Include="..\..\wine\include\mediaobj.idl" />
     <Midl Include="..\..\wine\include\mmdeviceapi.idl" />
     <Midl Include="..\..\wine\include\msxml.idl" />
