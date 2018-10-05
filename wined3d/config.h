@@ -20,6 +20,14 @@
 #define HAVE_ISFINITE 1
 #define HAVE_ISINF 1
 #define HAVE_ISNAN 1
+#define HAVE_LRINT 1
+#define HAVE_LLRINT 1
+#define HAVE_LRINTF 1
+#define HAVE_LLRINTF 1
+#define HAVE_RINT 1
+#define HAVE_RINTF 1
+#define HAVE_INTF 1
+#define HAVE_STRNLEN 1
 
 #include <direct.h>
 
