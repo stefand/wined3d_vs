@@ -21,9 +21,6 @@
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\button.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\comctl32\tests\comboex.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\datetime.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -94,6 +91,18 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="testlist.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\tests\combo.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\tests\edit.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\tests\listbox.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\comctl32\tests\static.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

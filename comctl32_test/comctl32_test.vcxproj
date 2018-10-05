@@ -150,15 +150,17 @@
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\animate.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\button.c" />
-    <ClCompile Include="..\..\wine\dlls\comctl32\tests\comboex.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\tests\combo.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\datetime.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\dpa.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\tests\edit.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\header.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\imagelist.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\ipaddress.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\tests\listbox.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\listview.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\misc.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\monthcal.c" />
@@ -167,6 +169,7 @@
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\progress.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\propsheet.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\rebar.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\tests\static.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\status.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\subclass.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tests\syslink.c" />

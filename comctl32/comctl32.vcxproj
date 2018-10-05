@@ -100,7 +100,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
-      <AdditionalDependencies>uuid.lib;user32.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libwine.lib;libport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>imm32.lib;uuid.lib;user32.lib;usp10.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libwine.lib;libport.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:MenuHelp
 /EXPORT:ShowHideMenuCtl
 /EXPORT:GetEffectiveClientRect
@@ -306,7 +306,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
-      <AdditionalDependencies>uuid.lib;user32.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libwine.lib;libport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>imm32.lib;uuid.lib;user32.lib;usp10.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libwine.lib;libport.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:MenuHelp
 /EXPORT:ShowHideMenuCtl
 /EXPORT:GetEffectiveClientRect
@@ -505,6 +505,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\comctl32\animate.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\button.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\combo.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\comboex.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\comctl32undoc.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\commctrl.c" />
@@ -512,11 +514,13 @@
     <ClCompile Include="..\..\wine\dlls\comctl32\dpa.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\draglist.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\dsa.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\edit.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\flatsb.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\header.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\hotkey.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\imagelist.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\ipaddress.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\listbox.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\listview.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\monthcal.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\nativefont.c" />
@@ -525,16 +529,13 @@
     <ClCompile Include="..\..\wine\dlls\comctl32\propsheet.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\rebar.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\smoothscroll.c" />
+    <ClCompile Include="..\..\wine\dlls\comctl32\static.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\status.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\string.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\syslink.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tab.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\taskdialog.c" />
-    <ClCompile Include="..\..\wine\dlls\comctl32\theme_button.c" />
-    <ClCompile Include="..\..\wine\dlls\comctl32\theme_combo.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\theme_dialog.c" />
-    <ClCompile Include="..\..\wine\dlls\comctl32\theme_edit.c" />
-    <ClCompile Include="..\..\wine\dlls\comctl32\theme_listbox.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\theme_scrollbar.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\theming.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\toolbar.c" />
