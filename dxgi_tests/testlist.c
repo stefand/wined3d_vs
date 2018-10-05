@@ -6,10 +6,10 @@
 #define STANDALONE
 #include "wine/test.h"
 
-extern void func_device(void);
+extern void func_dxgi(void);
 
 const struct test winetest_testlist[] =
 {
-    { "device", func_device },
+    { "dxgi", func_dxgi },
     { 0, 0 }
 };
