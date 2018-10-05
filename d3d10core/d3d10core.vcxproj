@@ -104,6 +104,7 @@
     <ClCompile Include="..\idls\d3d10_1_i.c" />
     <ClCompile Include="..\idls\d3d10_i.c" />
     <ClCompile Include="..\idls\d3d11_1_i.c" />
+    <ClCompile Include="..\idls\d3d11_2_i.c" />
     <ClCompile Include="..\idls\d3d11_i.c" />
     <ClCompile Include="..\idls\dxgi_i.c" />
     <ClCompile Include="..\idls\wine\winedxgi_i.c" />

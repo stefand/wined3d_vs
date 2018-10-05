@@ -96,7 +96,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>gdi32.lib;user32.lib;uuid.lib;d3d11.lib</AdditionalDependencies>
+      <AdditionalDependencies>gdi32.lib;user32.lib;uuid.lib;d3d11.lib;dxgi.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -127,7 +127,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>gdi32.lib;user32.lib;uuid.lib;d3d11.lib</AdditionalDependencies>
+      <AdditionalDependencies>gdi32.lib;user32.lib;uuid.lib;d3d11.lib;dxgi.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -152,7 +152,16 @@
     <ClCompile Include="..\idls\d3d10_1_i.c" />
     <ClCompile Include="..\idls\d3d10_i.c" />
     <ClCompile Include="..\idls\d3d11sdklayers_i.c" />
+    <ClCompile Include="..\idls\d3d11_1_i.c" />
+    <ClCompile Include="..\idls\d3d11_2_i.c" />
+    <ClCompile Include="..\idls\d3d11_3_i.c" />
+    <ClCompile Include="..\idls\d3d11_4_i.c" />
     <ClCompile Include="..\idls\d3d11_i.c" />
+    <ClCompile Include="..\idls\dxgi1_2_i.c" />
+    <ClCompile Include="..\idls\dxgi1_3_i.c" />
+    <ClCompile Include="..\idls\dxgi1_4_i.c" />
+    <ClCompile Include="..\idls\dxgi1_5_i.c" />
+    <ClCompile Include="..\idls\dxgi1_6_i.c" />
     <ClCompile Include="..\idls\dxgi_i.c" />
     <ClCompile Include="testlist.c" />
   </ItemGroup>

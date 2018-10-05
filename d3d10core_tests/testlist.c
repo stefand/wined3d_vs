@@ -6,10 +6,10 @@
 #define STANDALONE
 #include "wine/test.h"
 
-extern void func_device(void);
+extern void func_d3d10core(void);
 
 const struct test winetest_testlist[] =
 {
-    { "device", func_device },
+    { "d3d10core", func_d3d10core },
     { 0, 0 }
 };

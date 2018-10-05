@@ -36,5 +36,32 @@
     <ClCompile Include="..\idls\d3d11sdklayers_i.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\idls\d3d11_1_i.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\d3d11_2_i.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\d3d11_3_i.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\d3d11_4_i.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\dxgi1_2_i.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\dxgi1_3_i.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\dxgi1_4_i.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\dxgi1_5_i.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\idls\dxgi1_6_i.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

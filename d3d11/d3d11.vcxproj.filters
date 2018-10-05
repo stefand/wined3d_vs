@@ -63,6 +63,9 @@
     <ClCompile Include="..\idls\wine\winedxgi_i.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\idls\d3d11_2_i.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\wine\dlls\d3d11\d3d11_private.h">
