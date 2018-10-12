@@ -73,6 +73,9 @@
     </CustomBuildStep>
     <CustomBuildStep />
     <PreBuildEvent />
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -100,6 +103,9 @@
       </Command>
     </CustomBuildStep>
     <CustomBuildStep />
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\d3d9\tests\d3d9ex.c" />
