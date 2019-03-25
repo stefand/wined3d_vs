@@ -33,4 +33,18 @@
 
 static const char wine_build[] = "msvc_hack";
 
+struct timeval
+{
+	long tv_sec;
+	long tv_usec;
+};
+
+/* Called by mkstemps.c to get semi-random data. Ignore security for this hacky build. */
+static inline int gettimeofday(struct timeval *tv, struct timezone *tz)
+{
+	tv->tv_sec = 0;
+	tv->tv_usec = 0;
+	return 0;
+}
+
 #pragma warning(disable:4756)

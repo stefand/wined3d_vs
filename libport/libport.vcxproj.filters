@@ -263,9 +263,6 @@
     <ClCompile Include="..\..\wine\libs\port\getopt.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\getopt1.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\libs\port\interlocked.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -282,12 +279,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\libs\port\mbtowc.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\memcpy_unaligned.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\memmove.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\libs\port\mkstemps.c">
@@ -311,15 +302,6 @@
     <ClCompile Include="..\..\wine\libs\port\statvfs.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\strcasecmp.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\strerror.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\strncasecmp.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\libs\port\symlink.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -330,6 +312,18 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\libs\port\wctomb.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\libs\port\combclass.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\libs\port\normalize.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\libs\port\rint.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\libs\port\strnlen.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
