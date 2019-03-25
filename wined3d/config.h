@@ -47,4 +47,12 @@ static inline int gettimeofday(struct timeval *tv, struct timezone *tz)
 	return 0;
 }
 
+#define HAVE_FFS
+static __inline int ffs(int x) {
+	int i = 0;
+	if (_BitScanForward(&i, x) == 0)
+		return 0;
+	return i + 1;
+}
+
 #pragma warning(disable:4756)
