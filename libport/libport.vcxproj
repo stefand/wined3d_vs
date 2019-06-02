@@ -54,7 +54,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;__i386__;__WINESRC__;_DEBUG;_WINDOWS;_USRDLL;LIBPORT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;__i386__;__fastcall=__stdcall;__WINESRC__;_DEBUG;_WINDOWS;_USRDLL;LIBPORT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -77,7 +77,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;__i386__;__WINESRC__;NDEBUG;_WINDOWS;_USRDLL;LIBPORT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;__i386__;__fastcall=__stdcall;__WINESRC__;NDEBUG;_WINDOWS;_USRDLL;LIBPORT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -98,6 +98,8 @@
     <ClInclude Include="..\..\wine\libs\port\getopt.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\wine\libs\port\casemap.c" />
+    <ClCompile Include="..\..\wine\libs\port\collation.c" />
     <ClCompile Include="..\..\wine\libs\port\combclass.c" />
     <ClCompile Include="..\..\wine\libs\port\compose.c" />
     <ClCompile Include="..\..\wine\libs\port\cpsymbol.c" />
@@ -193,13 +195,17 @@
     <ClCompile Include="..\..\wine\libs\port\pwrite.c" />
     <ClCompile Include="..\..\wine\libs\port\readlink.c" />
     <ClCompile Include="..\..\wine\libs\port\rint.c" />
+    <ClCompile Include="..\..\wine\libs\port\sortkey.c" />
     <ClCompile Include="..\..\wine\libs\port\spawn.c" />
     <ClCompile Include="..\..\wine\libs\port\statvfs.c" />
+    <ClCompile Include="..\..\wine\libs\port\string.c" />
     <ClCompile Include="..\..\wine\libs\port\strnlen.c" />
+    <ClCompile Include="..\..\wine\libs\port\stubs.c" />
     <ClCompile Include="..\..\wine\libs\port\symlink.c" />
     <ClCompile Include="..\..\wine\libs\port\usleep.c" />
     <ClCompile Include="..\..\wine\libs\port\utf8.c" />
     <ClCompile Include="..\..\wine\libs\port\wctomb.c" />
+    <ClCompile Include="..\..\wine\libs\port\wctype.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

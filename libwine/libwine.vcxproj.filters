@@ -15,15 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\wine\libs\wine\casemap.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\wine\collation.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\wine\config.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\libs\wine\debug.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -39,13 +30,7 @@
     <ClCompile Include="..\..\wine\libs\wine\port.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\libs\wine\sortkey.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\wine\string.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\wine\wctype.c">
+    <ClCompile Include="..\..\wine\libs\wine\config.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

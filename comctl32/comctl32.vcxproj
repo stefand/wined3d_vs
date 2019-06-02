@@ -100,7 +100,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
-      <AdditionalDependencies>imm32.lib;uuid.lib;user32.lib;usp10.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libwine.lib;libport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>imm32.lib;uuid.lib;user32.lib;usp10.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libwine.lib;libport.lib;winecrt0.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:MenuHelp
 /EXPORT:ShowHideMenuCtl
 /EXPORT:GetEffectiveClientRect
@@ -306,7 +306,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
-      <AdditionalDependencies>imm32.lib;uuid.lib;user32.lib;usp10.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libwine.lib;libport.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>imm32.lib;uuid.lib;user32.lib;usp10.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libwine.lib;libport.lib;winecrt0.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:MenuHelp
 /EXPORT:ShowHideMenuCtl
 /EXPORT:GetEffectiveClientRect

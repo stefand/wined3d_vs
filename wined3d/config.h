@@ -56,3 +56,5 @@ static __inline int ffs(int x) {
 }
 
 #pragma warning(disable:4756)
+
+#define PACKAGE_VERSION "4.9"

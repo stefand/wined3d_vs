@@ -11,20 +11,24 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\wine\libs\wine\casemap.c" />
-    <ClCompile Include="..\..\wine\libs\wine\collation.c" />
-    <ClCompile Include="..\..\wine\libs\wine\config.c" />
-    <ClCompile Include="..\..\wine\libs\wine\debug.c" />
-    <ClCompile Include="..\..\wine\libs\wine\ldt.c" />
-    <ClCompile Include="..\..\wine\libs\wine\loader.c" />
-    <ClCompile Include="..\..\wine\libs\wine\mmap.c" />
-    <ClCompile Include="..\..\wine\libs\wine\port.c" />
-    <ClCompile Include="..\..\wine\libs\wine\sortkey.c" />
-    <ClCompile Include="..\..\wine\libs\wine\string.c">
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/wd4018 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/wd4018 %(AdditionalOptions)</AdditionalOptions>
+    <ClCompile Include="..\..\wine\libs\wine\config.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\wine\libs\wine\wctype.c" />
+    <ClCompile Include="..\..\wine\libs\wine\debug.c" />
+    <ClCompile Include="..\..\wine\libs\wine\ldt.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\libs\wine\loader.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\libs\wine\mmap.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\libs\wine\port.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0496AECD-CBE7-4502-BDDF-0C76649B2FFF}</ProjectGuid>

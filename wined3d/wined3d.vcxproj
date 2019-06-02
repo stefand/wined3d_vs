@@ -55,13 +55,13 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_WIN32_OPENGL;COM_NO_WINDOWS_H;_DEBUG;_WINDOWS;_USRDLL;WINED3D_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_WIN32_VULKAN;USE_WIN32_OPENGL;COM_NO_WINDOWS_H;_DEBUG;_WINDOWS;_USRDLL;WINED3D_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/wd4244 /wd4018 /wd4056</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libwine.lib;libport.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib</AdditionalDependencies>
+      <AdditionalDependencies>libwine.lib;libport.lib;winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/EXPORT:wined3d_blend_state_create
 /EXPORT:wined3d_blend_state_decref
@@ -167,8 +167,6 @@
 /EXPORT:wined3d_device_get_vs_sampler
 /EXPORT:wined3d_device_get_wined3d
 /EXPORT:wined3d_device_incref
-/EXPORT:wined3d_device_init_3d
-/EXPORT:wined3d_device_init_gdi
 /EXPORT:wined3d_device_multiply_transform
 /EXPORT:wined3d_device_process_vertices
 /EXPORT:wined3d_device_release_focus_window
@@ -237,7 +235,6 @@
 /EXPORT:wined3d_device_setup_fullscreen_window
 /EXPORT:wined3d_device_show_cursor
 /EXPORT:wined3d_device_uninit_3d
-/EXPORT:wined3d_device_uninit_gdi
 /EXPORT:wined3d_device_update_sub_resource
 /EXPORT:wined3d_device_update_texture
 /EXPORT:wined3d_device_validate_device
@@ -373,7 +370,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;NDEBUG;_WINDOWS;_USRDLL;WINED3D_EXPORTS;USE_WIN32_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_WIN32_VULKAN;COM_NO_WINDOWS_H;NDEBUG;_WINDOWS;_USRDLL;WINED3D_EXPORTS;USE_WIN32_OPENGL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/wd4244 /wd4018 /wd4056</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -381,7 +378,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libwine.lib;libport.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib</AdditionalDependencies>
+      <AdditionalDependencies>libwine.lib;libport.lib;winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>/EXPORT:wined3d_blend_state_create
 /EXPORT:wined3d_blend_state_decref
@@ -487,8 +484,6 @@
 /EXPORT:wined3d_device_get_vs_sampler
 /EXPORT:wined3d_device_get_wined3d
 /EXPORT:wined3d_device_incref
-/EXPORT:wined3d_device_init_3d
-/EXPORT:wined3d_device_init_gdi
 /EXPORT:wined3d_device_multiply_transform
 /EXPORT:wined3d_device_process_vertices
 /EXPORT:wined3d_device_release_focus_window
@@ -557,7 +552,6 @@
 /EXPORT:wined3d_device_setup_fullscreen_window
 /EXPORT:wined3d_device_show_cursor
 /EXPORT:wined3d_device_uninit_3d
-/EXPORT:wined3d_device_uninit_gdi
 /EXPORT:wined3d_device_update_sub_resource
 /EXPORT:wined3d_device_update_texture
 /EXPORT:wined3d_device_validate_device
@@ -694,6 +688,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\wined3d\adapter_gl.c" />
+    <ClCompile Include="..\..\wine\dlls\wined3d\adapter_vk.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\arb_program_shader.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\ati_fragment_shader.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\buffer.c" />

@@ -82,7 +82,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libwine.lib;wined3d.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>libwine.lib;wined3d.lib;uuid.lib;winecrt0.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3D8GetSWInfo /EXPORT:DebugSetMute /EXPORT:Direct3DCreate8 /EXPORT:ValidatePixelShader /EXPORT:ValidateVertexShader %(AdditionalOptions)</AdditionalOptions>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
@@ -103,7 +103,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libwine.lib;wined3d.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>libwine.lib;wined3d.lib;uuid.lib;winecrt0.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3D8GetSWInfo /EXPORT:DebugSetMute /EXPORT:Direct3DCreate8 /EXPORT:ValidatePixelShader /EXPORT:ValidateVertexShader %(AdditionalOptions)</AdditionalOptions>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>

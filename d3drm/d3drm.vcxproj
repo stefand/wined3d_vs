@@ -62,7 +62,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libwine.lib;uuid.lib;d3dxof.lib;dxguid.lib;ddraw.lib</AdditionalDependencies>
+      <AdditionalDependencies>libwine.lib;uuid.lib;d3dxof.lib;dxguid.lib;ddraw.lib;winecrt0.lib</AdditionalDependencies>
       <AdditionalOptions>/export:D3DRMColorGetAlpha
 /export:D3DRMColorGetBlue
 /export:D3DRMColorGetGreen
@@ -103,7 +103,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libwine.lib;uuid.lib;d3dxof.lib;dxguid.lib;ddraw.lib</AdditionalDependencies>
+      <AdditionalDependencies>libwine.lib;uuid.lib;d3dxof.lib;dxguid.lib;ddraw.lib;winecrt0.lib</AdditionalDependencies>
       <AdditionalOptions>/export:D3DRMColorGetAlpha
 /export:D3DRMColorGetBlue
 /export:D3DRMColorGetGreen

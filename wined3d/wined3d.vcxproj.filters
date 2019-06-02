@@ -113,5 +113,8 @@
     <ClCompile Include="..\..\wine\dlls\wined3d\adapter_gl.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\wined3d\adapter_vk.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

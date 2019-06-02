@@ -62,7 +62,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>libwine.lib</AdditionalDependencies>
-      <AdditionalOptions>/EXPORT:__wine_unregister_resources /EXPORT:__wine_register_resources %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/EXPORT:__wine_unregister_resources /EXPORT:__wine_register_resources /EXPORT:__wine_dbg_strdup /EXPORT:__wine_dbg_output /EXPORT:__wine_dbg_header %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -81,10 +81,11 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>libwine.lib</AdditionalDependencies>
-      <AdditionalOptions>/EXPORT:__wine_unregister_resources /EXPORT:__wine_register_resources %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/EXPORT:__wine_unregister_resources /EXPORT:__wine_register_resources /EXPORT:__wine_dbg_strdup /EXPORT:__wine_dbg_output /EXPORT:__wine_dbg_header %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\wine\dlls\winecrt0\debug.c" />
     <ClCompile Include="..\..\wine\dlls\winecrt0\dll_main.c" />
     <ClCompile Include="..\..\wine\dlls\winecrt0\register.c" />
   </ItemGroup>
