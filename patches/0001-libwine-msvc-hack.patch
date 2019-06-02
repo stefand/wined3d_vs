@@ -1,25 +1,25 @@
-From f8a0ef8808219f8a7873e03c6ffc949dfbe187dd Mon Sep 17 00:00:00 2001
+From dcf816cc5a9325425be0ddeb3e5d38acbedd6566 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Stefan=20D=C3=B6singer?= <stefan@codeweavers.com>
 Date: Fri, 30 Jul 2010 06:31:40 +0200
-Subject: [PATCH 1/9] libwine: msvc hack
+Subject: [PATCH 1/7] libwine: msvc hack
 
 ---
  libs/wine/loader.c | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/libs/wine/loader.c b/libs/wine/loader.c
-index 3591ede..b7063e3 100644
+index 649aa221d1..b162d20e24 100644
 --- a/libs/wine/loader.c
 +++ b/libs/wine/loader.c
-@@ -49,7 +49,7 @@
- #undef LoadResource
+@@ -50,7 +50,7 @@
  #undef GetCurrentThread
  #include <pthread.h>
+ #include <mach-o/getsect.h>
 -#else
 +#elif !defined(_MSC_VER)
  extern char **environ;
  #endif
  
 -- 
-1.8.4.msysgit.0
+2.21.0.windows.1
 

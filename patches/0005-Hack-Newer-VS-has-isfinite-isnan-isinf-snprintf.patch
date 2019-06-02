@@ -1,0 +1,33 @@
+From 1b20653d6524bc6b029afd032e65f2d8f146f40d Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Stefan=20D=C3=B6singer?= <stefan@codeweavers.com>
+Date: Sun, 2 Jun 2019 16:47:48 +0200
+Subject: [PATCH 5/7] Hack: Newer VS has isfinite, isnan, isinf, snprintf.
+
+---
+ include/wine/port.h | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/include/wine/port.h b/include/wine/port.h
+index d23e2b033f..699f910150 100644
+--- a/include/wine/port.h
++++ b/include/wine/port.h
+@@ -58,12 +58,12 @@
+ #ifdef _MSC_VER
+ 
+ #define ftruncate chsize
+-#define isfinite(x) _finite(x)
+-#define isinf(x) (!(_finite(x) || _isnan(x)))
+-#define isnan(x) _isnan(x)
++//#define isfinite(x) _finite(x)
++//#define isinf(x) (!(_finite(x) || _isnan(x)))
++//#define isnan(x) _isnan(x)
+ #define popen _popen
+ #define pclose _pclose
+-#define snprintf _snprintf
++//#define snprintf _snprintf
+ #define strtoll _strtoi64
+ #define strtoull _strtoui64
+ #define strncasecmp _strnicmp
+-- 
+2.21.0.windows.1
+

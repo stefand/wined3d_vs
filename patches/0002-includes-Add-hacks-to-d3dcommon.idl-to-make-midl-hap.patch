@@ -1,14 +1,14 @@
-From 2571dc6e630e98de25404cf885905c58cdb083b3 Mon Sep 17 00:00:00 2001
+From 3d1499e2f10fad3306e13e50d1d28e7ced76b300 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Stefan=20D=C3=B6singer?= <stefan@codeweavers.com>
 Date: Wed, 18 Dec 2013 14:54:03 +0100
-Subject: [PATCH 2/9] includes: Add hacks to d3dcommon.idl to make midl happy.
+Subject: [PATCH 2/7] includes: Add hacks to d3dcommon.idl to make midl happy.
 
 ---
  include/d3dcommon.idl | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/include/d3dcommon.idl b/include/d3dcommon.idl
-index f8fe203..0da018e 100644
+index 5e38658f89..e7b33baac3 100644
 --- a/include/d3dcommon.idl
 +++ b/include/d3dcommon.idl
 @@ -55,8 +55,9 @@ typedef enum _D3D_INCLUDE_TYPE
@@ -23,5 +23,5 @@ index f8fe203..0da018e 100644
      HRESULT Open(D3D_INCLUDE_TYPE include_type,
                   const char *filename,
 -- 
-1.8.4.msysgit.0
+2.21.0.windows.1
 

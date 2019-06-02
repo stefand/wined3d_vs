@@ -1,20 +1,20 @@
-From d63805026e274416efca69a7aef6cf5b05465288 Mon Sep 17 00:00:00 2001
+From 8fca0d59454c40f45376c389271d3dbe6763ac0c Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Stefan=20D=C3=B6singer?= <stefan@codeweavers.com>
 Date: Wed, 1 Jan 2014 17:08:24 +0100
-Subject: [PATCH 4/9] d3dx9_36: Get rid of FILL_INDEX_BUFFER.
+Subject: [PATCH 4/7] d3dx9_36: Get rid of FILL_INDEX_BUFFER.
 
 The macro uses an incorrect type for first_index in the DWORD case. While
 this could be fixed by passing the destination type to the macro, I think
 it's better to just replicate the code.
 ---
- dlls/d3dx9_36/mesh.c | 49 +++++++++++++++++++++++++++++++------------------
+ dlls/d3dx9_36/mesh.c | 49 ++++++++++++++++++++++++++++----------------
  1 file changed, 31 insertions(+), 18 deletions(-)
 
 diff --git a/dlls/d3dx9_36/mesh.c b/dlls/d3dx9_36/mesh.c
-index 746b479..9f60ef1 100644
+index 355cdbdfed..edc5fd671c 100644
 --- a/dlls/d3dx9_36/mesh.c
 +++ b/dlls/d3dx9_36/mesh.c
-@@ -3573,27 +3573,40 @@ HRESULT WINAPI D3DXLoadSkinMeshFromXof(struct ID3DXFileData *filedata, DWORD opt
+@@ -3572,27 +3572,40 @@ HRESULT WINAPI D3DXLoadSkinMeshFromXof(struct ID3DXFileData *filedata, DWORD opt
      if (FAILED(hr)) goto cleanup;
  
      index_in_ptr = mesh_data.indices;
@@ -74,5 +74,5 @@ index 746b479..9f60ef1 100644
  
      if (mesh_data.material_indices) {
 -- 
-1.8.4.msysgit.0
+2.21.0.windows.1
 

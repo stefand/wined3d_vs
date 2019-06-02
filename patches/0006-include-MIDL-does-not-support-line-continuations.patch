@@ -1,0 +1,27 @@
+From 3818fffdfb0bce90b5c12638c61f6fbe41d07323 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Stefan=20D=C3=B6singer?= <stefan@codeweavers.com>
+Date: Sun, 2 Jun 2019 17:32:00 +0200
+Subject: [PATCH 6/7] include: MIDL does not support line continuations.
+
+---
+ include/d3d12.idl | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/include/d3d12.idl b/include/d3d12.idl
+index 307a4fd375..3e09a7f457 100644
+--- a/include/d3d12.idl
++++ b/include/d3d12.idl
+@@ -1300,9 +1300,7 @@ typedef enum D3D12_COLOR_WRITE_ENABLE
+     D3D12_COLOR_WRITE_ENABLE_GREEN = 0x2,
+     D3D12_COLOR_WRITE_ENABLE_BLUE = 0x4,
+     D3D12_COLOR_WRITE_ENABLE_ALPHA = 0x8,
+-    D3D12_COLOR_WRITE_ENABLE_ALL = (D3D12_COLOR_WRITE_ENABLE_RED\
+-            | D3D12_COLOR_WRITE_ENABLE_GREEN | D3D12_COLOR_WRITE_ENABLE_BLUE\
+-            | D3D12_COLOR_WRITE_ENABLE_ALPHA),
++    D3D12_COLOR_WRITE_ENABLE_ALL = (D3D12_COLOR_WRITE_ENABLE_RED | D3D12_COLOR_WRITE_ENABLE_GREEN | D3D12_COLOR_WRITE_ENABLE_BLUE | D3D12_COLOR_WRITE_ENABLE_ALPHA),
+ } D3D12_COLOR_WRITE_ENABLE;
+ 
+ typedef struct D3D12_RENDER_TARGET_BLEND_DESC
+-- 
+2.21.0.windows.1
+
