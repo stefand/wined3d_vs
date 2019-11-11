@@ -268,12 +268,7 @@
     <ClCompile Include="..\..\wine\libs\port\fold.c" />
     <ClCompile Include="..\..\wine\libs\port\fstatvfs.c" />
     <ClCompile Include="..\..\wine\libs\port\getopt.c" />
-    <ClCompile Include="..\..\wine\libs\port\interlocked.c">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="..\..\wine\libs\port\interlocked.c" />
     <ClCompile Include="..\..\wine\libs\port\isfinite.c" />
     <ClCompile Include="..\..\wine\libs\port\isinf.c" />
     <ClCompile Include="..\..\wine\libs\port\isnan.c" />
