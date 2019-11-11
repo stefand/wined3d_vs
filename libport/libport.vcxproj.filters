@@ -344,5 +344,8 @@
     <ClCompile Include="..\..\wine\libs\port\wctype.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\wine\libs\port\c_28601.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

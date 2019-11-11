@@ -147,6 +147,7 @@
     <ClCompile Include="..\..\wine\libs\port\c_28598.c" />
     <ClCompile Include="..\..\wine\libs\port\c_28599.c" />
     <ClCompile Include="..\..\wine\libs\port\c_28600.c" />
+    <ClCompile Include="..\..\wine\libs\port\c_28601.c" />
     <ClCompile Include="..\..\wine\libs\port\c_28603.c" />
     <ClCompile Include="..\..\wine\libs\port\c_28604.c" />
     <ClCompile Include="..\..\wine\libs\port\c_28605.c" />
