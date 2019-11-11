@@ -71,21 +71,25 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>.;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>.;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>.;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>.;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
+    <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

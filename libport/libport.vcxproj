@@ -70,18 +70,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;$(IncludePath)</IncludePath>
+    <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -110,7 +114,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;__i386__;__fastcall=__stdcall;__WINESRC__;_DEBUG;_WINDOWS;_USRDLL;LIBPORT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;__x86_64__;__fastcall=__stdcall;__WINESRC__;_DEBUG;_WINDOWS;_USRDLL;LIBPORT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -158,7 +162,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;__i386__;__fastcall=__stdcall;__WINESRC__;NDEBUG;_WINDOWS;_USRDLL;LIBPORT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;__x86_64__;__fastcall=__stdcall;__WINESRC__;NDEBUG;_WINDOWS;_USRDLL;LIBPORT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/wd4996 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -264,7 +268,12 @@
     <ClCompile Include="..\..\wine\libs\port\fold.c" />
     <ClCompile Include="..\..\wine\libs\port\fstatvfs.c" />
     <ClCompile Include="..\..\wine\libs\port\getopt.c" />
-    <ClCompile Include="..\..\wine\libs\port\interlocked.c" />
+    <ClCompile Include="..\..\wine\libs\port\interlocked.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\wine\libs\port\isfinite.c" />
     <ClCompile Include="..\..\wine\libs\port\isinf.c" />
     <ClCompile Include="..\..\wine\libs\port\isnan.c" />
