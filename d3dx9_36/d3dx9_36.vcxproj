@@ -5,9 +5,17 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -23,7 +31,20 @@
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -36,7 +57,13 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -46,13 +73,290 @@
     <LibraryPath>..\Debug;$(LibraryPath);$(DXSDK_DIR)\lib\x86</LibraryPath>
     <OutDir>$(SolutionDir)$(Configuration)_dll\</OutDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Debug;$(LibraryPath);$(DXSDK_DIR)\lib\x86</LibraryPath>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\Release;$(LibraryPath);$(LibraryPath);$(DXSDK_DIR)\lib\x86</LibraryPath>
     <OutDir>$(SolutionDir)$(Configuration)_dll\</OutDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
+    <LibraryPath>..\Release;$(LibraryPath);$(LibraryPath);$(DXSDK_DIR)\lib\x86</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;NDEBUG;_WINDOWS;_USRDLL;_DEBUG;_WINDOWS;_USRDLL;D3DX9_36_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libwine.lib;libport.lib;d3dxof.lib;dxguid.lib;d3dcompiler.lib;ole32.lib;gdi32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/EXPORT:D3DXAssembleShader
+/EXPORT:D3DXCreatePolygon
+/EXPORT:D3DXCreateTorus
+/EXPORT:D3DXAssembleShaderFromFileA
+/EXPORT:D3DXAssembleShaderFromFileW
+/EXPORT:D3DXAssembleShaderFromResourceA
+/EXPORT:D3DXAssembleShaderFromResourceW
+/EXPORT:D3DXBoxBoundProbe
+/EXPORT:D3DXCheckCubeTextureRequirements
+/EXPORT:D3DXCheckTextureRequirements
+/EXPORT:D3DXCheckVersion
+/EXPORT:D3DXCheckVolumeTextureRequirements
+/EXPORT:D3DXCleanMesh
+/EXPORT:D3DXColorAdjustContrast
+/EXPORT:D3DXColorAdjustSaturation
+/EXPORT:D3DXCompileShader
+/EXPORT:D3DXCompileShaderFromFileA
+/EXPORT:D3DXCompileShaderFromFileW
+/EXPORT:D3DXCompileShaderFromResourceA
+/EXPORT:D3DXCompileShaderFromResourceW
+/EXPORT:D3DXComputeBoundingBox
+/EXPORT:D3DXComputeBoundingSphere
+/EXPORT:D3DXCreateBox
+/EXPORT:D3DXCreateBuffer
+/EXPORT:D3DXCreateCubeTexture
+/EXPORT:D3DXCreateCubeTextureFromFileA
+/EXPORT:D3DXCreateCubeTextureFromFileExA
+/EXPORT:D3DXCreateCubeTextureFromFileExW
+/EXPORT:D3DXCreateCubeTextureFromFileInMemory
+/EXPORT:D3DXCreateCubeTextureFromFileInMemoryEx
+/EXPORT:D3DXCreateCubeTextureFromFileW
+/EXPORT:D3DXCreateCylinder
+/EXPORT:D3DXCreateEffect
+/EXPORT:D3DXCreateEffectCompiler
+/EXPORT:D3DXCreateEffectCompilerFromFileA
+/EXPORT:D3DXCreateEffectCompilerFromFileW
+/EXPORT:D3DXCreateEffectCompilerFromResourceA
+/EXPORT:D3DXCreateEffectCompilerFromResourceW
+/EXPORT:D3DXCreateEffectEx
+/EXPORT:D3DXCreateEffectFromFileA
+/EXPORT:D3DXCreateEffectFromFileExA
+/EXPORT:D3DXCreateEffectFromFileExW
+/EXPORT:D3DXCreateEffectFromFileW
+/EXPORT:D3DXCreateEffectFromResourceA
+/EXPORT:D3DXCreateEffectFromResourceExA
+/EXPORT:D3DXCreateEffectFromResourceExW
+/EXPORT:D3DXCreateEffectFromResourceW
+/EXPORT:D3DXCreateEffectPool
+/EXPORT:D3DXCreateFontA
+/EXPORT:D3DXCreateFontIndirectA
+/EXPORT:D3DXCreateFontIndirectW
+/EXPORT:D3DXCreateFontW
+/EXPORT:D3DXCreateLine
+/EXPORT:D3DXCreateMatrixStack
+/EXPORT:D3DXCreateMesh
+/EXPORT:D3DXCreateMeshFVF
+/EXPORT:D3DXCreateRenderToEnvMap
+/EXPORT:D3DXCreateRenderToSurface
+/EXPORT:D3DXCreateSkinInfo
+/EXPORT:D3DXCreateSkinInfoFVF
+/EXPORT:D3DXCreateSphere
+/EXPORT:D3DXCreateSprite
+/EXPORT:D3DXCreateTeapot
+/EXPORT:D3DXCreateTextA
+/EXPORT:D3DXCreateTextW
+/EXPORT:D3DXCreateTexture
+/EXPORT:D3DXCreateTextureFromFileA
+/EXPORT:D3DXCreateTextureFromFileExA
+/EXPORT:D3DXCreateTextureFromFileExW
+/EXPORT:D3DXCreateTextureFromFileInMemory
+/EXPORT:D3DXCreateTextureFromFileInMemoryEx
+/EXPORT:D3DXCreateTextureFromFileW
+/EXPORT:D3DXCreateTextureFromResourceA
+/EXPORT:D3DXCreateTextureFromResourceExA
+/EXPORT:D3DXCreateTextureFromResourceExW
+/EXPORT:D3DXCreateTextureFromResourceW
+/EXPORT:D3DXCreateVolumeTexture
+/EXPORT:D3DXCreateVolumeTextureFromFileA
+/EXPORT:D3DXCreateVolumeTextureFromFileExA
+/EXPORT:D3DXCreateVolumeTextureFromFileExW
+/EXPORT:D3DXCreateVolumeTextureFromFileInMemory
+/EXPORT:D3DXCreateVolumeTextureFromFileInMemoryEx
+/EXPORT:D3DXCreateVolumeTextureFromFileW
+/EXPORT:D3DXDebugMute
+/EXPORT:D3DXDeclaratorFromFVF
+/EXPORT:D3DXDisassembleEffect
+/EXPORT:D3DXFileCreate
+/EXPORT:D3DXFillCubeTexture
+/EXPORT:D3DXFillTexture
+/EXPORT:D3DXFillVolumeTexture
+/EXPORT:D3DXFilterTexture
+/EXPORT:D3DXFindShaderComment
+/EXPORT:D3DXFloat16To32Array
+/EXPORT:D3DXFloat32To16Array
+/EXPORT:D3DXFrameDestroy
+/EXPORT:D3DXFresnelTerm
+/EXPORT:D3DXFVFFromDeclarator
+/EXPORT:D3DXGetDeclLength
+/EXPORT:D3DXGetDeclVertexSize
+/EXPORT:D3DXGetDriverLevel
+/EXPORT:D3DXGetFVFVertexSize
+/EXPORT:D3DXGetImageInfoFromFileA
+/EXPORT:D3DXGetImageInfoFromFileInMemory
+/EXPORT:D3DXGetImageInfoFromFileW
+/EXPORT:D3DXGetImageInfoFromResourceA
+/EXPORT:D3DXGetImageInfoFromResourceW
+/EXPORT:D3DXGetPixelShaderProfile
+/EXPORT:D3DXGetShaderConstantTable
+/EXPORT:D3DXGetShaderConstantTableEx
+/EXPORT:D3DXGetShaderSamplers
+/EXPORT:D3DXGetShaderSize
+/EXPORT:D3DXGetShaderVersion
+/EXPORT:D3DXGetVertexShaderProfile
+/EXPORT:D3DXIntersectTri
+/EXPORT:D3DXLoadMeshFromXA
+/EXPORT:D3DXLoadMeshFromXInMemory
+/EXPORT:D3DXLoadMeshFromXResource
+/EXPORT:D3DXLoadMeshFromXW
+/EXPORT:D3DXLoadMeshHierarchyFromXA
+/EXPORT:D3DXLoadMeshHierarchyFromXInMemory
+/EXPORT:D3DXLoadMeshHierarchyFromXW
+/EXPORT:D3DXLoadSkinMeshFromXof
+/EXPORT:D3DXLoadSurfaceFromFileA
+/EXPORT:D3DXLoadSurfaceFromFileInMemory
+/EXPORT:D3DXLoadSurfaceFromFileW
+/EXPORT:D3DXLoadSurfaceFromMemory
+/EXPORT:D3DXLoadSurfaceFromResourceA
+/EXPORT:D3DXLoadSurfaceFromResourceW
+/EXPORT:D3DXLoadSurfaceFromSurface
+/EXPORT:D3DXLoadVolumeFromFileA
+/EXPORT:D3DXLoadVolumeFromFileInMemory
+/EXPORT:D3DXLoadVolumeFromFileW
+/EXPORT:D3DXLoadVolumeFromMemory
+/EXPORT:D3DXLoadVolumeFromVolume
+/EXPORT:D3DXMatrixAffineTransformation
+/EXPORT:D3DXMatrixAffineTransformation2D
+/EXPORT:D3DXMatrixDecompose
+/EXPORT:D3DXMatrixDeterminant
+/EXPORT:D3DXMatrixInverse
+/EXPORT:D3DXMatrixLookAtLH
+/EXPORT:D3DXMatrixLookAtRH
+/EXPORT:D3DXMatrixMultiply
+/EXPORT:D3DXMatrixMultiplyTranspose
+/EXPORT:D3DXMatrixOrthoLH
+/EXPORT:D3DXMatrixOrthoOffCenterLH
+/EXPORT:D3DXMatrixOrthoOffCenterRH
+/EXPORT:D3DXMatrixOrthoRH
+/EXPORT:D3DXMatrixPerspectiveFovLH
+/EXPORT:D3DXMatrixPerspectiveFovRH
+/EXPORT:D3DXMatrixPerspectiveLH
+/EXPORT:D3DXMatrixPerspectiveOffCenterLH
+/EXPORT:D3DXMatrixPerspectiveOffCenterRH
+/EXPORT:D3DXMatrixPerspectiveRH
+/EXPORT:D3DXMatrixReflect
+/EXPORT:D3DXMatrixRotationAxis
+/EXPORT:D3DXMatrixRotationQuaternion
+/EXPORT:D3DXMatrixRotationX
+/EXPORT:D3DXMatrixRotationY
+/EXPORT:D3DXMatrixRotationYawPitchRoll
+/EXPORT:D3DXMatrixRotationZ
+/EXPORT:D3DXMatrixScaling
+/EXPORT:D3DXMatrixShadow
+/EXPORT:D3DXMatrixTransformation
+/EXPORT:D3DXMatrixTransformation2D
+/EXPORT:D3DXMatrixTranslation
+/EXPORT:D3DXMatrixTranspose
+/EXPORT:D3DXOptimizeFaces
+/EXPORT:D3DXPlaneFromPointNormal
+/EXPORT:D3DXPlaneFromPoints
+/EXPORT:D3DXPlaneIntersectLine
+/EXPORT:D3DXPlaneNormalize
+/EXPORT:D3DXPlaneTransform
+/EXPORT:D3DXPlaneTransformArray
+/EXPORT:D3DXPreprocessShader
+/EXPORT:D3DXPreprocessShaderFromFileA
+/EXPORT:D3DXPreprocessShaderFromFileW
+/EXPORT:D3DXPreprocessShaderFromResourceA
+/EXPORT:D3DXPreprocessShaderFromResourceW
+/EXPORT:D3DXQuaternionBaryCentric
+/EXPORT:D3DXQuaternionExp
+/EXPORT:D3DXQuaternionInverse
+/EXPORT:D3DXQuaternionLn
+/EXPORT:D3DXQuaternionMultiply
+/EXPORT:D3DXQuaternionNormalize
+/EXPORT:D3DXQuaternionRotationAxis
+/EXPORT:D3DXQuaternionRotationMatrix
+/EXPORT:D3DXQuaternionRotationYawPitchRoll
+/EXPORT:D3DXQuaternionSlerp
+/EXPORT:D3DXQuaternionSquad
+/EXPORT:D3DXQuaternionSquadSetup
+/EXPORT:D3DXQuaternionToAxisAngle
+/EXPORT:D3DXSaveSurfaceToFileA
+/EXPORT:D3DXSaveSurfaceToFileInMemory
+/EXPORT:D3DXSaveSurfaceToFileW
+/EXPORT:D3DXSaveTextureToFileA
+/EXPORT:D3DXSaveTextureToFileInMemory
+/EXPORT:D3DXSaveTextureToFileW
+/EXPORT:D3DXSHAdd
+/EXPORT:D3DXSHDot
+/EXPORT:D3DXSHEvalConeLight
+/EXPORT:D3DXSHEvalDirection
+/EXPORT:D3DXSHEvalDirectionalLight
+/EXPORT:D3DXSHEvalHemisphereLight
+/EXPORT:D3DXSHEvalSphericalLight
+/EXPORT:D3DXSHMultiply2
+/EXPORT:D3DXSHMultiply3
+/EXPORT:D3DXSHMultiply4
+/EXPORT:D3DXSHRotate
+/EXPORT:D3DXSHRotateZ
+/EXPORT:D3DXSHScale
+/EXPORT:D3DXSphereBoundProbe
+/EXPORT:D3DXValidMesh
+/EXPORT:D3DXVec2BaryCentric
+/EXPORT:D3DXVec2CatmullRom
+/EXPORT:D3DXVec2Hermite
+/EXPORT:D3DXVec2Normalize
+/EXPORT:D3DXVec2Transform
+/EXPORT:D3DXVec2TransformArray
+/EXPORT:D3DXVec2TransformCoord
+/EXPORT:D3DXVec2TransformCoordArray
+/EXPORT:D3DXVec2TransformNormal
+/EXPORT:D3DXVec2TransformNormalArray
+/EXPORT:D3DXVec3BaryCentric
+/EXPORT:D3DXVec3CatmullRom
+/EXPORT:D3DXVec3Hermite
+/EXPORT:D3DXVec3Normalize
+/EXPORT:D3DXVec3Project
+/EXPORT:D3DXVec3ProjectArray
+/EXPORT:D3DXVec3Transform
+/EXPORT:D3DXVec3TransformArray
+/EXPORT:D3DXVec3TransformCoord
+/EXPORT:D3DXVec3TransformCoordArray
+/EXPORT:D3DXVec3TransformNormal
+/EXPORT:D3DXVec3TransformNormalArray
+/EXPORT:D3DXVec3Unproject
+/EXPORT:D3DXVec3UnprojectArray
+/EXPORT:D3DXVec4BaryCentric
+/EXPORT:D3DXVec4CatmullRom
+/EXPORT:D3DXVec4Cross
+/EXPORT:D3DXVec4Hermite
+/EXPORT:D3DXVec4Normalize
+/EXPORT:D3DXVec4Transform
+/EXPORT:D3DXVec4TransformArray
+/EXPORT:D3DXWeldVertices
+/EXPORT:D3DXComputeTangentFrameEx
+/EXPORT:D3DXComputeNormals
+/EXPORT:D3DXCreateAnimationController
+/EXPORT:D3DXCreateTextureShader
+/EXPORT:D3DXFillVolumeTexture
+/EXPORT:D3DXFillVolumeTextureTX
+/EXPORT:D3DXFillTexture
+/EXPORT:D3DXFillTextureTX
+/EXPORT:D3DXFillCubeTextureTX %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -590,20 +894,295 @@
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;NDEBUG;_WINDOWS;_USRDLL;NDEBUG;_WINDOWS;_USRDLL;D3DX9_36_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libwine.lib;libport.lib;d3dxof.lib;dxguid.lib;d3dcompiler.lib;ole32.lib;gdi32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/EXPORT:D3DXAssembleShader
+/EXPORT:D3DXCreatePolygon
+/EXPORT:D3DXCreateTorus
+/EXPORT:D3DXAssembleShaderFromFileA
+/EXPORT:D3DXAssembleShaderFromFileW
+/EXPORT:D3DXAssembleShaderFromResourceA
+/EXPORT:D3DXAssembleShaderFromResourceW
+/EXPORT:D3DXBoxBoundProbe
+/EXPORT:D3DXCheckCubeTextureRequirements
+/EXPORT:D3DXCheckTextureRequirements
+/EXPORT:D3DXCheckVersion
+/EXPORT:D3DXCheckVolumeTextureRequirements
+/EXPORT:D3DXCleanMesh
+/EXPORT:D3DXColorAdjustContrast
+/EXPORT:D3DXColorAdjustSaturation
+/EXPORT:D3DXCompileShader
+/EXPORT:D3DXCompileShaderFromFileA
+/EXPORT:D3DXCompileShaderFromFileW
+/EXPORT:D3DXCompileShaderFromResourceA
+/EXPORT:D3DXCompileShaderFromResourceW
+/EXPORT:D3DXComputeBoundingBox
+/EXPORT:D3DXComputeBoundingSphere
+/EXPORT:D3DXCreateBox
+/EXPORT:D3DXCreateBuffer
+/EXPORT:D3DXCreateCubeTexture
+/EXPORT:D3DXCreateCubeTextureFromFileA
+/EXPORT:D3DXCreateCubeTextureFromFileExA
+/EXPORT:D3DXCreateCubeTextureFromFileExW
+/EXPORT:D3DXCreateCubeTextureFromFileInMemory
+/EXPORT:D3DXCreateCubeTextureFromFileInMemoryEx
+/EXPORT:D3DXCreateCubeTextureFromFileW
+/EXPORT:D3DXCreateCylinder
+/EXPORT:D3DXCreateEffect
+/EXPORT:D3DXCreateEffectCompiler
+/EXPORT:D3DXCreateEffectCompilerFromFileA
+/EXPORT:D3DXCreateEffectCompilerFromFileW
+/EXPORT:D3DXCreateEffectCompilerFromResourceA
+/EXPORT:D3DXCreateEffectCompilerFromResourceW
+/EXPORT:D3DXCreateEffectEx
+/EXPORT:D3DXCreateEffectFromFileA
+/EXPORT:D3DXCreateEffectFromFileExA
+/EXPORT:D3DXCreateEffectFromFileExW
+/EXPORT:D3DXCreateEffectFromFileW
+/EXPORT:D3DXCreateEffectFromResourceA
+/EXPORT:D3DXCreateEffectFromResourceExA
+/EXPORT:D3DXCreateEffectFromResourceExW
+/EXPORT:D3DXCreateEffectFromResourceW
+/EXPORT:D3DXCreateEffectPool
+/EXPORT:D3DXCreateFontA
+/EXPORT:D3DXCreateFontIndirectA
+/EXPORT:D3DXCreateFontIndirectW
+/EXPORT:D3DXCreateFontW
+/EXPORT:D3DXCreateLine
+/EXPORT:D3DXCreateMatrixStack
+/EXPORT:D3DXCreateMesh
+/EXPORT:D3DXCreateMeshFVF
+/EXPORT:D3DXCreateRenderToEnvMap
+/EXPORT:D3DXCreateRenderToSurface
+/EXPORT:D3DXCreateSkinInfo
+/EXPORT:D3DXCreateSkinInfoFVF
+/EXPORT:D3DXCreateSphere
+/EXPORT:D3DXCreateSprite
+/EXPORT:D3DXCreateTeapot
+/EXPORT:D3DXCreateTextA
+/EXPORT:D3DXCreateTextW
+/EXPORT:D3DXCreateTexture
+/EXPORT:D3DXCreateTextureFromFileA
+/EXPORT:D3DXCreateTextureFromFileExA
+/EXPORT:D3DXCreateTextureFromFileExW
+/EXPORT:D3DXCreateTextureFromFileInMemory
+/EXPORT:D3DXCreateTextureFromFileInMemoryEx
+/EXPORT:D3DXCreateTextureFromFileW
+/EXPORT:D3DXCreateTextureFromResourceA
+/EXPORT:D3DXCreateTextureFromResourceExA
+/EXPORT:D3DXCreateTextureFromResourceExW
+/EXPORT:D3DXCreateTextureFromResourceW
+/EXPORT:D3DXCreateVolumeTexture
+/EXPORT:D3DXCreateVolumeTextureFromFileA
+/EXPORT:D3DXCreateVolumeTextureFromFileExA
+/EXPORT:D3DXCreateVolumeTextureFromFileExW
+/EXPORT:D3DXCreateVolumeTextureFromFileInMemory
+/EXPORT:D3DXCreateVolumeTextureFromFileInMemoryEx
+/EXPORT:D3DXCreateVolumeTextureFromFileW
+/EXPORT:D3DXDebugMute
+/EXPORT:D3DXDeclaratorFromFVF
+/EXPORT:D3DXDisassembleEffect
+/EXPORT:D3DXFileCreate
+/EXPORT:D3DXFillCubeTexture
+/EXPORT:D3DXFillTexture
+/EXPORT:D3DXFillVolumeTexture
+/EXPORT:D3DXFilterTexture
+/EXPORT:D3DXFindShaderComment
+/EXPORT:D3DXFloat16To32Array
+/EXPORT:D3DXFloat32To16Array
+/EXPORT:D3DXFrameDestroy
+/EXPORT:D3DXFresnelTerm
+/EXPORT:D3DXFVFFromDeclarator
+/EXPORT:D3DXGetDeclLength
+/EXPORT:D3DXGetDeclVertexSize
+/EXPORT:D3DXGetDriverLevel
+/EXPORT:D3DXGetFVFVertexSize
+/EXPORT:D3DXGetImageInfoFromFileA
+/EXPORT:D3DXGetImageInfoFromFileInMemory
+/EXPORT:D3DXGetImageInfoFromFileW
+/EXPORT:D3DXGetImageInfoFromResourceA
+/EXPORT:D3DXGetImageInfoFromResourceW
+/EXPORT:D3DXGetPixelShaderProfile
+/EXPORT:D3DXGetShaderConstantTable
+/EXPORT:D3DXGetShaderConstantTableEx
+/EXPORT:D3DXGetShaderSamplers
+/EXPORT:D3DXGetShaderSize
+/EXPORT:D3DXGetShaderVersion
+/EXPORT:D3DXGetVertexShaderProfile
+/EXPORT:D3DXIntersectTri
+/EXPORT:D3DXLoadMeshFromXA
+/EXPORT:D3DXLoadMeshFromXInMemory
+/EXPORT:D3DXLoadMeshFromXResource
+/EXPORT:D3DXLoadMeshFromXW
+/EXPORT:D3DXLoadMeshHierarchyFromXA
+/EXPORT:D3DXLoadMeshHierarchyFromXInMemory
+/EXPORT:D3DXLoadMeshHierarchyFromXW
+/EXPORT:D3DXLoadSkinMeshFromXof
+/EXPORT:D3DXLoadSurfaceFromFileA
+/EXPORT:D3DXLoadSurfaceFromFileInMemory
+/EXPORT:D3DXLoadSurfaceFromFileW
+/EXPORT:D3DXLoadSurfaceFromMemory
+/EXPORT:D3DXLoadSurfaceFromResourceA
+/EXPORT:D3DXLoadSurfaceFromResourceW
+/EXPORT:D3DXLoadSurfaceFromSurface
+/EXPORT:D3DXLoadVolumeFromFileA
+/EXPORT:D3DXLoadVolumeFromFileInMemory
+/EXPORT:D3DXLoadVolumeFromFileW
+/EXPORT:D3DXLoadVolumeFromMemory
+/EXPORT:D3DXLoadVolumeFromVolume
+/EXPORT:D3DXMatrixAffineTransformation
+/EXPORT:D3DXMatrixAffineTransformation2D
+/EXPORT:D3DXMatrixDecompose
+/EXPORT:D3DXMatrixDeterminant
+/EXPORT:D3DXMatrixInverse
+/EXPORT:D3DXMatrixLookAtLH
+/EXPORT:D3DXMatrixLookAtRH
+/EXPORT:D3DXMatrixMultiply
+/EXPORT:D3DXMatrixMultiplyTranspose
+/EXPORT:D3DXMatrixOrthoLH
+/EXPORT:D3DXMatrixOrthoOffCenterLH
+/EXPORT:D3DXMatrixOrthoOffCenterRH
+/EXPORT:D3DXMatrixOrthoRH
+/EXPORT:D3DXMatrixPerspectiveFovLH
+/EXPORT:D3DXMatrixPerspectiveFovRH
+/EXPORT:D3DXMatrixPerspectiveLH
+/EXPORT:D3DXMatrixPerspectiveOffCenterLH
+/EXPORT:D3DXMatrixPerspectiveOffCenterRH
+/EXPORT:D3DXMatrixPerspectiveRH
+/EXPORT:D3DXMatrixReflect
+/EXPORT:D3DXMatrixRotationAxis
+/EXPORT:D3DXMatrixRotationQuaternion
+/EXPORT:D3DXMatrixRotationX
+/EXPORT:D3DXMatrixRotationY
+/EXPORT:D3DXMatrixRotationYawPitchRoll
+/EXPORT:D3DXMatrixRotationZ
+/EXPORT:D3DXMatrixScaling
+/EXPORT:D3DXMatrixShadow
+/EXPORT:D3DXMatrixTransformation
+/EXPORT:D3DXMatrixTransformation2D
+/EXPORT:D3DXMatrixTranslation
+/EXPORT:D3DXMatrixTranspose
+/EXPORT:D3DXOptimizeFaces
+/EXPORT:D3DXPlaneFromPointNormal
+/EXPORT:D3DXPlaneFromPoints
+/EXPORT:D3DXPlaneIntersectLine
+/EXPORT:D3DXPlaneNormalize
+/EXPORT:D3DXPlaneTransform
+/EXPORT:D3DXPlaneTransformArray
+/EXPORT:D3DXPreprocessShader
+/EXPORT:D3DXPreprocessShaderFromFileA
+/EXPORT:D3DXPreprocessShaderFromFileW
+/EXPORT:D3DXPreprocessShaderFromResourceA
+/EXPORT:D3DXPreprocessShaderFromResourceW
+/EXPORT:D3DXQuaternionBaryCentric
+/EXPORT:D3DXQuaternionExp
+/EXPORT:D3DXQuaternionInverse
+/EXPORT:D3DXQuaternionLn
+/EXPORT:D3DXQuaternionMultiply
+/EXPORT:D3DXQuaternionNormalize
+/EXPORT:D3DXQuaternionRotationAxis
+/EXPORT:D3DXQuaternionRotationMatrix
+/EXPORT:D3DXQuaternionRotationYawPitchRoll
+/EXPORT:D3DXQuaternionSlerp
+/EXPORT:D3DXQuaternionSquad
+/EXPORT:D3DXQuaternionSquadSetup
+/EXPORT:D3DXQuaternionToAxisAngle
+/EXPORT:D3DXSaveSurfaceToFileA
+/EXPORT:D3DXSaveSurfaceToFileInMemory
+/EXPORT:D3DXSaveSurfaceToFileW
+/EXPORT:D3DXSaveTextureToFileA
+/EXPORT:D3DXSaveTextureToFileInMemory
+/EXPORT:D3DXSaveTextureToFileW
+/EXPORT:D3DXSHAdd
+/EXPORT:D3DXSHDot
+/EXPORT:D3DXSHEvalConeLight
+/EXPORT:D3DXSHEvalDirection
+/EXPORT:D3DXSHEvalDirectionalLight
+/EXPORT:D3DXSHEvalHemisphereLight
+/EXPORT:D3DXSHEvalSphericalLight
+/EXPORT:D3DXSHMultiply2
+/EXPORT:D3DXSHMultiply3
+/EXPORT:D3DXSHMultiply4
+/EXPORT:D3DXSHRotate
+/EXPORT:D3DXSHRotateZ
+/EXPORT:D3DXSHScale
+/EXPORT:D3DXSphereBoundProbe
+/EXPORT:D3DXValidMesh
+/EXPORT:D3DXVec2BaryCentric
+/EXPORT:D3DXVec2CatmullRom
+/EXPORT:D3DXVec2Hermite
+/EXPORT:D3DXVec2Normalize
+/EXPORT:D3DXVec2Transform
+/EXPORT:D3DXVec2TransformArray
+/EXPORT:D3DXVec2TransformCoord
+/EXPORT:D3DXVec2TransformCoordArray
+/EXPORT:D3DXVec2TransformNormal
+/EXPORT:D3DXVec2TransformNormalArray
+/EXPORT:D3DXVec3BaryCentric
+/EXPORT:D3DXVec3CatmullRom
+/EXPORT:D3DXVec3Hermite
+/EXPORT:D3DXVec3Normalize
+/EXPORT:D3DXVec3Project
+/EXPORT:D3DXVec3ProjectArray
+/EXPORT:D3DXVec3Transform
+/EXPORT:D3DXVec3TransformArray
+/EXPORT:D3DXVec3TransformCoord
+/EXPORT:D3DXVec3TransformCoordArray
+/EXPORT:D3DXVec3TransformNormal
+/EXPORT:D3DXVec3TransformNormalArray
+/EXPORT:D3DXVec3Unproject
+/EXPORT:D3DXVec3UnprojectArray
+/EXPORT:D3DXVec4BaryCentric
+/EXPORT:D3DXVec4CatmullRom
+/EXPORT:D3DXVec4Cross
+/EXPORT:D3DXVec4Hermite
+/EXPORT:D3DXVec4Normalize
+/EXPORT:D3DXVec4Transform
+/EXPORT:D3DXVec4TransformArray
+/EXPORT:D3DXWeldVertices
+/EXPORT:D3DXComputeTangentFrameEx
+/EXPORT:D3DXComputeNormals
+/EXPORT:D3DXCreateAnimationController
+/EXPORT:D3DXCreateTextureShader
+/EXPORT:D3DXFillVolumeTexture
+/EXPORT:D3DXFillVolumeTextureTX
+/EXPORT:D3DXFillTexture
+/EXPORT:D3DXFillTextureTX
+/EXPORT:D3DXFillCubeTextureTX %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\animation.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\core.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\effect.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\font.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/wd4244 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/wd4244 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/wd4244 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/wd4244 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\line.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\main.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\math.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\mesh.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\preshader.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\render.c" />
@@ -612,11 +1191,15 @@
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\sprite.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\surface.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\texture.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\util.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\volume.c" />

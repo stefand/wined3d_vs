@@ -5,9 +5,17 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
@@ -29,7 +37,20 @@
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -42,7 +63,13 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -50,7 +77,15 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
   </PropertyGroup>
@@ -136,7 +171,175 @@
 /export:DSPROPSETID_DirectSoundDevice %(AdditionalOptions)</AdditionalOptions>
     </Lib>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_COMPILER_EXCEPTIONS;_DEBUG;_WINDOWS;_USRDLL;DXGUID_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/EXPORT:IID_IDirect3DTexture
+/EXPORT:IID_IDirectDrawClipper
+/EXPORT:IID_IUnknown
+/EXPORT:IID_IDirect3DNullDevice
+/EXPORT:IID_IDirect3DRGBDevice
+/EXPORT:IID_IDirectDraw
+/EXPORT:IID_IDirect3DHALDevice
+/EXPORT:IID_IDirectDraw3
+/EXPORT:IID_IDirectDraw7
+/EXPORT:IID_IDirectDraw2
+/EXPORT:IID_IDirect3DTnLHalDevice
+/EXPORT:IID_IDirect3D3
+/EXPORT:IID_IDirect3DRefDevice
+/EXPORT:IID_IDirect3D2
+/EXPORT:IID_IDirect3D
+/EXPORT:IID_IDirect3DMMXDevice
+/EXPORT:IID_IDirect3D7
+/EXPORT:IID_IDirectDraw4
+/EXPORT:IID_IDirect3DDevice3
+/EXPORT:IID_IDirect3DDevice
+/EXPORT:IID_IDirect3DDevice7
+/EXPORT:IID_IDirect3DDevice2
+/EXPORT:IID_IDirect3DExecuteBuffer
+/EXPORT:IID_IClassFactory
+/EXPORT:IID_IDirect3DMaterial3
+/EXPORT:IID_IDirect3DMaterial2
+/EXPORT:IID_IDirect3DMaterial
+/EXPORT:IID_IDirectDrawPalette
+/EXPORT:IID_IDirectDrawSurface
+/EXPORT:IID_IDirectDrawGammaControl
+/EXPORT:IID_IDirectDrawSurface3
+/EXPORT:IID_IDirectDrawSurface2
+/EXPORT:IID_IDirectDrawSurface7
+/EXPORT:IID_IDirect3DTexture2
+/EXPORT:IID_IDirectDrawSurface4
+/EXPORT:IID_IDirect3DVertexBuffer
+/EXPORT:IID_IDirect3DVertexBuffer7
+/EXPORT:IID_IDirect3DViewport2
+/EXPORT:IID_IDirect3DViewport3
+/EXPORT:IID_IDirect3DViewport
+/EXPORT:CLSID_DirectDrawClipper
+/EXPORT:CLSID_DirectDraw7
+/EXPORT:CLSID_DirectDraw
+/EXPORT:IID_IDirectDrawColorControl</AdditionalOptions>
+    </Link>
+    <Lib>
+      <AdditionalOptions>/export:IID_IDirectSoundNotify
+/export:IID_IDirectSoundBuffer
+/export:IID_IDirectSound3DListener
+/export:IID_IDirectSoundBuffer8
+/export:IID_IDirectSound3DBuffer
+/export:IID_IKsPropertySet
+/export:GUID_All_Objects
+/export:IID_IDirectSoundCapture
+/export:DSDEVID_DefaultCapture
+/export:DSDEVID_DefaultVoicePlayback
+/export:IID_IDirectSoundCaptureBuffer8
+/export:DSDEVID_DefaultPlayback
+/export:IID_IDirectSoundCaptureBuffer
+/export:IID_IDirectSound8
+/export:IID_IDirectSound
+/export:DSDEVID_DefaultVoiceCapture
+/export:CLSID_DirectSoundPrivate
+/export:CLSID_DirectSoundFullDuplex
+/export:CLSID_DirectSoundCapture
+/export:CLSID_DirectSound8
+/export:CLSID_DirectSoundCapture8
+/export:CLSID_DirectSound
+/export:IID_IDirectSoundFullDuplex
+/export:DSPROPSETID_DirectSoundDevice %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;__i386__;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_COMPILER_EXCEPTIONS;NDEBUG;_WINDOWS;_USRDLL;DXGUID_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>/EXPORT:IID_IDirect3DTexture
+/EXPORT:IID_IDirectDrawClipper
+/EXPORT:IID_IUnknown
+/EXPORT:IID_IDirect3DNullDevice
+/EXPORT:IID_IDirect3DRGBDevice
+/EXPORT:IID_IDirectDraw
+/EXPORT:IID_IDirect3DHALDevice
+/EXPORT:IID_IDirectDraw3
+/EXPORT:IID_IDirectDraw7
+/EXPORT:IID_IDirectDraw2
+/EXPORT:IID_IDirect3DTnLHalDevice
+/EXPORT:IID_IDirect3D3
+/EXPORT:IID_IDirect3DRefDevice
+/EXPORT:IID_IDirect3D2
+/EXPORT:IID_IDirect3D
+/EXPORT:IID_IDirect3DMMXDevice
+/EXPORT:IID_IDirect3D7
+/EXPORT:IID_IDirectDraw4
+/EXPORT:IID_IDirect3DDevice3
+/EXPORT:IID_IDirect3DDevice
+/EXPORT:IID_IDirect3DDevice7
+/EXPORT:IID_IDirect3DDevice2
+/EXPORT:IID_IDirect3DExecuteBuffer
+/EXPORT:IID_IClassFactory
+/EXPORT:IID_IDirect3DMaterial3
+/EXPORT:IID_IDirect3DMaterial2
+/EXPORT:IID_IDirect3DMaterial
+/EXPORT:IID_IDirectDrawPalette
+/EXPORT:IID_IDirectDrawSurface
+/EXPORT:IID_IDirectDrawGammaControl
+/EXPORT:IID_IDirectDrawSurface3
+/EXPORT:IID_IDirectDrawSurface2
+/EXPORT:IID_IDirectDrawSurface7
+/EXPORT:IID_IDirect3DTexture2
+/EXPORT:IID_IDirectDrawSurface4
+/EXPORT:IID_IDirect3DVertexBuffer
+/EXPORT:IID_IDirect3DVertexBuffer7
+/EXPORT:IID_IDirect3DViewport2
+/EXPORT:IID_IDirect3DViewport3
+/EXPORT:IID_IDirect3DViewport
+/EXPORT:CLSID_DirectDrawClipper
+/EXPORT:CLSID_DirectDraw7
+/EXPORT:CLSID_DirectDraw
+/EXPORT:IID_IDirectDrawColorControl</AdditionalOptions>
+    </Link>
+    <Lib>
+      <AdditionalOptions>/export:IID_IDirectSoundNotify
+/export:IID_IDirectSoundBuffer
+/export:IID_IDirectSound3DListener
+/export:IID_IDirectSoundBuffer8
+/export:IID_IDirectSound3DBuffer
+/export:IID_IKsPropertySet
+/export:GUID_All_Objects
+/export:IID_IDirectSoundCapture
+/export:DSDEVID_DefaultCapture
+/export:DSDEVID_DefaultVoicePlayback
+/export:IID_IDirectSoundCaptureBuffer8
+/export:DSDEVID_DefaultPlayback
+/export:IID_IDirectSoundCaptureBuffer
+/export:IID_IDirectSound8
+/export:IID_IDirectSound
+/export:DSDEVID_DefaultVoiceCapture
+/export:CLSID_DirectSoundPrivate
+/export:CLSID_DirectSoundFullDuplex
+/export:CLSID_DirectSoundCapture
+/export:CLSID_DirectSound8
+/export:CLSID_DirectSoundCapture8
+/export:CLSID_DirectSound
+/export:IID_IDirectSoundFullDuplex
+/export:DSPROPSETID_DirectSoundDevice %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
