@@ -101,7 +101,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib;dxguid.lib;winecrt0.lib</AdditionalDependencies>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
       <AdditionalOptions>/EXPORT:D3D11CoreCreateDevice /EXPORT:D3D11CoreRegisterLayers /EXPORT:D3D11CreateDevice /EXPORT:D3D11CreateDeviceAndSwapChain %(AdditionalOptions)</AdditionalOptions>
     </Link>
@@ -117,6 +117,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib;dxguid.lib;winecrt0.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -133,7 +134,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib;dxguid.lib;winecrt0.lib</AdditionalDependencies>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
       <AdditionalOptions>/EXPORT:D3D11CoreCreateDevice /EXPORT:D3D11CoreRegisterLayers /EXPORT:D3D11CreateDevice /EXPORT:D3D11CreateDeviceAndSwapChain %(AdditionalOptions)</AdditionalOptions>
     </Link>
@@ -153,6 +154,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib;dxguid.lib;winecrt0.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -166,13 +168,6 @@
     <ClCompile Include="..\..\wine\dlls\d3d11\texture.c" />
     <ClCompile Include="..\..\wine\dlls\d3d11\utils.c" />
     <ClCompile Include="..\..\wine\dlls\d3d11\view.c" />
-    <ClCompile Include="..\idls\d3d10_1_i.c" />
-    <ClCompile Include="..\idls\d3d10_i.c" />
-    <ClCompile Include="..\idls\d3d11_1_i.c" />
-    <ClCompile Include="..\idls\d3d11_2_i.c" />
-    <ClCompile Include="..\idls\d3d11_i.c" />
-    <ClCompile Include="..\idls\dxgi_i.c" />
-    <ClCompile Include="..\idls\wine\winedxgi_i.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\wine\dlls\d3d11\d3d11_private.h" />

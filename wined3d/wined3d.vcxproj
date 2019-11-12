@@ -421,7 +421,8 @@
 /EXPORT:wined3d_output_take_ownership
 /EXPORT:wined3d_swapchain_get_state
 /EXPORT:wined3d_swapchain_state_resize_target
-/EXPORT:wined3d_swapchain_state_set_fullscreen</AdditionalOptions>
+/EXPORT:wined3d_swapchain_state_set_fullscreen
+/EXPORT:wined3d_extract_shader_input_signature_from_dxbc</AdditionalOptions>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
@@ -757,7 +758,8 @@
 /EXPORT:wined3d_output_take_ownership
 /EXPORT:wined3d_swapchain_get_state
 /EXPORT:wined3d_swapchain_state_resize_target
-/EXPORT:wined3d_swapchain_state_set_fullscreen</AdditionalOptions>
+/EXPORT:wined3d_swapchain_state_set_fullscreen
+/EXPORT:wined3d_extract_shader_input_signature_from_dxbc</AdditionalOptions>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
@@ -1097,7 +1099,8 @@
 /EXPORT:wined3d_output_take_ownership
 /EXPORT:wined3d_swapchain_get_state
 /EXPORT:wined3d_swapchain_state_resize_target
-/EXPORT:wined3d_swapchain_state_set_fullscreen</AdditionalOptions>
+/EXPORT:wined3d_swapchain_state_set_fullscreen
+/EXPORT:wined3d_extract_shader_input_signature_from_dxbc</AdditionalOptions>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>
@@ -1437,7 +1440,8 @@
 /EXPORT:wined3d_output_take_ownership
 /EXPORT:wined3d_swapchain_get_state
 /EXPORT:wined3d_swapchain_state_resize_target
-/EXPORT:wined3d_swapchain_state_set_fullscreen</AdditionalOptions>
+/EXPORT:wined3d_swapchain_state_set_fullscreen
+/EXPORT:wined3d_extract_shader_input_signature_from_dxbc</AdditionalOptions>
     </Link>
     <Midl>
       <HeaderFileName>%(Filename).h</HeaderFileName>

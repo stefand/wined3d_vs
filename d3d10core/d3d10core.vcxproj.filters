@@ -23,57 +23,6 @@
     <ClCompile Include="..\..\wine\dlls\d3d10core\d3d10core_main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\idls\d3d10_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\d3d10_1_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\wine\winedxgi_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d11\async.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d11\buffer.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d11\d3d11_main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d11\device.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d11\inputlayout.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d11\shader.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d11\state.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d11\texture.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d11\utils.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d3d11\view.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\d3d11_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\d3d11_1_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\dxgi_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\d3d11_2_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\wine\dlls\d3d11\d3d11_private.h">

@@ -103,7 +103,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib;winecrt0.lib;d3d11.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3D10CoreCreateDevice /EXPORT:D3D10CoreRegisterLayers %(AdditionalOptions)</AdditionalOptions>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
@@ -118,7 +118,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib;winecrt0.lib;d3d11.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3D10CoreCreateDevice /EXPORT:D3D10CoreRegisterLayers %(AdditionalOptions)</AdditionalOptions>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
@@ -137,7 +137,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib;winecrt0.lib;d3d11.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3D10CoreCreateDevice /EXPORT:D3D10CoreRegisterLayers %(AdditionalOptions)</AdditionalOptions>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
@@ -156,7 +156,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib;winecrt0.lib;d3d11.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3D10CoreCreateDevice /EXPORT:D3D10CoreRegisterLayers %(AdditionalOptions)</AdditionalOptions>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
@@ -166,23 +166,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\d3d10core\d3d10core_main.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d11\async.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d11\buffer.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d11\d3d11_main.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d11\device.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d11\inputlayout.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d11\shader.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d11\state.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d11\texture.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d11\utils.c" />
-    <ClCompile Include="..\..\wine\dlls\d3d11\view.c" />
-    <ClCompile Include="..\idls\d3d10_1_i.c" />
-    <ClCompile Include="..\idls\d3d10_i.c" />
-    <ClCompile Include="..\idls\d3d11_1_i.c" />
-    <ClCompile Include="..\idls\d3d11_2_i.c" />
-    <ClCompile Include="..\idls\d3d11_i.c" />
-    <ClCompile Include="..\idls\dxgi_i.c" />
-    <ClCompile Include="..\idls\wine\winedxgi_i.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\wine\dlls\d3d11\d3d11_private.h" />
