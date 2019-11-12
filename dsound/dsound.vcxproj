@@ -228,9 +228,6 @@
     <ClCompile Include="..\..\wine\dlls\dsound\primary.c" />
     <ClCompile Include="..\..\wine\dlls\dsound\propset.c" />
     <ClCompile Include="..\..\wine\dlls\dsound\sound3d.c" />
-    <ClCompile Include="..\idls\audioclient_i.c" />
-    <ClCompile Include="..\idls\mediaobj_i.c" />
-    <ClCompile Include="..\idls\mmdeviceapi_i.c" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\wine\dlls\dsound\version.rc" />
