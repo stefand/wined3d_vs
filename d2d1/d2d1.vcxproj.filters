@@ -39,9 +39,6 @@
     <ClCompile Include="..\..\wine\dlls\d2d1\mesh.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\d2d1\render_target.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d2d1\state_block.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -49,6 +46,15 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d2d1\wic_render_target.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\d2d1\device.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\d2d1\effect.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\d2d1\layer.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

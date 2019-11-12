@@ -179,7 +179,6 @@
     <CustomBuild Include="..\..\wine\include\audioclient.idl" />
     <CustomBuild Include="..\..\wine\include\comcat.idl" />
     <CustomBuild Include="..\..\wine\include\commoncontrols.idl" />
-    <CustomBuild Include="..\..\wine\include\d2d1.idl" />
     <CustomBuild Include="..\..\wine\include\d3d10.idl" />
     <CustomBuild Include="..\..\wine\include\d3d10sdklayers.idl" />
     <CustomBuild Include="..\..\wine\include\d3d10_1.idl" />
@@ -251,6 +250,19 @@
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">echo ..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)
 ..\$(Configuration)\make_xftmpl.exe -H -o %(Filename).h %(Identity)</Command>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\wine\include\d2d1_2.idl" />
+    <CustomBuild Include="..\..\wine\include\dwrite.idl" />
+    <CustomBuild Include="..\..\wine\include\dwrite_1.idl" />
+    <CustomBuild Include="..\..\wine\include\dwrite_2.idl" />
+    <CustomBuild Include="..\..\wine\include\dwrite_3.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\wine\include\d2d1_1.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\wine\include\dcommon.idl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -78,6 +78,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
+    <IncludePath>..\..\wine\include;..\wined3d;..\idls;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -88,6 +89,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
+    <IncludePath>..\..\wine\include;..\wined3d;..\idls;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -107,8 +109,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;D2D1_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -141,8 +142,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -160,11 +160,13 @@
     <ClCompile Include="..\..\wine\dlls\d2d1\bitmap_render_target.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\brush.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\dc_render_target.c" />
+    <ClCompile Include="..\..\wine\dlls\d2d1\device.c" />
+    <ClCompile Include="..\..\wine\dlls\d2d1\effect.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\factory.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\geometry.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\hwnd_render_target.c" />
+    <ClCompile Include="..\..\wine\dlls\d2d1\layer.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\mesh.c" />
-    <ClCompile Include="..\..\wine\dlls\d2d1\render_target.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\state_block.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\stroke.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\wic_render_target.c" />
