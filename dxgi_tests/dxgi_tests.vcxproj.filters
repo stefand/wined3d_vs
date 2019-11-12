@@ -18,43 +18,8 @@
     <ClCompile Include="testlist.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\idls\d3d10_1_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\d3d10_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\dxgi_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\d3d11_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\dxgi\tests\dxgi.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\idls\d3d12_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\dxgi1_2_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\dxgi1_3_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\dxgi1_4_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\dxgi1_5_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\idls\dxgi1_6_i.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="initguid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
