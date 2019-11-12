@@ -1,7 +1,7 @@
-From 1b20653d6524bc6b029afd032e65f2d8f146f40d Mon Sep 17 00:00:00 2001
+From 774831e6e01c2eac43d1826056ca6d58319cee40 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Stefan=20D=C3=B6singer?= <stefan@codeweavers.com>
 Date: Sun, 2 Jun 2019 16:47:48 +0200
-Subject: [PATCH 5/7] Hack: Newer VS has isfinite, isnan, isinf, snprintf.
+Subject: [PATCH 4/7] Hack: Newer VS has isfinite, isnan, isinf, snprintf.
 
 ---
  include/wine/port.h | 8 ++++----
@@ -29,5 +29,5 @@ index d23e2b033f..699f910150 100644
  #define strtoull _strtoui64
  #define strncasecmp _strnicmp
 -- 
-2.21.0.windows.1
+2.24.0.windows.2
 

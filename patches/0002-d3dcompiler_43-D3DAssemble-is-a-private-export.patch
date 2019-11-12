@@ -1,7 +1,7 @@
-From 9a9236f8fbe5785ec11c121f75d4f85b71ad53ec Mon Sep 17 00:00:00 2001
+From 0fb1fbf10769f3859dd5ab0dc6b7cc22f6ecffcd Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Stefan=20D=C3=B6singer?= <stefan@codeweavers.com>
 Date: Wed, 18 Dec 2013 18:50:09 +0100
-Subject: [PATCH 3/7] d3dcompiler_43: D3DAssemble is a private export.
+Subject: [PATCH 2/7] d3dcompiler_43: D3DAssemble is a private export.
 
 ---
  dlls/d3dcompiler_43/d3dcompiler_43.spec |  2 +-
@@ -49,5 +49,5 @@ index c59fc791ea..ed51a45de9 100644
                       (ID3DBlob **)error_messages);
  
 -- 
-2.21.0.windows.1
+2.24.0.windows.2
 
