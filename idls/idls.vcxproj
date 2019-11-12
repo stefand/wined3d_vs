@@ -96,6 +96,12 @@
       <GenerateServerFiles>None</GenerateServerFiles>
       <AdditionalOptions>/cpp_opt "/wd4005 /E /nologo" %(AdditionalOptions)</AdditionalOptions>
     </Midl>
+    <CustomBuild>
+      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+    </CustomBuild>
+    <CustomBuild>
+      <Outputs>.%(Filename).h</Outputs>
+    </CustomBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -111,6 +117,12 @@
       <GenerateServerFiles>None</GenerateServerFiles>
       <AdditionalOptions>/cpp_opt "/wd4005 /E /nologo" %(AdditionalOptions)</AdditionalOptions>
     </Midl>
+    <CustomBuild>
+      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+    </CustomBuild>
+    <CustomBuild>
+      <Outputs>.%(Filename).h</Outputs>
+    </CustomBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -130,6 +142,12 @@
       <GenerateServerFiles>None</GenerateServerFiles>
       <AdditionalOptions>/cpp_opt "/wd4005 /E /nologo" %(AdditionalOptions)</AdditionalOptions>
     </Midl>
+    <CustomBuild>
+      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+    </CustomBuild>
+    <CustomBuild>
+      <Outputs>.%(Filename).h</Outputs>
+    </CustomBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -149,84 +167,73 @@
       <GenerateServerFiles>None</GenerateServerFiles>
       <AdditionalOptions>/cpp_opt "/wd4005 /E /nologo" %(AdditionalOptions)</AdditionalOptions>
     </Midl>
+    <CustomBuild>
+      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+    </CustomBuild>
+    <CustomBuild>
+      <Outputs>.%(Filename).h</Outputs>
+    </CustomBuild>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Midl Include="..\..\wine\include\atliface.idl" />
-    <Midl Include="..\..\wine\include\audioclient.idl" />
-    <Midl Include="..\..\wine\include\comcat.idl" />
-    <Midl Include="..\..\wine\include\commoncontrols.idl" />
-    <Midl Include="..\..\wine\include\d2d1.idl">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </Midl>
-    <Midl Include="..\..\wine\include\d3d10.idl" />
-    <Midl Include="..\..\wine\include\d3d10sdklayers.idl" />
-    <Midl Include="..\..\wine\include\d3d10_1.idl" />
-    <Midl Include="..\..\wine\include\d3d11.idl" />
-    <Midl Include="..\..\wine\include\d3d11sdklayers.idl" />
-    <Midl Include="..\..\wine\include\d3d11_1.idl" />
-    <Midl Include="..\..\wine\include\d3d11_2.idl" />
-    <Midl Include="..\..\wine\include\d3d11_3.idl" />
-    <Midl Include="..\..\wine\include\d3d11_4.idl" />
-    <Midl Include="..\..\wine\include\d3d12.idl" />
-    <Midl Include="..\..\wine\include\d3dcommon.idl" />
-    <Midl Include="..\..\wine\include\d3dx10core.idl">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </Midl>
-    <Midl Include="..\..\wine\include\docobj.idl" />
-    <Midl Include="..\..\wine\include\dxgi.idl" />
-    <Midl Include="..\..\wine\include\dxgi1_2.idl" />
-    <Midl Include="..\..\wine\include\dxgi1_3.idl" />
-    <Midl Include="..\..\wine\include\dxgi1_4.idl" />
-    <Midl Include="..\..\wine\include\dxgi1_5.idl" />
-    <Midl Include="..\..\wine\include\dxgi1_6.idl" />
-    <Midl Include="..\..\wine\include\dxgicommon.idl" />
-    <Midl Include="..\..\wine\include\dxgiformat.idl" />
-    <Midl Include="..\..\wine\include\dxgitype.idl" />
-    <Midl Include="..\..\wine\include\mediaobj.idl" />
-    <Midl Include="..\..\wine\include\mmdeviceapi.idl" />
-    <Midl Include="..\..\wine\include\msxml.idl" />
-    <Midl Include="..\..\wine\include\oaidl.idl" />
-    <Midl Include="..\..\wine\include\objidl.idl" />
-    <Midl Include="..\..\wine\include\ocidl.idl" />
-    <Midl Include="..\..\wine\include\oleidl.idl" />
-    <Midl Include="..\..\wine\include\propidl.idl">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </Midl>
-    <Midl Include="..\..\wine\include\propsys.idl">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </Midl>
-    <Midl Include="..\..\wine\include\servprov.idl" />
-    <Midl Include="..\..\wine\include\shobjidl.idl">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </Midl>
-    <Midl Include="..\..\wine\include\shtypes.idl" />
-    <Midl Include="..\..\wine\include\strmif.idl" />
-    <Midl Include="..\..\wine\include\structuredquerycondition.idl" />
-    <Midl Include="..\..\wine\include\unknwn.idl" />
-    <Midl Include="..\..\wine\include\urlmon.idl" />
-    <Midl Include="..\..\wine\include\wincodec.idl" />
-    <Midl Include="..\..\wine\include\wine\winedxgi.idl">
+    <CustomBuild Include="..\..\wine\include\atliface.idl" />
+    <CustomBuild Include="..\..\wine\include\audioclient.idl" />
+    <CustomBuild Include="..\..\wine\include\comcat.idl" />
+    <CustomBuild Include="..\..\wine\include\commoncontrols.idl" />
+    <CustomBuild Include="..\..\wine\include\d2d1.idl" />
+    <CustomBuild Include="..\..\wine\include\d3d10.idl" />
+    <CustomBuild Include="..\..\wine\include\d3d10sdklayers.idl" />
+    <CustomBuild Include="..\..\wine\include\d3d10_1.idl" />
+    <CustomBuild Include="..\..\wine\include\d3d11.idl" />
+    <CustomBuild Include="..\..\wine\include\d3d11sdklayers.idl" />
+    <CustomBuild Include="..\..\wine\include\d3d11_1.idl" />
+    <CustomBuild Include="..\..\wine\include\d3d11_2.idl" />
+    <CustomBuild Include="..\..\wine\include\d3d11_3.idl" />
+    <CustomBuild Include="..\..\wine\include\d3d11_4.idl" />
+    <CustomBuild Include="..\..\wine\include\d3d12.idl" />
+    <CustomBuild Include="..\..\wine\include\d3dcommon.idl" />
+    <CustomBuild Include="..\..\wine\include\d3dx10core.idl" />
+    <CustomBuild Include="..\..\wine\include\docobj.idl" />
+    <CustomBuild Include="..\..\wine\include\dxgi.idl" />
+    <CustomBuild Include="..\..\wine\include\dxgi1_2.idl" />
+    <CustomBuild Include="..\..\wine\include\dxgi1_3.idl" />
+    <CustomBuild Include="..\..\wine\include\dxgi1_4.idl" />
+    <CustomBuild Include="..\..\wine\include\dxgi1_5.idl" />
+    <CustomBuild Include="..\..\wine\include\dxgi1_6.idl" />
+    <CustomBuild Include="..\..\wine\include\dxgicommon.idl" />
+    <CustomBuild Include="..\..\wine\include\dxgiformat.idl" />
+    <CustomBuild Include="..\..\wine\include\dxgitype.idl" />
+    <CustomBuild Include="..\..\wine\include\mediaobj.idl" />
+    <CustomBuild Include="..\..\wine\include\mmdeviceapi.idl" />
+    <CustomBuild Include="..\..\wine\include\msxml.idl" />
+    <CustomBuild Include="..\..\wine\include\oaidl.idl" />
+    <CustomBuild Include="..\..\wine\include\objidl.idl" />
+    <CustomBuild Include="..\..\wine\include\ocidl.idl" />
+    <CustomBuild Include="..\..\wine\include\oleidl.idl" />
+    <CustomBuild Include="..\..\wine\include\propidl.idl" />
+    <CustomBuild Include="..\..\wine\include\propsys.idl" />
+    <CustomBuild Include="..\..\wine\include\servprov.idl" />
+    <CustomBuild Include="..\..\wine\include\shobjidl.idl" />
+    <CustomBuild Include="..\..\wine\include\shtypes.idl" />
+    <CustomBuild Include="..\..\wine\include\strmif.idl" />
+    <CustomBuild Include="..\..\wine\include\structuredquerycondition.idl" />
+    <CustomBuild Include="..\..\wine\include\unknwn.idl" />
+    <CustomBuild Include="..\..\wine\include\urlmon.idl" />
+    <CustomBuild Include="..\..\wine\include\wincodec.idl" />
+    <CustomBuild Include="..\..\wine\include\wine\winedxgi.idl">
       <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">wine</OutputDirectory>
       <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">wine</OutputDirectory>
       <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">wine</OutputDirectory>
       <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release|x64'">wine</OutputDirectory>
-    </Midl>
-    <Midl Include="..\..\wine\include\wtypes.idl" />
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">wine\.%(Filename).h</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">wine\.%(Filename).h</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">wine\.%(Filename).h</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">wine\.%(Filename).h</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\wtypes.idl" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\wine\include\rmxftmpl.x">

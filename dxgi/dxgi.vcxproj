@@ -173,16 +173,6 @@
     <ClCompile Include="..\..\wine\dlls\dxgi\surface.c" />
     <ClCompile Include="..\..\wine\dlls\dxgi\swapchain.c" />
     <ClCompile Include="..\..\wine\dlls\dxgi\utils.c" />
-    <ClCompile Include="..\idls\d3d10_1_i.c" />
-    <ClCompile Include="..\idls\d3d10_i.c" />
-    <ClCompile Include="..\idls\d3d12_i.c" />
-    <ClCompile Include="..\idls\dxgi1_2_i.c" />
-    <ClCompile Include="..\idls\dxgi1_3_i.c" />
-    <ClCompile Include="..\idls\dxgi1_4_i.c" />
-    <ClCompile Include="..\idls\dxgi1_5_i.c" />
-    <ClCompile Include="..\idls\dxgi1_6_i.c" />
-    <ClCompile Include="..\idls\dxgi_i.c" />
-    <ClCompile Include="..\idls\wine\winedxgi_i.c" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\wine\dlls\dxgi\version.rc" />

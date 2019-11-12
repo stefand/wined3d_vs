@@ -18,52 +18,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="..\..\wine\include\msxml.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\oaidl.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\objidl.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\oleidl.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\propidl.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\servprov.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\unknwn.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\urlmon.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\wtypes.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\atliface.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\ocidl.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\wincodec.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\d3dcommon.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
     <Midl Include="..\..\wine\include\d3d10.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\dxgi.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\wine\winedxgi.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
     <Midl Include="..\..\wine\include\d3d10_1.idl">
@@ -75,43 +30,13 @@
     <Midl Include="..\..\wine\include\d3d11sdklayers.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
-    <Midl Include="..\..\wine\include\mmdeviceapi.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
     <Midl Include="..\..\wine\include\audioclient.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\propsys.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\shtypes.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\structuredquerycondition.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\shobjidl.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\docobj.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
     <Midl Include="..\..\wine\include\comcat.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
-    <Midl Include="..\..\wine\include\strmif.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\mediaobj.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
     <Midl Include="..\..\wine\include\d3d11_1.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\dxgi1_2.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\d3dx10core.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
     <Midl Include="..\..\wine\include\d3d10sdklayers.idl">
@@ -123,22 +48,7 @@
     <Midl Include="..\..\wine\include\commoncontrols.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
-    <Midl Include="..\..\wine\include\dxgi1_3.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\dxgi1_4.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\dxgi1_5.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\dxgi1_6.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
     <Midl Include="..\..\wine\include\d3d12.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\dxgitype.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
     <Midl Include="..\..\wine\include\d3d11_2.idl">
@@ -150,16 +60,106 @@
     <Midl Include="..\..\wine\include\d3d11_4.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
-    <Midl Include="..\..\wine\include\dxgicommon.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\dxgiformat.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\wine\include\rmxftmpl.x">
       <Filter>xftmpls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\atliface.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3dcommon.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3dx10core.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\docobj.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\dxgi.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\dxgi1_2.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\dxgi1_3.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\dxgi1_4.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\dxgi1_5.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\dxgi1_6.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\dxgicommon.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\dxgiformat.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\dxgitype.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\mediaobj.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\mmdeviceapi.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\msxml.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\oaidl.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\objidl.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\ocidl.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\oleidl.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\propidl.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\propsys.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\servprov.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\shobjidl.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\shtypes.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\strmif.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\structuredquerycondition.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\unknwn.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\urlmon.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\wincodec.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\wine\winedxgi.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\wtypes.idl">
+      <Filter>Headerdateien</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>
