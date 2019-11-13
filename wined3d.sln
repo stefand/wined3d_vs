@@ -192,6 +192,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vkd3d-shader", "vkd3d-shade
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vkd3d-utils", "vkd3d-utils\vkd3d-utils.vcxproj", "{EB024E37-C88C-49CF-91B3-EEEFCBD68B40}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vkd3d-compiler", "vkd3d-compiler\vkd3d-compiler.vcxproj", "{BDAD5C43-D228-444B-8894-AC03D29AF5F0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vkd3d-tests", "vkd3d-tests\vkd3d-tests.vcxproj", "{A7595183-7F08-4621-9A1F-EE70C9EBCE8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -420,6 +424,14 @@ Global
 		{EB024E37-C88C-49CF-91B3-EEEFCBD68B40}.Debug|x64.ActiveCfg = Debug|x64
 		{EB024E37-C88C-49CF-91B3-EEEFCBD68B40}.Release|Win32.ActiveCfg = Release|Win32
 		{EB024E37-C88C-49CF-91B3-EEEFCBD68B40}.Release|x64.ActiveCfg = Release|x64
+		{BDAD5C43-D228-444B-8894-AC03D29AF5F0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BDAD5C43-D228-444B-8894-AC03D29AF5F0}.Debug|x64.ActiveCfg = Debug|x64
+		{BDAD5C43-D228-444B-8894-AC03D29AF5F0}.Release|Win32.ActiveCfg = Release|Win32
+		{BDAD5C43-D228-444B-8894-AC03D29AF5F0}.Release|x64.ActiveCfg = Release|x64
+		{A7595183-7F08-4621-9A1F-EE70C9EBCE8A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A7595183-7F08-4621-9A1F-EE70C9EBCE8A}.Debug|x64.ActiveCfg = Debug|x64
+		{A7595183-7F08-4621-9A1F-EE70C9EBCE8A}.Release|Win32.ActiveCfg = Release|Win32
+		{A7595183-7F08-4621-9A1F-EE70C9EBCE8A}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
