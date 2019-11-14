@@ -21,6 +21,8 @@ Tests and Wine-private DLLs will be placed in wined3d_vs\Debug, frontend DLLs re
 
 x64 builds are work in progress and fail at the moment.
 
+To build d3d12, install the Vulkan SDK and make sure %VULKAN_SDK% is set and points to the right place - the installer should do this for you by default. Create a vkd3d checkout next to the wined3d_vs and wine checkout and build the following projects in this order: vkd3d-common, vkd3d-shader, vkd3d, d3d12. I will enable them by default once x64 support is in place because 32 bit d3d12.dll is of limited use.
+
 Running games:
 
 Copy libwine.dll, wined3d.dll and whichever frontend dll (e.g. d3d11.dll) next to the game exectutable and run it. It should prefer the DLLs in its current directory over the system DLLs.
