@@ -81,24 +81,28 @@ static inline int pthread_cond_init(pthread_cond_t *cond, const void *attr)
 {
     assert(!attr);
     InitializeConditionVariable(cond);
+    return 0;
 }
 
 static inline int pthread_cond_destroy(pthread_cond_t *cond)
 {
-	return -1;
+    return 0;
 }
 
 static inline int pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t *mutex)
 {
     SleepConditionVariableCS(cond, mutex, INFINITE);
+    return 0;
 }
 
 static inline int pthread_cond_broadcast(pthread_cond_t *cond)
 {
     WakeAllConditionVariable(cond);
+    return 0;
 }
 
 static inline int pthread_cond_signal(pthread_cond_t *cond)
 {
     WakeConditionVariable(cond);
+    return 0;
 }
