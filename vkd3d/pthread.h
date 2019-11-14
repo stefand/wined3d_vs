@@ -1,6 +1,7 @@
 #pragma once
 
-typedef HANDLE pthread_t, pthread_cond_t;
+typedef HANDLE pthread_t;
+typedef CONDITION_VARIABLE pthread_cond_t;
 typedef CRITICAL_SECTION pthread_mutex_t;
 
 static inline int pthread_join(pthread_t thread, void **retval)
@@ -76,29 +77,28 @@ static inline int pthread_mutex_unlock(pthread_mutex_t *mutex)
     return 0;
 }
 
+static inline int pthread_cond_init(pthread_cond_t *cond, const void *attr)
+{
+    assert(!attr);
+    InitializeConditionVariable(cond);
+}
+
 static inline int pthread_cond_destroy(pthread_cond_t *cond)
 {
 	return -1;
 }
 
-static inline int pthread_cond_init(pthread_cond_t *cond,
-		const void *attr)
+static inline int pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t *mutex)
 {
-	return -1;
-}
-
-static inline int pthread_cond_wait(pthread_cond_t *cond,
-	pthread_mutex_t *mutex)
-{
-	return -1;
+    SleepConditionVariableCS(cond, mutex, INFINITE);
 }
 
 static inline int pthread_cond_broadcast(pthread_cond_t *cond)
 {
-	return -1;
+    WakeAllConditionVariable(cond);
 }
 
 static inline int pthread_cond_signal(pthread_cond_t *cond)
 {
-	return -1;
+    WakeConditionVariable(cond);
 }
