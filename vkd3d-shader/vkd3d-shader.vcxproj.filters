@@ -36,4 +36,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="vkd3d-shader.def">
+      <Filter>Quelldateien</Filter>
+    </None>
+  </ItemGroup>
 </Project>

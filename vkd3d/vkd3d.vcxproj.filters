@@ -38,5 +38,13 @@
     <ClInclude Include="..\..\vkd3d\libs\vkd3d\vkd3d_private.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="pthread.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vkd3d.def">
+      <Filter>Quelldateien</Filter>
+    </None>
   </ItemGroup>
 </Project>

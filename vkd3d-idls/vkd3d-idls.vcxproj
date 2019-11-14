@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{BDAD5C43-D228-444B-8894-AC03D29AF5F0}</ProjectGuid>
-    <RootNamespace>vkd3dcompiler</RootNamespace>
+    <ProjectGuid>{98AC0CF4-1CC4-436C-9488-0627B69CB38D}</ProjectGuid>
+    <RootNamespace>vkd3didls</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -69,22 +69,47 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\..\vkd3d\include;..\..\vkd3d\include\private;..\vkd3d-idls;..\wined3d;.;$(IncludePath)</IncludePath>
-    <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>..\..\vkd3d\include;..\..\vkd3d\include\private;..\vkd3d-idls;..\wined3d;.;$(IncludePath)</IncludePath>
-    <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>..\..\vkd3d\include;..\..\vkd3d\include\private;..\vkd3d-idls;..\wined3d;.;$(IncludePath)</IncludePath>
-    <LibraryPath>..\Debug;$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>..\..\vkd3d\include;..\..\vkd3d\include\private;..\vkd3d-idls;..\wined3d;.;$(IncludePath)</IncludePath>
-    <LibraryPath>..\Release;$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\vkd3d\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIDL__</PreprocessorDefinitions>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+    </Midl>
+    <CustomBuild>
+      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -I..\..\vkd3d\include</Command>
+      <Outputs>.%(Filename).h</Outputs>
+    </CustomBuild>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\vkd3d\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIDL__</PreprocessorDefinitions>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+    </Midl>
+    <CustomBuild>
+      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -I..\..\vkd3d\include</Command>
+      <Outputs>.%(Filename).h</Outputs>
+    </CustomBuild>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -93,40 +118,21 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>vkd3d-shader.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>vkd3d-shader.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>vkd3d-shader.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\vkd3d\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIDL__</PreprocessorDefinitions>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+    </Midl>
+    <CustomBuild>
+      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -I..\..\vkd3d\include</Command>
+      <Outputs>.%(Filename).h</Outputs>
+    </CustomBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -136,20 +142,46 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>vkd3d-shader.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Midl>
+      <AdditionalIncludeDirectories>..\..\vkd3d\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIDL__</PreprocessorDefinitions>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+    </Midl>
+    <CustomBuild>
+      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -I..\..\vkd3d\include</Command>
+      <Outputs>.%(Filename).h</Outputs>
+    </CustomBuild>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\vkd3d\programs\vkd3d-compiler\main.c" />
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_d3d12.idl" />
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_d3d12sdklayers.idl" />
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_d3dcommon.idl" />
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgi.idl" />
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgi1_2.idl" />
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgi1_3.idl" />
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgi1_4.idl" />
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgibase.idl" />
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgiformat.idl" />
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgitype.idl" />
+    <Midl Include="..\..\vkd3d\include\vkd3d_unknown.idl">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DWORD=int;LONG=long;HRESULT=int;ULONG=long;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DWORD=int;LONG=long;HRESULT=int;ULONG=long;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">DWORD=int;LONG=long;HRESULT=int;ULONG=long;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">DWORD=int;LONG=long;HRESULT=int;ULONG=long;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="unistd.h" />
+    <ClInclude Include="..\..\vkd3d\include\vkd3d.h" />
+    <ClInclude Include="..\..\vkd3d\include\vkd3d_shader.h" />
+    <ClInclude Include="..\..\vkd3d\include\vkd3d_types.h" />
+    <ClInclude Include="..\..\vkd3d\include\vkd3d_utils.h" />
+    <ClInclude Include="..\..\vkd3d\include\vkd3d_windows.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
