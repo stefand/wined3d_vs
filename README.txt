@@ -13,7 +13,7 @@ Building:
 The msvc project references source files from ..\wine\, so to build, clone this repository and the Wine sources next to each other:
 
 1) git clone git://source.winehq.org/git/wine.git
-2) git clone https://github.com/stefandoesinger/wined3d_vs
+2) git clone https://github.com/stefand/wined3d_vs.git
 3) Apply patches in wined3d_vs\patches to the Wine tree
 4) Open wined3d_vs\wined3d.sln with MSVC 2019 and build the solution.
 
