@@ -1,6 +1,7 @@
 #pragma once
 
-typedef HANDLE pthread_t, pthread_mutex_t, pthread_cond_t;
+typedef HANDLE pthread_t, pthread_cond_t;
+typedef CRITICAL_SECTION pthread_mutex_t;
 
 static inline int pthread_join(pthread_t thread, void **retval)
 {
@@ -50,25 +51,29 @@ static inline int pthread_create(pthread_t *thread, const void *attr,
 	return 0;
 }
 
-static inline int pthread_mutex_destroy(pthread_mutex_t *mutex)
+static inline int pthread_mutex_init(pthread_mutex_t *mutex, const void *attr)
 {
-	return -1;
+    assert(!attr);
+    InitializeCriticalSection(mutex);
+    return 0;
 }
 
-static inline int pthread_mutex_init(pthread_mutex_t *mutex,
-		const void *attr)
+static inline int pthread_mutex_destroy(pthread_mutex_t *mutex)
 {
-	return -1;
+    DeleteCriticalSection(mutex);
+    return 0;
 }
 
 static inline int pthread_mutex_lock(pthread_mutex_t *mutex)
 {
-	return -1;
+    EnterCriticalSection(mutex);
+    return 0;
 }
 
 static inline int pthread_mutex_unlock(pthread_mutex_t *mutex)
 {
-	return -1;
+    LeaveCriticalSection(mutex);
+    return 0;
 }
 
 static inline int pthread_cond_destroy(pthread_cond_t *cond)
