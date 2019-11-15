@@ -165,19 +165,17 @@
     <CustomBuild Include="..\..\wine\include\dcommon.idl">
       <Filter>Headerdateien</Filter>
     </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <Midl Include="..\..\wine\include\d2d1_2.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\dwrite.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\dwrite_1.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\wine\include\dwrite_2.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
+    <CustomBuild Include="..\..\wine\include\d2d1_2.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\dwrite.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\dwrite_1.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\dwrite_2.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

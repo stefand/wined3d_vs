@@ -15,33 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="..\..\vkd3d\include\vkd3d_d3d12sdklayers.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\vkd3d\include\vkd3d_d3dcommon.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\vkd3d\include\vkd3d_dxgi.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\vkd3d\include\vkd3d_dxgi1_2.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\vkd3d\include\vkd3d_dxgi1_3.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\vkd3d\include\vkd3d_dxgi1_4.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\vkd3d\include\vkd3d_dxgibase.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\vkd3d\include\vkd3d_dxgiformat.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-    <Midl Include="..\..\vkd3d\include\vkd3d_dxgitype.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
     <Midl Include="..\..\vkd3d\include\vkd3d_unknown.idl">
       <Filter>Headerdateien</Filter>
     </Midl>
@@ -66,6 +39,33 @@
   <ItemGroup>
     <CustomBuild Include="..\..\vkd3d\include\vkd3d_d3d12.idl">
       <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_d3d12sdklayers.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_d3dcommon.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgi.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgi1_2.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgi1_3.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgi1_4.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgibase.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgiformat.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgitype.idl">
+      <Filter>Quelldateien</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>
