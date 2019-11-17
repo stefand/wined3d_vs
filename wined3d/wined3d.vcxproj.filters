@@ -117,4 +117,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\wine\dlls\wined3d\wined3d.spec">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
+  </ItemGroup>
 </Project>
