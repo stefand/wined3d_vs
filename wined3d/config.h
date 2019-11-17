@@ -60,3 +60,5 @@ static __inline int ffs(int x) {
 #define PACKAGE_VERSION "4.9"
 #define SONAME_LIBVULKAN "libvulkan-1.dll"
 static const char vkd3d_build[] = { 'F','i','x','m','e',0 }; /* TODO: Get the git commit hash */
+
+#define EXEEXT ".exe"
