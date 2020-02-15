@@ -113,7 +113,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>d3d9.lib;gdi32.lib;user32.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;gdi32.lib;user32.lib;uuid.lib;winecrt0.lib</AdditionalDependencies>
     </Link>
     <PreBuildEvent />
     <CustomBuildStep>
@@ -140,7 +140,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>d3d9.lib;gdi32.lib;user32.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;gdi32.lib;user32.lib;uuid.lib;winecrt0.lib</AdditionalDependencies>
     </Link>
     <PreBuildEvent />
     <CustomBuildStep>
@@ -171,7 +171,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>d3d9.lib;gdi32.lib;user32.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;gdi32.lib;user32.lib;uuid.lib;winecrt0.lib</AdditionalDependencies>
     </Link>
     <PreBuildEvent />
     <CustomBuildStep>
@@ -201,7 +201,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>d3d9.lib;gdi32.lib;user32.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>d3d9.lib;gdi32.lib;user32.lib;uuid.lib;winecrt0.lib</AdditionalDependencies>
     </Link>
     <PreBuildEvent />
     <CustomBuildStep>
