@@ -104,7 +104,7 @@
       <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
     </CustomBuild>
     <CustomBuild>
-      <Outputs>.%(Filename).h</Outputs>
+      <Outputs>%(Filename).h</Outputs>
     </CustomBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -125,7 +125,7 @@
       <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
     </CustomBuild>
     <CustomBuild>
-      <Outputs>.%(Filename).h</Outputs>
+      <Outputs>%(Filename).h</Outputs>
     </CustomBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -150,7 +150,7 @@
       <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
     </CustomBuild>
     <CustomBuild>
-      <Outputs>.%(Filename).h</Outputs>
+      <Outputs>%(Filename).h</Outputs>
     </CustomBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -175,7 +175,7 @@
       <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
     </CustomBuild>
     <CustomBuild>
-      <Outputs>.%(Filename).h</Outputs>
+      <Outputs>%(Filename).h</Outputs>
     </CustomBuild>
   </ItemDefinitionGroup>
   <ItemGroup>
