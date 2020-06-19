@@ -192,8 +192,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\wine\libs\port\casemap.c" />
-    <ClCompile Include="..\..\wine\libs\port\compose.c" />
-    <ClCompile Include="..\..\wine\libs\port\decompose.c" />
     <ClCompile Include="..\..\wine\libs\port\ffs.c" />
     <ClCompile Include="..\..\wine\libs\port\fstatvfs.c" />
     <ClCompile Include="..\..\wine\libs\port\getopt.c" />
