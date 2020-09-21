@@ -255,5 +255,11 @@
     <ClCompile Include="..\..\wine\libs\wine\wctomb.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\wine\libs\wine\compose.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\libs\wine\decompose.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

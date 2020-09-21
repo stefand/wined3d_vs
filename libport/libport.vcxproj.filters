@@ -29,9 +29,6 @@
     <ClCompile Include="..\..\wine\libs\port\getopt.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\interlocked.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\libs\port\isfinite.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -81,9 +78,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\libs\port\string.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\stubs.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\libs\port\wctype.c">

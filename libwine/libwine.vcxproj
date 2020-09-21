@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\wine\libs\wine\collation.c" />
+    <ClCompile Include="..\..\wine\libs\wine\compose.c" />
     <ClCompile Include="..\..\wine\libs\wine\config.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -94,6 +95,7 @@
     <ClCompile Include="..\..\wine\libs\wine\c_949.c" />
     <ClCompile Include="..\..\wine\libs\wine\c_950.c" />
     <ClCompile Include="..\..\wine\libs\wine\debug.c" />
+    <ClCompile Include="..\..\wine\libs\wine\decompose.c" />
     <ClCompile Include="..\..\wine\libs\wine\digitmap.c" />
     <ClCompile Include="..\..\wine\libs\wine\fold.c" />
     <ClCompile Include="..\..\wine\libs\wine\ldt.c">
