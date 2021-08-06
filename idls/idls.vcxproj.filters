@@ -117,45 +117,6 @@
     <CustomBuild Include="..\..\wine\include\wtypes.idl">
       <Filter>Headerdateien</Filter>
     </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\audioclient.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\comcat.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\commoncontrols.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\d3d10.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\d3d10sdklayers.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\d3d10_1.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\d3d11.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\d3d11sdklayers.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\d3d11_1.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\d3d11_2.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\d3d11_3.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\d3d11_4.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\d3d12.idl">
-      <Filter>Quelldateien</Filter>
-    </CustomBuild>
     <CustomBuild Include="..\..\wine\include\dwrite_3.idl">
       <Filter>Headerdateien</Filter>
     </CustomBuild>
@@ -165,17 +126,61 @@
     <CustomBuild Include="..\..\wine\include\dcommon.idl">
       <Filter>Headerdateien</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\audioclient.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\comcat.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\commoncontrols.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
     <CustomBuild Include="..\..\wine\include\d2d1_2.idl">
-      <Filter>Quelldateien</Filter>
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d10.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d10_1.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d10sdklayers.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d11.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d11_1.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d11_2.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d11_3.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d11_4.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d11sdklayers.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d12.idl">
+      <Filter>Headerdateien</Filter>
     </CustomBuild>
     <CustomBuild Include="..\..\wine\include\dwrite.idl">
-      <Filter>Quelldateien</Filter>
+      <Filter>Headerdateien</Filter>
     </CustomBuild>
     <CustomBuild Include="..\..\wine\include\dwrite_1.idl">
-      <Filter>Quelldateien</Filter>
+      <Filter>Headerdateien</Filter>
     </CustomBuild>
     <CustomBuild Include="..\..\wine\include\dwrite_2.idl">
-      <Filter>Quelldateien</Filter>
+      <Filter>Headerdateien</Filter>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\..\wine\include\objidlbase.idl">
+      <Filter>Headerdateien</Filter>
+    </Midl>
   </ItemGroup>
 </Project>

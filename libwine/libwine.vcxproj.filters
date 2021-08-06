@@ -261,5 +261,14 @@
     <ClCompile Include="..\..\wine\libs\wine\decompose.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\wine\libs\wine\casemap.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\libs\wine\string.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\libs\wine\wctype.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

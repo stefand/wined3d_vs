@@ -191,27 +191,15 @@
     <ClInclude Include="..\..\wine\libs\port\getopt.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\wine\libs\port\casemap.c" />
-    <ClCompile Include="..\..\wine\libs\port\ffs.c" />
-    <ClCompile Include="..\..\wine\libs\port\fstatvfs.c" />
     <ClCompile Include="..\..\wine\libs\port\getopt.c" />
-    <ClCompile Include="..\..\wine\libs\port\isfinite.c" />
-    <ClCompile Include="..\..\wine\libs\port\isinf.c" />
-    <ClCompile Include="..\..\wine\libs\port\isnan.c" />
     <ClCompile Include="..\..\wine\libs\port\lstat.c" />
     <ClCompile Include="..\..\wine\libs\port\mkstemps.c" />
     <ClCompile Include="..\..\wine\libs\port\poll.c" />
     <ClCompile Include="..\..\wine\libs\port\pread.c" />
     <ClCompile Include="..\..\wine\libs\port\pwrite.c" />
     <ClCompile Include="..\..\wine\libs\port\readlink.c" />
-    <ClCompile Include="..\..\wine\libs\port\rint.c" />
     <ClCompile Include="..\..\wine\libs\port\spawn.c" />
-    <ClCompile Include="..\..\wine\libs\port\statvfs.c" />
-    <ClCompile Include="..\..\wine\libs\port\string.c" />
-    <ClCompile Include="..\..\wine\libs\port\strnlen.c" />
     <ClCompile Include="..\..\wine\libs\port\symlink.c" />
-    <ClCompile Include="..\..\wine\libs\port\usleep.c" />
-    <ClCompile Include="..\..\wine\libs\port\wctype.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

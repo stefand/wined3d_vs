@@ -20,22 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\wine\libs\port\ffs.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\fstatvfs.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\libs\port\getopt.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\isfinite.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\isinf.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\isnan.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\libs\port\lstat.c">
@@ -59,28 +44,7 @@
     <ClCompile Include="..\..\wine\libs\port\spawn.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\statvfs.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\libs\port\symlink.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\usleep.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\rint.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\strnlen.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\casemap.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\string.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\libs\port\wctype.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

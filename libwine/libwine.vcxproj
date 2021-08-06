@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\wine\libs\wine\casemap.c" />
     <ClCompile Include="..\..\wine\libs\wine\collation.c" />
     <ClCompile Include="..\..\wine\libs\wine\compose.c" />
     <ClCompile Include="..\..\wine\libs\wine\config.c">
@@ -124,8 +125,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\wine\libs\wine\sortkey.c" />
+    <ClCompile Include="..\..\wine\libs\wine\string.c" />
     <ClCompile Include="..\..\wine\libs\wine\utf8.c" />
     <ClCompile Include="..\..\wine\libs\wine\wctomb.c" />
+    <ClCompile Include="..\..\wine\libs\wine\wctype.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0496AECD-CBE7-4502-BDDF-0C76649B2FFF}</ProjectGuid>
@@ -216,7 +219,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalOptions>/EXPORT:strstrW /EXPORT:strtolW /EXPORT:strncmpiW /EXPORT:wine_wctype_table /EXPORT:wine_casemap_upper /ignore:4049</AdditionalOptions>
+      <AdditionalOptions>/ignore:4049</AdditionalOptions>
       <AdditionalDependencies>libport.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -232,7 +235,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalOptions>/EXPORT:strstrW /EXPORT:strtolW /EXPORT:strncmpiW /EXPORT:wine_wctype_table /EXPORT:wine_casemap_upper /ignore:4049</AdditionalOptions>
+      <AdditionalOptions>/ignore:4049</AdditionalOptions>
       <AdditionalDependencies>libport.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -250,7 +253,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalOptions>/EXPORT:strstrW /EXPORT:strtolW /EXPORT:strncmpiW /EXPORT:wine_wctype_table /EXPORT:wine_casemap_upper /ignore:4049</AdditionalOptions>
+      <AdditionalOptions>/ignore:4049</AdditionalOptions>
       <AdditionalDependencies>libport.lib</AdditionalDependencies>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
@@ -269,7 +272,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalOptions>/EXPORT:strstrW /EXPORT:strtolW /EXPORT:strncmpiW /EXPORT:wine_wctype_table /EXPORT:wine_casemap_upper /ignore:4049</AdditionalOptions>
+      <AdditionalOptions>/ignore:4049</AdditionalOptions>
       <AdditionalDependencies>libport.lib</AdditionalDependencies>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>

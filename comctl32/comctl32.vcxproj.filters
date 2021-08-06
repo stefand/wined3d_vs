@@ -26,9 +26,6 @@
     <ClCompile Include="..\..\wine\dlls\comctl32\comboex.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\comctl32\comctl32undoc.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\comctl32\commctrl.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -96,15 +93,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\comctl32\taskdialog.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\comctl32\theme_dialog.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\comctl32\theme_scrollbar.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\comctl32\theming.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\comctl32\toolbar.c">

@@ -110,7 +110,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
-      <AdditionalDependencies>imm32.lib;uuid.lib;user32.lib;usp10.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libwine.lib;libport.lib;winecrt0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>imm32.lib;uuid.lib;user32.lib;usp10.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libport.lib;winecrt0.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:MenuHelp
 /EXPORT:ShowHideMenuCtl
 /EXPORT:GetEffectiveClientRect
@@ -298,6 +298,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>imm32.lib;uuid.lib;user32.lib;usp10.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libport.lib;winecrt0.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -316,7 +317,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
-      <AdditionalDependencies>imm32.lib;uuid.lib;user32.lib;usp10.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libwine.lib;libport.lib;winecrt0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>imm32.lib;uuid.lib;user32.lib;usp10.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libport.lib;winecrt0.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:MenuHelp
 /EXPORT:ShowHideMenuCtl
 /EXPORT:GetEffectiveClientRect
@@ -508,6 +509,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>imm32.lib;uuid.lib;user32.lib;usp10.lib;gdi32.lib;advapi32.lib;winmm.lib;uxtheme.lib;libport.lib;winecrt0.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -518,7 +520,6 @@
     <ClCompile Include="..\..\wine\dlls\comctl32\button.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\combo.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\comboex.c" />
-    <ClCompile Include="..\..\wine\dlls\comctl32\comctl32undoc.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\commctrl.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\datetime.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\dpa.c" />
@@ -545,9 +546,6 @@
     <ClCompile Include="..\..\wine\dlls\comctl32\syslink.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tab.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\taskdialog.c" />
-    <ClCompile Include="..\..\wine\dlls\comctl32\theme_dialog.c" />
-    <ClCompile Include="..\..\wine\dlls\comctl32\theme_scrollbar.c" />
-    <ClCompile Include="..\..\wine\dlls\comctl32\theming.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\toolbar.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\tooltips.c" />
     <ClCompile Include="..\..\wine\dlls\comctl32\trackbar.c" />

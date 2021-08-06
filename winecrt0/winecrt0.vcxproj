@@ -106,7 +106,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libwine.lib</AdditionalDependencies>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
       <AdditionalOptions>/EXPORT:__wine_unregister_resources /EXPORT:__wine_register_resources /EXPORT:__wine_dbg_strdup /EXPORT:__wine_dbg_output /EXPORT:__wine_dbg_header /EXPORT:__wine_dbg_get_channel_flags %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
@@ -121,7 +122,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libwine.lib</AdditionalDependencies>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
       <AdditionalOptions>/EXPORT:__wine_unregister_resources /EXPORT:__wine_register_resources /EXPORT:__wine_dbg_strdup /EXPORT:__wine_dbg_output /EXPORT:__wine_dbg_header /EXPORT:__wine_dbg_get_channel_flags %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
@@ -140,7 +142,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libwine.lib</AdditionalDependencies>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
       <AdditionalOptions>/EXPORT:__wine_unregister_resources /EXPORT:__wine_register_resources /EXPORT:__wine_dbg_strdup /EXPORT:__wine_dbg_output /EXPORT:__wine_dbg_header /EXPORT:__wine_dbg_get_channel_flags %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
@@ -159,7 +162,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libwine.lib</AdditionalDependencies>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
       <AdditionalOptions>/EXPORT:__wine_unregister_resources /EXPORT:__wine_register_resources /EXPORT:__wine_dbg_strdup /EXPORT:__wine_dbg_output /EXPORT:__wine_dbg_header /EXPORT:__wine_dbg_get_channel_flags %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>

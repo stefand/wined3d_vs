@@ -228,13 +228,13 @@
       <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">wine</OutputDirectory>
       <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release|x64'">wine</OutputDirectory>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">wine\.%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">wine\%(Filename).h</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">wine\.%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">wine\%(Filename).h</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">wine\.%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">wine\%(Filename).h</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">wine\.%(Filename).h</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">wine\%(Filename).h</Outputs>
     </CustomBuild>
     <CustomBuild Include="..\..\wine\include\wtypes.idl" />
   </ItemGroup>
@@ -267,6 +267,9 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\wine\include\dcommon.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\..\wine\include\objidlbase.idl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
