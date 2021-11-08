@@ -15,16 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\wine\dlls\dxguid\dx8guid.c">
+    <ClCompile Include="..\..\wine\libs\dxguid\dx8guid.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\dxguid\dx9guid.c">
+    <ClCompile Include="..\..\wine\libs\dxguid\dx9guid.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\dxguid\dx10guid.c">
+    <ClCompile Include="..\..\wine\libs\dxguid\dx10guid.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\dxguid\dxguid.c">
+    <ClCompile Include="..\..\wine\libs\dxguid\dxguid.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

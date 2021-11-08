@@ -100,7 +100,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libwine.lib;libport.lib;dxguid.lib;winecrt0.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>dxguid.lib;winecrt0.lib;uuid.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:DirectXFileCreate
 /EXPORT:DllCanUnloadNow,PRIVATE
 /EXPORT:DllGetClassObject,PRIVATE
@@ -120,7 +120,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libwine.lib;libport.lib;dxguid.lib;winecrt0.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>dxguid.lib;winecrt0.lib;uuid.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:DirectXFileCreate
 /EXPORT:DllCanUnloadNow,PRIVATE
 /EXPORT:DllGetClassObject,PRIVATE
@@ -144,7 +144,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libwine.lib;libport.lib;dxguid.lib;winecrt0.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>dxguid.lib;winecrt0.lib;uuid.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:DirectXFileCreate
 /EXPORT:DllCanUnloadNow,PRIVATE
 /EXPORT:DllGetClassObject,PRIVATE
@@ -168,7 +168,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libwine.lib;libport.lib;dxguid.lib;winecrt0.lib;uuid.lib</AdditionalDependencies>
+      <AdditionalDependencies>dxguid.lib;winecrt0.lib;uuid.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:DirectXFileCreate
 /EXPORT:DllCanUnloadNow,PRIVATE
 /EXPORT:DllGetClassObject,PRIVATE

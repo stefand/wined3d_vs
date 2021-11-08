@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\wine\dlls\dxguid\dx10guid.c" />
-    <ClCompile Include="..\..\wine\dlls\dxguid\dx8guid.c" />
-    <ClCompile Include="..\..\wine\dlls\dxguid\dx9guid.c" />
-    <ClCompile Include="..\..\wine\dlls\dxguid\dxguid.c" />
+    <ClCompile Include="..\..\wine\libs\dxguid\dx10guid.c" />
+    <ClCompile Include="..\..\wine\libs\dxguid\dx8guid.c" />
+    <ClCompile Include="..\..\wine\libs\dxguid\dx9guid.c" />
+    <ClCompile Include="..\..\wine\libs\dxguid\dxguid.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B9D2EE27-0166-4A59-8564-5A0ABAD9402B}</ProjectGuid>

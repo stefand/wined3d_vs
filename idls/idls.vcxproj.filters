@@ -27,9 +27,6 @@
     <CustomBuild Include="..\..\wine\include\d3dcommon.idl">
       <Filter>Headerdateien</Filter>
     </CustomBuild>
-    <CustomBuild Include="..\..\wine\include\d3dx10core.idl">
-      <Filter>Headerdateien</Filter>
-    </CustomBuild>
     <CustomBuild Include="..\..\wine\include\docobj.idl">
       <Filter>Headerdateien</Filter>
     </CustomBuild>
@@ -175,6 +172,9 @@
       <Filter>Headerdateien</Filter>
     </CustomBuild>
     <CustomBuild Include="..\..\wine\include\dwrite_2.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d12sdklayers.idl">
       <Filter>Headerdateien</Filter>
     </CustomBuild>
   </ItemGroup>

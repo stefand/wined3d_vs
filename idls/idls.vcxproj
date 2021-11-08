@@ -194,7 +194,6 @@
     <CustomBuild Include="..\..\wine\include\d3d11_4.idl" />
     <CustomBuild Include="..\..\wine\include\d3d12.idl" />
     <CustomBuild Include="..\..\wine\include\d3dcommon.idl" />
-    <CustomBuild Include="..\..\wine\include\d3dx10core.idl" />
     <CustomBuild Include="..\..\wine\include\docobj.idl" />
     <CustomBuild Include="..\..\wine\include\dxgi.idl" />
     <CustomBuild Include="..\..\wine\include\dxgi1_2.idl" />
@@ -269,6 +268,7 @@
     <CustomBuild Include="..\..\wine\include\dcommon.idl" />
   </ItemGroup>
   <ItemGroup>
+    <CustomBuild Include="..\..\wine\include\d3d12sdklayers.idl" />
     <Midl Include="..\..\wine\include\objidlbase.idl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
