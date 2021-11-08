@@ -169,7 +169,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\winecrt0\debug.c" />
+    <ClCompile Include="..\..\wine\dlls\winecrt0\dll_canunload.c" />
     <ClCompile Include="..\..\wine\dlls\winecrt0\dll_main.c" />
+    <ClCompile Include="..\..\wine\dlls\winecrt0\dll_register.c" />
     <ClCompile Include="..\..\wine\dlls\winecrt0\register.c" />
   </ItemGroup>
   <ItemGroup>

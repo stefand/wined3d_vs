@@ -24,6 +24,12 @@
     <ClCompile Include="..\..\wine\dlls\winecrt0\debug.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\winecrt0\dll_canunload.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\winecrt0\dll_register.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\wine\dlls\winecrt0\crt0_private.h">
