@@ -29,6 +29,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\vkd3d\libs\vkd3d\vkd3d_private.h" />
     <ClInclude Include="pthread.h" />
+    <ClInclude Include="vkd3d_version.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="vkd3d.def" />

@@ -1,5 +1,8 @@
 #pragma once
 
+#include <windows.h>
+#include <assert.h>
+
 typedef HANDLE pthread_t;
 typedef CONDITION_VARIABLE pthread_cond_t;
 typedef CRITICAL_SECTION pthread_mutex_t;

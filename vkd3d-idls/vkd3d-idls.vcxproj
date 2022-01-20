@@ -184,6 +184,7 @@
     <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgibase.idl" />
     <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgiformat.idl" />
     <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgitype.idl" />
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_d3dx9shader.idl" />
     <Midl Include="..\..\vkd3d\include\vkd3d_unknown.idl">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DWORD=int;LONG=long;HRESULT=int;ULONG=long;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DWORD=int;LONG=long;HRESULT=int;ULONG=long;%(PreprocessorDefinitions)</PreprocessorDefinitions>

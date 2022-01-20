@@ -41,6 +41,9 @@
     <ClInclude Include="pthread.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="vkd3d_version.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="vkd3d.def">

@@ -67,5 +67,8 @@
     <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgitype.idl">
       <Filter>Quelldateien</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_d3dx9shader.idl">
+      <Filter>Quelldateien</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

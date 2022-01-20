@@ -30,6 +30,27 @@
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\vkd3d_shader_main.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\d3dbc.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\glsl.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_codegen.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_sm1.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_sm4.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="fakelexer.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vkd3d\libs\vkd3d-shader\vkd3d_shader_private.h">
