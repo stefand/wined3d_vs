@@ -101,6 +101,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;DECLSPEC_SELECTANY=;__i386__;_DEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4018;4244;4305</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -128,6 +129,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;DECLSPEC_SELECTANY=;__x86_64__;_DEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4018;4244;4305</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -157,6 +159,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;DECLSPEC_SELECTANY=;__i386__;_NDEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4018;4244;4305</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -188,6 +191,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;DECLSPEC_SELECTANY=;__x86_64__;_NDEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4018;4244;4305</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

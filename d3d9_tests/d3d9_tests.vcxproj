@@ -106,9 +106,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_NTSYSTEM_;__i386__;_DEBUG</PreprocessorDefinitions>
-      <AdditionalOptions>/wd4244 /wd4305</AdditionalOptions>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,9 +133,9 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_NTSYSTEM_;__x86_64__;_DEBUG</PreprocessorDefinitions>
-      <AdditionalOptions>/wd4244 /wd4305</AdditionalOptions>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -162,9 +162,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_NTSYSTEM_;__i386__;_NDEBUG</PreprocessorDefinitions>
-      <AdditionalOptions>/wd4244 /wd4305</AdditionalOptions>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -192,9 +192,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_NTSYSTEM_;__x86_64__;_NDEBUG</PreprocessorDefinitions>
-      <AdditionalOptions>/wd4244 /wd4305</AdditionalOptions>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
