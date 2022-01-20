@@ -101,7 +101,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;USE_COMPILER_EXCEPTIONS;__i386__;_DEBUG</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;USE_COMPILER_EXCEPTIONS;__WINE_USE_MSVCRT;__i386__;_DEBUG</PreprocessorDefinitions>
       <AdditionalOptions>/wd4018 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -130,7 +130,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;USE_COMPILER_EXCEPTIONS;__x86_64__;_DEBUG</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;USE_COMPILER_EXCEPTIONS;__WINE_USE_MSVCRT;__x86_64__;_DEBUG</PreprocessorDefinitions>
       <AdditionalOptions>/wd4018 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -161,7 +161,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;USE_COMPILER_EXCEPTIONS;__i386__;_NDEBUG</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;USE_COMPILER_EXCEPTIONS;__WINE_USE_MSVCRT;__i386__;_NDEBUG</PreprocessorDefinitions>
       <AdditionalOptions>/wd4018 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -194,7 +194,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;USE_COMPILER_EXCEPTIONS;__x86_64__;_NDEBUG</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;USE_COMPILER_EXCEPTIONS;__WINE_USE_MSVCRT;__x86_64__;_NDEBUG</PreprocessorDefinitions>
       <AdditionalOptions>/wd4018 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
