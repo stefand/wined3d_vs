@@ -69,28 +69,28 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
+    <IncludePath>..\wined3d;..\..\vkd3d\include;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\$(Platform)_$(Configuration);$(LibraryPath)</LibraryPath>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
+    <IncludePath>..\wined3d;..\..\vkd3d\include;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\$(Platform)_$(Configuration);$(LibraryPath)</LibraryPath>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
+    <IncludePath>..\wined3d;..\..\vkd3d\include;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\$(Platform)_$(Configuration);$(LibraryPath)</LibraryPath>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
+    <IncludePath>..\wined3d;..\..\vkd3d\include;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\$(Platform)_$(Configuration);$(LibraryPath)</LibraryPath>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)\</OutDir>
@@ -100,13 +100,13 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_WIN32_VULKAN;USE_WIN32_OPENGL;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_WINDOWS;_USRDLL;_NTSYSTEM_;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_WIN32_VULKAN;USE_WIN32_OPENGL;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_DEBUG;_WINDOWS;_USRDLL;__i386__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4244;4018;4056;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_WINDOWS;_USRDLL;_NTSYSTEM_;ssize_t=SSIZE_T;_DEBUG;__i386__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4018;4056;4273;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib</AdditionalDependencies>
+      <AdditionalDependencies>winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib;vkd3d.lib;vkd3d-shader.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>
       </AdditionalOptions>
@@ -121,13 +121,13 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_WIN32_VULKAN;USE_WIN32_OPENGL;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_WINDOWS;_USRDLL;_NTSYSTEM_;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_WIN32_VULKAN;USE_WIN32_OPENGL;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_DEBUG;_WINDOWS;_USRDLL;__x86_64__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4244;4018;4056;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_WINDOWS;_USRDLL;_NTSYSTEM_;ssize_t=SSIZE_T;_DEBUG;__x86_64__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4018;4056;4273;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib</AdditionalDependencies>
+      <AdditionalDependencies>winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib;vkd3d.lib;vkd3d-shader.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>
       </AdditionalOptions>
@@ -144,15 +144,15 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_WIN32_VULKAN;USE_WIN32_OPENGL;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_WINDOWS;_USRDLL;_NTSYSTEM_;WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_WIN32_VULKAN;USE_WIN32_OPENGL;COM_NO_WINDOWS_H;WINED3D_EXPORTS;NDEBUG;_WINDOWS;_USRDLL;__i386__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4244;4018;4056;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_WINDOWS;_USRDLL;_NTSYSTEM_;ssize_t=SSIZE_T;NDEBUG;__i386__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4018;4056;4273;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib</AdditionalDependencies>
+      <AdditionalDependencies>winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib;vkd3d.lib;vkd3d-shader.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>
       </AdditionalOptions>
@@ -169,15 +169,15 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_WIN32_VULKAN;USE_WIN32_OPENGL;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_WINDOWS;_USRDLL;_NTSYSTEM_;WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;USE_WIN32_VULKAN;USE_WIN32_OPENGL;COM_NO_WINDOWS_H;WINED3D_EXPORTS;NDEBUG;_WINDOWS;_USRDLL;__x86_64__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4244;4018;4056;4273;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_WINDOWS;_USRDLL;_NTSYSTEM_;ssize_t=SSIZE_T;NDEBUG;__x86_64__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4018;4056;4273;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib</AdditionalDependencies>
+      <AdditionalDependencies>winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib;vkd3d.lib;vkd3d-shader.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>
       </AdditionalOptions>
