@@ -23,5 +23,8 @@
     <ClInclude Include="..\..\vkd3d\libs\vkd3d-utils\vkd3d_utils_private.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\vkd3d\include\vkd3d_utils.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

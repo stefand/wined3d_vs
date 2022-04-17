@@ -24,5 +24,11 @@
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-common\utf8.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-common\blob.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-common\error.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

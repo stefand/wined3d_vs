@@ -70,22 +70,22 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\..\vkd3d\include;..\..\vkd3d\include\private;..\vkd3d-idls;..\wined3d;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>$(VULKAN_SDK)\Include;..\..\vkd3d\include;..\..\vkd3d\include\private;..\vkd3d-idls;..\wined3d;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>..\..\vkd3d\include;..\..\vkd3d\include\private;..\vkd3d-idls;..\wined3d;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>$(VULKAN_SDK)\Include;..\..\vkd3d\include;..\..\vkd3d\include\private;..\vkd3d-idls;..\wined3d;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>..\..\vkd3d\include;..\..\vkd3d\include\private;..\vkd3d-idls;..\wined3d;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>$(VULKAN_SDK)\Include;..\..\vkd3d\include;..\..\vkd3d\include\private;..\vkd3d-idls;..\wined3d;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>..\..\vkd3d\include;..\..\vkd3d\include\private;..\vkd3d-idls;..\wined3d;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <IncludePath>$(VULKAN_SDK)\Include;..\..\vkd3d\include;..\..\vkd3d\include\private;..\vkd3d-idls;..\wined3d;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
@@ -150,7 +150,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-common\blob.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-common\debug.c" />
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-common\error.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-common\memory.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-common\utf8.c" />
   </ItemGroup>

@@ -51,15 +51,16 @@
     <ClCompile Include="fakelexer.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_constant_ops.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vkd3d\libs\vkd3d-shader\vkd3d_shader_private.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="vkd3d-shader.def">
-      <Filter>Quelldateien</Filter>
-    </None>
+    <ClInclude Include="..\..\vkd3d\include\vkd3d_shader.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
