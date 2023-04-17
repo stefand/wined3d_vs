@@ -72,7 +72,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)_dll\</OutDir>
-    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
+    <IncludePath>..\wined3d;..\..\vkd3d\include;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\$(Platform)_$(Configuration);..\$(Platform)_$(Configuration)_dll;$(LibraryPath)</LibraryPath>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
@@ -81,12 +81,12 @@
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)_dll\</OutDir>
     <LibraryPath>..\$(Platform)_$(Configuration);..\$(Platform)_$(Configuration)_dll;$(LibraryPath)</LibraryPath>
-    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
+    <IncludePath>..\wined3d;..\..\vkd3d\include;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)_dll\</OutDir>
-    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
+    <IncludePath>..\wined3d;..\..\vkd3d\include;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
     <LibraryPath>..\$(Platform)_$(Configuration);..\$(Platform)_$(Configuration)_dll;$(LibraryPath)</LibraryPath>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
@@ -95,7 +95,7 @@
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)_dll\</OutDir>
     <LibraryPath>..\$(Platform)_$(Configuration);..\$(Platform)_$(Configuration)_dll;$(LibraryPath)</LibraryPath>
-    <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
+    <IncludePath>..\wined3d;..\..\vkd3d\include;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -103,11 +103,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;__i386__;_DEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4133;4244;4273;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib;dxguid.lib;winecrt0.lib</AdditionalDependencies>
+      <AdditionalDependencies>wined3d.lib;dxgi.lib;uuid.lib;dxguid.lib;winecrt0.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3D11CoreCreateDevice /EXPORT:D3D11CoreRegisterLayers /EXPORT:D3D11CreateDevice /EXPORT:D3D11CreateDeviceAndSwapChain  /EXPORT:D3D11CoreCreateDevice %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
@@ -118,11 +119,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;__x86_64__;_DEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4133;4244;4273;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib;dxguid.lib;winecrt0.lib</AdditionalDependencies>
+      <AdditionalDependencies>wined3d.lib;dxgi.lib;uuid.lib;dxguid.lib;winecrt0.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3D11CoreCreateDevice /EXPORT:D3D11CoreRegisterLayers /EXPORT:D3D11CreateDevice /EXPORT:D3D11CreateDeviceAndSwapChain  /EXPORT:D3D11CoreCreateDevice %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
@@ -134,13 +136,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;__i386__;_NDEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4133;4244;4273;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib;dxguid.lib;winecrt0.lib</AdditionalDependencies>
+      <AdditionalDependencies>wined3d.lib;dxgi.lib;uuid.lib;dxguid.lib;winecrt0.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3D11CoreCreateDevice /EXPORT:D3D11CoreRegisterLayers /EXPORT:D3D11CreateDevice /EXPORT:D3D11CreateDeviceAndSwapChain  /EXPORT:D3D11CoreCreateDevice %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
@@ -153,13 +156,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;__x86_64__;_NDEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4133;4244;4273;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>wined3d.lib;libwine.lib;dxgi.lib;uuid.lib;dxguid.lib;winecrt0.lib</AdditionalDependencies>
+      <AdditionalDependencies>wined3d.lib;dxgi.lib;uuid.lib;dxguid.lib;winecrt0.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3D11CoreCreateDevice /EXPORT:D3D11CoreRegisterLayers /EXPORT:D3D11CreateDevice /EXPORT:D3D11CreateDeviceAndSwapChain  /EXPORT:D3D11CoreCreateDevice %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>

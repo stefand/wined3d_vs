@@ -108,7 +108,7 @@
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_NTSYSTEM_;__i386__;_DEBUG</PreprocessorDefinitions>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
-      <DisableSpecificWarnings>4244;4996</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;4305;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -135,7 +135,7 @@
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_NTSYSTEM_;__x86_64__;_DEBUG</PreprocessorDefinitions>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
-      <DisableSpecificWarnings>4244;4996</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;4305;4996;4312;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -164,7 +164,7 @@
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_NTSYSTEM_;__i386__;_NDEBUG</PreprocessorDefinitions>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
-      <DisableSpecificWarnings>4244;4996</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;4305;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -194,7 +194,7 @@
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_NTSYSTEM_;__x86_64__;_NDEBUG</PreprocessorDefinitions>
       <UndefinePreprocessorDefinitions>
       </UndefinePreprocessorDefinitions>
-      <DisableSpecificWarnings>4244;4996</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;4305;4996;4312;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

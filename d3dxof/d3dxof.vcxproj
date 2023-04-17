@@ -116,7 +116,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;__WINE_USE_MSVCRT;__x86_64__;_DEBUG</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4018;4244</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -162,7 +162,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;__WINE_USE_MSVCRT;__x86_64__;_NDEBUG</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4018;4244</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

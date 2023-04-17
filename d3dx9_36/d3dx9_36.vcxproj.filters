@@ -57,9 +57,6 @@
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\xfile.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\idls\wincodec_i.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\render.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>

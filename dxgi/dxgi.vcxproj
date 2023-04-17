@@ -101,7 +101,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;_WINDOWS;_USRDLL;_NTSYSTEM_;USE_WIN32_VULKAN;SONAME_LIBVKD3D="vkd3d";__i386__;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4018;4244</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -116,7 +116,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;_WINDOWS;_USRDLL;_NTSYSTEM_;USE_WIN32_VULKAN;SONAME_LIBVKD3D="vkd3d";__x86_64__;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4018;4244</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,7 +133,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;_WINDOWS;_USRDLL;_NTSYSTEM_;USE_WIN32_VULKAN;SONAME_LIBVKD3D="vkd3d";__i386__;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4018;4244</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,7 +152,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;_WINDOWS;_USRDLL;_NTSYSTEM_;USE_WIN32_VULKAN;SONAME_LIBVKD3D="vkd3d";__x86_64__;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4018;4244</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -172,7 +172,7 @@
     <ClCompile Include="..\..\wine\dlls\dxgi\dxgi_main.c" />
     <ClCompile Include="..\..\wine\dlls\dxgi\factory.c" />
     <ClCompile Include="..\..\wine\dlls\dxgi\output.c" />
-    <ClCompile Include="..\..\wine\dlls\dxgi\surface.c" />
+    <ClCompile Include="..\..\wine\dlls\dxgi\resource.c" />
     <ClCompile Include="..\..\wine\dlls\dxgi\swapchain.c" />
     <ClCompile Include="..\..\wine\dlls\dxgi\utils.c" />
   </ItemGroup>

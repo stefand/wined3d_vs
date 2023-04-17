@@ -101,15 +101,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_WINDOWS;_USRDLL;_NTSYSTEM_;ssize_t=SSIZE_T;I64_MAX=_I64_MAX;_DEBUG;__i386__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4244;4018;4056;4273;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4098;4133;4146;4244;4273;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib;vkd3d.lib;vkd3d-shader.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4093</AdditionalOptions>
       <ModuleDefinitionFile>$(IntDir)$(TargetName).def</ModuleDefinitionFile>
     </Link>
     <Midl>
@@ -122,15 +121,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_WINDOWS;_USRDLL;_NTSYSTEM_;ssize_t=SSIZE_T;I64_MAX=_I64_MAX;_DEBUG;__x86_64__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4244;4018;4056;4273;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4098;4133;4146;4244;4273;4996;4267;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib;vkd3d.lib;vkd3d-shader.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4093</AdditionalOptions>
       <ModuleDefinitionFile>$(IntDir)$(TargetName).def</ModuleDefinitionFile>
     </Link>
     <Midl>
@@ -145,7 +143,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_WINDOWS;_USRDLL;_NTSYSTEM_;ssize_t=SSIZE_T;I64_MAX=_I64_MAX;NDEBUG;__i386__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4244;4018;4056;4273;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4098;4133;4146;4244;4273;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -154,8 +152,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib;vkd3d.lib;vkd3d-shader.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4093</AdditionalOptions>
       <ModuleDefinitionFile>$(IntDir)$(TargetName).def</ModuleDefinitionFile>
     </Link>
     <Midl>
@@ -170,7 +167,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;COM_NO_WINDOWS_H;WINED3D_EXPORTS;_WINDOWS;_USRDLL;_NTSYSTEM_;ssize_t=SSIZE_T;I64_MAX=_I64_MAX;NDEBUG;__x86_64__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4244;4018;4056;4273;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4098;4133;4146;4244;4273;4996;4267;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -179,8 +176,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>winecrt0.lib;gdi32.lib;user32.lib;advapi32.lib;opengl32.lib;ntdll.lib;vkd3d.lib;vkd3d-shader.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4093</AdditionalOptions>
       <ModuleDefinitionFile>$(IntDir)$(TargetName).def</ModuleDefinitionFile>
     </Link>
     <Midl>

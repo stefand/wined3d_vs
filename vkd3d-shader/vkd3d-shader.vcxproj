@@ -99,8 +99,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4146;4244;4133;4018;4267;4098;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_SPIRV_UNIFIED1_SPIRV_H;LIBVKD3D_SHADER_SOURCE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4146</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -113,8 +113,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4146;4244;4133;4018;4267;4098;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_SPIRV_UNIFIED1_SPIRV_H;LIBVKD3D_SHADER_SOURCE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4146</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,8 +129,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_SPIRV_UNIFIED1_SPIRV_H;LIBVKD3D_SHADER_SOURCE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4146</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4146;4244;4133;4018;4267;4098;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_SPIRV_UNIFIED1_SPIRV_H;LIBVKD3D_SHADER_SOURCE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -147,8 +147,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_SPIRV_UNIFIED1_SPIRV_H;LIBVKD3D_SHADER_SOURCE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4146</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4146;4244;4133;4018;4267;4098;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_SPIRV_UNIFIED1_SPIRV_H;LIBVKD3D_SHADER_SOURCE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -163,15 +163,11 @@
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\dxbc.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\glsl.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl.c" />
-    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_codegen.c">
-      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4146</DisableSpecificWarnings>
-      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4146</DisableSpecificWarnings>
-      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4146</DisableSpecificWarnings>
-      <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4146</DisableSpecificWarnings>
-    </ClCompile>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_codegen.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_constant_ops.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_sm1.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_sm4.c" />
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\ir.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\spirv.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\trace.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\vkd3d_shader_main.c" />

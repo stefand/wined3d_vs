@@ -35,13 +35,13 @@
     <ClCompile Include="..\..\wine\dlls\dxgi\output.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\dxgi\surface.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\dxgi\swapchain.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\dxgi\utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\dxgi\resource.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

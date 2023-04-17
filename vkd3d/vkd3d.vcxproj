@@ -123,7 +123,7 @@
       <PreprocessorDefinitions>PATH_MAX=MAX_PATH;_CRT_SECURE_NO_WARNINGS;PACKAGE_NAME="vkd3d-msvc";LIBVKD3D_SOURCE;WIN32;_DEBUG;VKD3D_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <DisableSpecificWarnings>4146</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4090;4098;4133;4146;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -142,7 +142,7 @@
       <PreprocessorDefinitions>PATH_MAX=MAX_PATH;_CRT_SECURE_NO_WARNINGS;PACKAGE_NAME="vkd3d-msvc";LIBVKD3D_SOURCE;_DEBUG;VKD3D_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <DisableSpecificWarnings>4146</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4090;4098;4133;4146;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -163,7 +163,7 @@
       <PreprocessorDefinitions>PATH_MAX=MAX_PATH;_CRT_SECURE_NO_WARNINGS;PACKAGE_NAME="vkd3d-msvc";LIBVKD3D_SOURCE;WIN32;NDEBUG;VKD3D_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <DisableSpecificWarnings>4146</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4090;4098;4133;4146;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -186,7 +186,7 @@
       <PreprocessorDefinitions>PATH_MAX=MAX_PATH;_CRT_SECURE_NO_WARNINGS;PACKAGE_NAME="vkd3d-msvc";LIBVKD3D_SOURCE;NDEBUG;VKD3D_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <DisableSpecificWarnings>4146</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4090;4098;4133;4146;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
