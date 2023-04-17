@@ -1,3 +1,4 @@
+#ifndef __WINE_CONFIG_H
 #define __WINE_CONFIG_H
 
 #define HAVE_STRERROR
@@ -60,3 +61,5 @@ static __inline int ffs(int x) {
 static const char vkd3d_build[] = { 'F','i','x','m','e',0 }; /* TODO: Get the git commit hash */
 
 #define EXEEXT ".exe"
+
+#endif
