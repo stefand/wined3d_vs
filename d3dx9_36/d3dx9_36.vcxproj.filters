@@ -69,6 +69,12 @@
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\main.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\d3dx9_36\txc_compress_dxtn.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\d3dx9_36\txc_fetch_dxtn.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\wine\dlls\d3dx9_36\d3dx9_36_private.h">

@@ -227,13 +227,13 @@
     <CustomBuild Include="..\..\wine\dlls\wined3d\wined3d.spec">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\$(Platform)_$(Configuration)\winebuild.exe --def -k -E %(Identity) -o $(IntDir)%(Filename).def</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating library imports</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating library exports</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\$(Platform)_$(Configuration)\winebuild.exe --def -k -E %(Identity) -o $(IntDir)%(Filename).def</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating library imports</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating library exports</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\$(Platform)_$(Configuration)\winebuild.exe --def -k -E %(Identity) -o $(IntDir)%(Filename).def</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating library imports</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating library exports</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\$(Platform)_$(Configuration)\winebuild.exe --def -k -E %(Identity) -o $(IntDir)%(Filename).def</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating library imports</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating library exports</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).def</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).def</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).def</Outputs>

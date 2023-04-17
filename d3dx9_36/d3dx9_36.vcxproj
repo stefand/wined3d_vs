@@ -70,28 +70,28 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
-    <LibraryPath>..\$(Platform)_$(Configuration);$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\$(Platform)_$(Configuration);..\$(Platform)_$(Configuration)_dll;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)_dll\</OutDir>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
-    <LibraryPath>..\$(Platform)_$(Configuration);$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\$(Platform)_$(Configuration);..\$(Platform)_$(Configuration)_dll;$(LibraryPath)</LibraryPath>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)_dll\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
-    <LibraryPath>..\$(Platform)_$(Configuration);$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\$(Platform)_$(Configuration);..\$(Platform)_$(Configuration)_dll;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)_dll\</OutDir>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\wined3d;..\..\wine\include;..\idls;$(IncludePath)</IncludePath>
-    <LibraryPath>..\$(Platform)_$(Configuration);$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\$(Platform)_$(Configuration);..\$(Platform)_$(Configuration)_dll;$(LibraryPath)</LibraryPath>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)_dll\</OutDir>
   </PropertyGroup>
@@ -106,10 +106,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libwine.lib;libport.lib;d3dxof.lib;dxguid.lib;d3dcompiler.lib;ole32.lib;gdi32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3dxof.lib;dxguid.lib;d3dcompiler.lib;winecrt0.lib;windowscodecs.lib;usp10.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3DXAssembleShader
-/EXPORT:D3DXCreatePolygon
-/EXPORT:D3DXCreateTorus
 /EXPORT:D3DXAssembleShaderFromFileA
 /EXPORT:D3DXAssembleShaderFromFileW
 /EXPORT:D3DXAssembleShaderFromResourceA
@@ -129,6 +127,11 @@
 /EXPORT:D3DXCompileShaderFromResourceW
 /EXPORT:D3DXComputeBoundingBox
 /EXPORT:D3DXComputeBoundingSphere
+/EXPORT:D3DXComputeNormalMap
+/EXPORT:D3DXComputeNormals
+/EXPORT:D3DXComputeTangentFrameEx
+/EXPORT:D3DXConvertMeshSubsetToSingleStrip
+/EXPORT:D3DXCreateAnimationController
 /EXPORT:D3DXCreateBox
 /EXPORT:D3DXCreateBuffer
 /EXPORT:D3DXCreateCubeTexture
@@ -159,10 +162,14 @@
 /EXPORT:D3DXCreateFontIndirectA
 /EXPORT:D3DXCreateFontIndirectW
 /EXPORT:D3DXCreateFontW
+/EXPORT:D3DXCreateFragmentLinker
+/EXPORT:D3DXCreateFragmentLinkerEx
+/EXPORT:D3DXCreateKeyframedAnimationSet
 /EXPORT:D3DXCreateLine
 /EXPORT:D3DXCreateMatrixStack
 /EXPORT:D3DXCreateMesh
 /EXPORT:D3DXCreateMeshFVF
+/EXPORT:D3DXCreatePolygon
 /EXPORT:D3DXCreateRenderToEnvMap
 /EXPORT:D3DXCreateRenderToSurface
 /EXPORT:D3DXCreateSkinInfo
@@ -183,6 +190,8 @@
 /EXPORT:D3DXCreateTextureFromResourceExA
 /EXPORT:D3DXCreateTextureFromResourceExW
 /EXPORT:D3DXCreateTextureFromResourceW
+/EXPORT:D3DXCreateTextureShader
+/EXPORT:D3DXCreateTorus
 /EXPORT:D3DXCreateVolumeTexture
 /EXPORT:D3DXCreateVolumeTextureFromFileA
 /EXPORT:D3DXCreateVolumeTextureFromFileExA
@@ -193,17 +202,22 @@
 /EXPORT:D3DXDebugMute
 /EXPORT:D3DXDeclaratorFromFVF
 /EXPORT:D3DXDisassembleEffect
+/EXPORT:D3DXDisassembleShader
+/EXPORT:D3DXFVFFromDeclarator
 /EXPORT:D3DXFileCreate
 /EXPORT:D3DXFillCubeTexture
+/EXPORT:D3DXFillCubeTextureTX
 /EXPORT:D3DXFillTexture
+/EXPORT:D3DXFillTextureTX
 /EXPORT:D3DXFillVolumeTexture
+/EXPORT:D3DXFillVolumeTextureTX
 /EXPORT:D3DXFilterTexture
 /EXPORT:D3DXFindShaderComment
 /EXPORT:D3DXFloat16To32Array
 /EXPORT:D3DXFloat32To16Array
 /EXPORT:D3DXFrameDestroy
+/EXPORT:D3DXFrameFind
 /EXPORT:D3DXFresnelTerm
-/EXPORT:D3DXFVFFromDeclarator
 /EXPORT:D3DXGetDeclLength
 /EXPORT:D3DXGetDeclVertexSize
 /EXPORT:D3DXGetDriverLevel
@@ -216,10 +230,13 @@
 /EXPORT:D3DXGetPixelShaderProfile
 /EXPORT:D3DXGetShaderConstantTable
 /EXPORT:D3DXGetShaderConstantTableEx
+/EXPORT:D3DXGetShaderInputSemantics
+/EXPORT:D3DXGetShaderOutputSemantics
 /EXPORT:D3DXGetShaderSamplers
 /EXPORT:D3DXGetShaderSize
 /EXPORT:D3DXGetShaderVersion
 /EXPORT:D3DXGetVertexShaderProfile
+/EXPORT:D3DXIntersect
 /EXPORT:D3DXIntersectTri
 /EXPORT:D3DXLoadMeshFromXA
 /EXPORT:D3DXLoadMeshFromXInMemory
@@ -298,12 +315,6 @@
 /EXPORT:D3DXQuaternionSquad
 /EXPORT:D3DXQuaternionSquadSetup
 /EXPORT:D3DXQuaternionToAxisAngle
-/EXPORT:D3DXSaveSurfaceToFileA
-/EXPORT:D3DXSaveSurfaceToFileInMemory
-/EXPORT:D3DXSaveSurfaceToFileW
-/EXPORT:D3DXSaveTextureToFileA
-/EXPORT:D3DXSaveTextureToFileInMemory
-/EXPORT:D3DXSaveTextureToFileW
 /EXPORT:D3DXSHAdd
 /EXPORT:D3DXSHDot
 /EXPORT:D3DXSHEvalConeLight
@@ -314,10 +325,18 @@
 /EXPORT:D3DXSHMultiply2
 /EXPORT:D3DXSHMultiply3
 /EXPORT:D3DXSHMultiply4
+/EXPORT:D3DXSHProjectCubeMap
 /EXPORT:D3DXSHRotate
 /EXPORT:D3DXSHRotateZ
 /EXPORT:D3DXSHScale
+/EXPORT:D3DXSaveSurfaceToFileA
+/EXPORT:D3DXSaveSurfaceToFileInMemory
+/EXPORT:D3DXSaveSurfaceToFileW
+/EXPORT:D3DXSaveTextureToFileA
+/EXPORT:D3DXSaveTextureToFileInMemory
+/EXPORT:D3DXSaveTextureToFileW
 /EXPORT:D3DXSphereBoundProbe
+/EXPORT:D3DXTessellateNPatches
 /EXPORT:D3DXValidMesh
 /EXPORT:D3DXVec2BaryCentric
 /EXPORT:D3DXVec2CatmullRom
@@ -351,16 +370,8 @@
 /EXPORT:D3DXVec4Transform
 /EXPORT:D3DXVec4TransformArray
 /EXPORT:D3DXWeldVertices
-/EXPORT:D3DXComputeTangentFrameEx
-/EXPORT:D3DXComputeNormals
-/EXPORT:D3DXCreateAnimationController
-/EXPORT:D3DXCreateTextureShader
-/EXPORT:D3DXFillVolumeTexture
-/EXPORT:D3DXFillVolumeTextureTX
-/EXPORT:D3DXFillTexture
-/EXPORT:D3DXFillTextureTX
-/EXPORT:D3DXFillCubeTextureTX %(AdditionalOptions)</AdditionalOptions>
-      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
+ %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(OutDir)d3dx9.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -374,10 +385,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libwine.lib;libport.lib;d3dxof.lib;dxguid.lib;d3dcompiler.lib;ole32.lib;gdi32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3dxof.lib;dxguid.lib;d3dcompiler.lib;winecrt0.lib;windowscodecs.lib;usp10.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3DXAssembleShader
-/EXPORT:D3DXCreatePolygon
-/EXPORT:D3DXCreateTorus
 /EXPORT:D3DXAssembleShaderFromFileA
 /EXPORT:D3DXAssembleShaderFromFileW
 /EXPORT:D3DXAssembleShaderFromResourceA
@@ -397,6 +406,11 @@
 /EXPORT:D3DXCompileShaderFromResourceW
 /EXPORT:D3DXComputeBoundingBox
 /EXPORT:D3DXComputeBoundingSphere
+/EXPORT:D3DXComputeNormalMap
+/EXPORT:D3DXComputeNormals
+/EXPORT:D3DXComputeTangentFrameEx
+/EXPORT:D3DXConvertMeshSubsetToSingleStrip
+/EXPORT:D3DXCreateAnimationController
 /EXPORT:D3DXCreateBox
 /EXPORT:D3DXCreateBuffer
 /EXPORT:D3DXCreateCubeTexture
@@ -427,10 +441,14 @@
 /EXPORT:D3DXCreateFontIndirectA
 /EXPORT:D3DXCreateFontIndirectW
 /EXPORT:D3DXCreateFontW
+/EXPORT:D3DXCreateFragmentLinker
+/EXPORT:D3DXCreateFragmentLinkerEx
+/EXPORT:D3DXCreateKeyframedAnimationSet
 /EXPORT:D3DXCreateLine
 /EXPORT:D3DXCreateMatrixStack
 /EXPORT:D3DXCreateMesh
 /EXPORT:D3DXCreateMeshFVF
+/EXPORT:D3DXCreatePolygon
 /EXPORT:D3DXCreateRenderToEnvMap
 /EXPORT:D3DXCreateRenderToSurface
 /EXPORT:D3DXCreateSkinInfo
@@ -451,6 +469,8 @@
 /EXPORT:D3DXCreateTextureFromResourceExA
 /EXPORT:D3DXCreateTextureFromResourceExW
 /EXPORT:D3DXCreateTextureFromResourceW
+/EXPORT:D3DXCreateTextureShader
+/EXPORT:D3DXCreateTorus
 /EXPORT:D3DXCreateVolumeTexture
 /EXPORT:D3DXCreateVolumeTextureFromFileA
 /EXPORT:D3DXCreateVolumeTextureFromFileExA
@@ -461,17 +481,22 @@
 /EXPORT:D3DXDebugMute
 /EXPORT:D3DXDeclaratorFromFVF
 /EXPORT:D3DXDisassembleEffect
+/EXPORT:D3DXDisassembleShader
+/EXPORT:D3DXFVFFromDeclarator
 /EXPORT:D3DXFileCreate
 /EXPORT:D3DXFillCubeTexture
+/EXPORT:D3DXFillCubeTextureTX
 /EXPORT:D3DXFillTexture
+/EXPORT:D3DXFillTextureTX
 /EXPORT:D3DXFillVolumeTexture
+/EXPORT:D3DXFillVolumeTextureTX
 /EXPORT:D3DXFilterTexture
 /EXPORT:D3DXFindShaderComment
 /EXPORT:D3DXFloat16To32Array
 /EXPORT:D3DXFloat32To16Array
 /EXPORT:D3DXFrameDestroy
+/EXPORT:D3DXFrameFind
 /EXPORT:D3DXFresnelTerm
-/EXPORT:D3DXFVFFromDeclarator
 /EXPORT:D3DXGetDeclLength
 /EXPORT:D3DXGetDeclVertexSize
 /EXPORT:D3DXGetDriverLevel
@@ -484,10 +509,13 @@
 /EXPORT:D3DXGetPixelShaderProfile
 /EXPORT:D3DXGetShaderConstantTable
 /EXPORT:D3DXGetShaderConstantTableEx
+/EXPORT:D3DXGetShaderInputSemantics
+/EXPORT:D3DXGetShaderOutputSemantics
 /EXPORT:D3DXGetShaderSamplers
 /EXPORT:D3DXGetShaderSize
 /EXPORT:D3DXGetShaderVersion
 /EXPORT:D3DXGetVertexShaderProfile
+/EXPORT:D3DXIntersect
 /EXPORT:D3DXIntersectTri
 /EXPORT:D3DXLoadMeshFromXA
 /EXPORT:D3DXLoadMeshFromXInMemory
@@ -566,12 +594,6 @@
 /EXPORT:D3DXQuaternionSquad
 /EXPORT:D3DXQuaternionSquadSetup
 /EXPORT:D3DXQuaternionToAxisAngle
-/EXPORT:D3DXSaveSurfaceToFileA
-/EXPORT:D3DXSaveSurfaceToFileInMemory
-/EXPORT:D3DXSaveSurfaceToFileW
-/EXPORT:D3DXSaveTextureToFileA
-/EXPORT:D3DXSaveTextureToFileInMemory
-/EXPORT:D3DXSaveTextureToFileW
 /EXPORT:D3DXSHAdd
 /EXPORT:D3DXSHDot
 /EXPORT:D3DXSHEvalConeLight
@@ -582,10 +604,18 @@
 /EXPORT:D3DXSHMultiply2
 /EXPORT:D3DXSHMultiply3
 /EXPORT:D3DXSHMultiply4
+/EXPORT:D3DXSHProjectCubeMap
 /EXPORT:D3DXSHRotate
 /EXPORT:D3DXSHRotateZ
 /EXPORT:D3DXSHScale
+/EXPORT:D3DXSaveSurfaceToFileA
+/EXPORT:D3DXSaveSurfaceToFileInMemory
+/EXPORT:D3DXSaveSurfaceToFileW
+/EXPORT:D3DXSaveTextureToFileA
+/EXPORT:D3DXSaveTextureToFileInMemory
+/EXPORT:D3DXSaveTextureToFileW
 /EXPORT:D3DXSphereBoundProbe
+/EXPORT:D3DXTessellateNPatches
 /EXPORT:D3DXValidMesh
 /EXPORT:D3DXVec2BaryCentric
 /EXPORT:D3DXVec2CatmullRom
@@ -619,16 +649,8 @@
 /EXPORT:D3DXVec4Transform
 /EXPORT:D3DXVec4TransformArray
 /EXPORT:D3DXWeldVertices
-/EXPORT:D3DXComputeTangentFrameEx
-/EXPORT:D3DXComputeNormals
-/EXPORT:D3DXCreateAnimationController
-/EXPORT:D3DXCreateTextureShader
-/EXPORT:D3DXFillVolumeTexture
-/EXPORT:D3DXFillVolumeTextureTX
-/EXPORT:D3DXFillTexture
-/EXPORT:D3DXFillTextureTX
-/EXPORT:D3DXFillCubeTextureTX %(AdditionalOptions)</AdditionalOptions>
-      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
+ %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(OutDir)d3dx9.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -646,10 +668,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libwine.lib;libport.lib;d3dxof.lib;dxguid.lib;d3dcompiler.lib;ole32.lib;gdi32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3dxof.lib;dxguid.lib;d3dcompiler.lib;winecrt0.lib;windowscodecs.lib;usp10.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3DXAssembleShader
-/EXPORT:D3DXCreatePolygon
-/EXPORT:D3DXCreateTorus
 /EXPORT:D3DXAssembleShaderFromFileA
 /EXPORT:D3DXAssembleShaderFromFileW
 /EXPORT:D3DXAssembleShaderFromResourceA
@@ -669,6 +689,11 @@
 /EXPORT:D3DXCompileShaderFromResourceW
 /EXPORT:D3DXComputeBoundingBox
 /EXPORT:D3DXComputeBoundingSphere
+/EXPORT:D3DXComputeNormalMap
+/EXPORT:D3DXComputeNormals
+/EXPORT:D3DXComputeTangentFrameEx
+/EXPORT:D3DXConvertMeshSubsetToSingleStrip
+/EXPORT:D3DXCreateAnimationController
 /EXPORT:D3DXCreateBox
 /EXPORT:D3DXCreateBuffer
 /EXPORT:D3DXCreateCubeTexture
@@ -699,10 +724,14 @@
 /EXPORT:D3DXCreateFontIndirectA
 /EXPORT:D3DXCreateFontIndirectW
 /EXPORT:D3DXCreateFontW
+/EXPORT:D3DXCreateFragmentLinker
+/EXPORT:D3DXCreateFragmentLinkerEx
+/EXPORT:D3DXCreateKeyframedAnimationSet
 /EXPORT:D3DXCreateLine
 /EXPORT:D3DXCreateMatrixStack
 /EXPORT:D3DXCreateMesh
 /EXPORT:D3DXCreateMeshFVF
+/EXPORT:D3DXCreatePolygon
 /EXPORT:D3DXCreateRenderToEnvMap
 /EXPORT:D3DXCreateRenderToSurface
 /EXPORT:D3DXCreateSkinInfo
@@ -723,6 +752,8 @@
 /EXPORT:D3DXCreateTextureFromResourceExA
 /EXPORT:D3DXCreateTextureFromResourceExW
 /EXPORT:D3DXCreateTextureFromResourceW
+/EXPORT:D3DXCreateTextureShader
+/EXPORT:D3DXCreateTorus
 /EXPORT:D3DXCreateVolumeTexture
 /EXPORT:D3DXCreateVolumeTextureFromFileA
 /EXPORT:D3DXCreateVolumeTextureFromFileExA
@@ -733,17 +764,22 @@
 /EXPORT:D3DXDebugMute
 /EXPORT:D3DXDeclaratorFromFVF
 /EXPORT:D3DXDisassembleEffect
+/EXPORT:D3DXDisassembleShader
+/EXPORT:D3DXFVFFromDeclarator
 /EXPORT:D3DXFileCreate
 /EXPORT:D3DXFillCubeTexture
+/EXPORT:D3DXFillCubeTextureTX
 /EXPORT:D3DXFillTexture
+/EXPORT:D3DXFillTextureTX
 /EXPORT:D3DXFillVolumeTexture
+/EXPORT:D3DXFillVolumeTextureTX
 /EXPORT:D3DXFilterTexture
 /EXPORT:D3DXFindShaderComment
 /EXPORT:D3DXFloat16To32Array
 /EXPORT:D3DXFloat32To16Array
 /EXPORT:D3DXFrameDestroy
+/EXPORT:D3DXFrameFind
 /EXPORT:D3DXFresnelTerm
-/EXPORT:D3DXFVFFromDeclarator
 /EXPORT:D3DXGetDeclLength
 /EXPORT:D3DXGetDeclVertexSize
 /EXPORT:D3DXGetDriverLevel
@@ -756,10 +792,13 @@
 /EXPORT:D3DXGetPixelShaderProfile
 /EXPORT:D3DXGetShaderConstantTable
 /EXPORT:D3DXGetShaderConstantTableEx
+/EXPORT:D3DXGetShaderInputSemantics
+/EXPORT:D3DXGetShaderOutputSemantics
 /EXPORT:D3DXGetShaderSamplers
 /EXPORT:D3DXGetShaderSize
 /EXPORT:D3DXGetShaderVersion
 /EXPORT:D3DXGetVertexShaderProfile
+/EXPORT:D3DXIntersect
 /EXPORT:D3DXIntersectTri
 /EXPORT:D3DXLoadMeshFromXA
 /EXPORT:D3DXLoadMeshFromXInMemory
@@ -838,12 +877,6 @@
 /EXPORT:D3DXQuaternionSquad
 /EXPORT:D3DXQuaternionSquadSetup
 /EXPORT:D3DXQuaternionToAxisAngle
-/EXPORT:D3DXSaveSurfaceToFileA
-/EXPORT:D3DXSaveSurfaceToFileInMemory
-/EXPORT:D3DXSaveSurfaceToFileW
-/EXPORT:D3DXSaveTextureToFileA
-/EXPORT:D3DXSaveTextureToFileInMemory
-/EXPORT:D3DXSaveTextureToFileW
 /EXPORT:D3DXSHAdd
 /EXPORT:D3DXSHDot
 /EXPORT:D3DXSHEvalConeLight
@@ -854,10 +887,18 @@
 /EXPORT:D3DXSHMultiply2
 /EXPORT:D3DXSHMultiply3
 /EXPORT:D3DXSHMultiply4
+/EXPORT:D3DXSHProjectCubeMap
 /EXPORT:D3DXSHRotate
 /EXPORT:D3DXSHRotateZ
 /EXPORT:D3DXSHScale
+/EXPORT:D3DXSaveSurfaceToFileA
+/EXPORT:D3DXSaveSurfaceToFileInMemory
+/EXPORT:D3DXSaveSurfaceToFileW
+/EXPORT:D3DXSaveTextureToFileA
+/EXPORT:D3DXSaveTextureToFileInMemory
+/EXPORT:D3DXSaveTextureToFileW
 /EXPORT:D3DXSphereBoundProbe
+/EXPORT:D3DXTessellateNPatches
 /EXPORT:D3DXValidMesh
 /EXPORT:D3DXVec2BaryCentric
 /EXPORT:D3DXVec2CatmullRom
@@ -891,16 +932,8 @@
 /EXPORT:D3DXVec4Transform
 /EXPORT:D3DXVec4TransformArray
 /EXPORT:D3DXWeldVertices
-/EXPORT:D3DXComputeTangentFrameEx
-/EXPORT:D3DXComputeNormals
-/EXPORT:D3DXCreateAnimationController
-/EXPORT:D3DXCreateTextureShader
-/EXPORT:D3DXFillVolumeTexture
-/EXPORT:D3DXFillVolumeTextureTX
-/EXPORT:D3DXFillTexture
-/EXPORT:D3DXFillTextureTX
-/EXPORT:D3DXFillCubeTextureTX %(AdditionalOptions)</AdditionalOptions>
-      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
+ %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(OutDir)d3dx9.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -918,10 +951,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libwine.lib;libport.lib;d3dxof.lib;dxguid.lib;d3dcompiler.lib;ole32.lib;gdi32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3dxof.lib;dxguid.lib;d3dcompiler.lib;winecrt0.lib;windowscodecs.lib;usp10.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:D3DXAssembleShader
-/EXPORT:D3DXCreatePolygon
-/EXPORT:D3DXCreateTorus
 /EXPORT:D3DXAssembleShaderFromFileA
 /EXPORT:D3DXAssembleShaderFromFileW
 /EXPORT:D3DXAssembleShaderFromResourceA
@@ -941,6 +972,11 @@
 /EXPORT:D3DXCompileShaderFromResourceW
 /EXPORT:D3DXComputeBoundingBox
 /EXPORT:D3DXComputeBoundingSphere
+/EXPORT:D3DXComputeNormalMap
+/EXPORT:D3DXComputeNormals
+/EXPORT:D3DXComputeTangentFrameEx
+/EXPORT:D3DXConvertMeshSubsetToSingleStrip
+/EXPORT:D3DXCreateAnimationController
 /EXPORT:D3DXCreateBox
 /EXPORT:D3DXCreateBuffer
 /EXPORT:D3DXCreateCubeTexture
@@ -971,10 +1007,14 @@
 /EXPORT:D3DXCreateFontIndirectA
 /EXPORT:D3DXCreateFontIndirectW
 /EXPORT:D3DXCreateFontW
+/EXPORT:D3DXCreateFragmentLinker
+/EXPORT:D3DXCreateFragmentLinkerEx
+/EXPORT:D3DXCreateKeyframedAnimationSet
 /EXPORT:D3DXCreateLine
 /EXPORT:D3DXCreateMatrixStack
 /EXPORT:D3DXCreateMesh
 /EXPORT:D3DXCreateMeshFVF
+/EXPORT:D3DXCreatePolygon
 /EXPORT:D3DXCreateRenderToEnvMap
 /EXPORT:D3DXCreateRenderToSurface
 /EXPORT:D3DXCreateSkinInfo
@@ -995,6 +1035,8 @@
 /EXPORT:D3DXCreateTextureFromResourceExA
 /EXPORT:D3DXCreateTextureFromResourceExW
 /EXPORT:D3DXCreateTextureFromResourceW
+/EXPORT:D3DXCreateTextureShader
+/EXPORT:D3DXCreateTorus
 /EXPORT:D3DXCreateVolumeTexture
 /EXPORT:D3DXCreateVolumeTextureFromFileA
 /EXPORT:D3DXCreateVolumeTextureFromFileExA
@@ -1005,17 +1047,22 @@
 /EXPORT:D3DXDebugMute
 /EXPORT:D3DXDeclaratorFromFVF
 /EXPORT:D3DXDisassembleEffect
+/EXPORT:D3DXDisassembleShader
+/EXPORT:D3DXFVFFromDeclarator
 /EXPORT:D3DXFileCreate
 /EXPORT:D3DXFillCubeTexture
+/EXPORT:D3DXFillCubeTextureTX
 /EXPORT:D3DXFillTexture
+/EXPORT:D3DXFillTextureTX
 /EXPORT:D3DXFillVolumeTexture
+/EXPORT:D3DXFillVolumeTextureTX
 /EXPORT:D3DXFilterTexture
 /EXPORT:D3DXFindShaderComment
 /EXPORT:D3DXFloat16To32Array
 /EXPORT:D3DXFloat32To16Array
 /EXPORT:D3DXFrameDestroy
+/EXPORT:D3DXFrameFind
 /EXPORT:D3DXFresnelTerm
-/EXPORT:D3DXFVFFromDeclarator
 /EXPORT:D3DXGetDeclLength
 /EXPORT:D3DXGetDeclVertexSize
 /EXPORT:D3DXGetDriverLevel
@@ -1028,10 +1075,13 @@
 /EXPORT:D3DXGetPixelShaderProfile
 /EXPORT:D3DXGetShaderConstantTable
 /EXPORT:D3DXGetShaderConstantTableEx
+/EXPORT:D3DXGetShaderInputSemantics
+/EXPORT:D3DXGetShaderOutputSemantics
 /EXPORT:D3DXGetShaderSamplers
 /EXPORT:D3DXGetShaderSize
 /EXPORT:D3DXGetShaderVersion
 /EXPORT:D3DXGetVertexShaderProfile
+/EXPORT:D3DXIntersect
 /EXPORT:D3DXIntersectTri
 /EXPORT:D3DXLoadMeshFromXA
 /EXPORT:D3DXLoadMeshFromXInMemory
@@ -1110,12 +1160,6 @@
 /EXPORT:D3DXQuaternionSquad
 /EXPORT:D3DXQuaternionSquadSetup
 /EXPORT:D3DXQuaternionToAxisAngle
-/EXPORT:D3DXSaveSurfaceToFileA
-/EXPORT:D3DXSaveSurfaceToFileInMemory
-/EXPORT:D3DXSaveSurfaceToFileW
-/EXPORT:D3DXSaveTextureToFileA
-/EXPORT:D3DXSaveTextureToFileInMemory
-/EXPORT:D3DXSaveTextureToFileW
 /EXPORT:D3DXSHAdd
 /EXPORT:D3DXSHDot
 /EXPORT:D3DXSHEvalConeLight
@@ -1126,10 +1170,18 @@
 /EXPORT:D3DXSHMultiply2
 /EXPORT:D3DXSHMultiply3
 /EXPORT:D3DXSHMultiply4
+/EXPORT:D3DXSHProjectCubeMap
 /EXPORT:D3DXSHRotate
 /EXPORT:D3DXSHRotateZ
 /EXPORT:D3DXSHScale
+/EXPORT:D3DXSaveSurfaceToFileA
+/EXPORT:D3DXSaveSurfaceToFileInMemory
+/EXPORT:D3DXSaveSurfaceToFileW
+/EXPORT:D3DXSaveTextureToFileA
+/EXPORT:D3DXSaveTextureToFileInMemory
+/EXPORT:D3DXSaveTextureToFileW
 /EXPORT:D3DXSphereBoundProbe
+/EXPORT:D3DXTessellateNPatches
 /EXPORT:D3DXValidMesh
 /EXPORT:D3DXVec2BaryCentric
 /EXPORT:D3DXVec2CatmullRom
@@ -1163,16 +1215,8 @@
 /EXPORT:D3DXVec4Transform
 /EXPORT:D3DXVec4TransformArray
 /EXPORT:D3DXWeldVertices
-/EXPORT:D3DXComputeTangentFrameEx
-/EXPORT:D3DXComputeNormals
-/EXPORT:D3DXCreateAnimationController
-/EXPORT:D3DXCreateTextureShader
-/EXPORT:D3DXFillVolumeTexture
-/EXPORT:D3DXFillVolumeTextureTX
-/EXPORT:D3DXFillTexture
-/EXPORT:D3DXFillTextureTX
-/EXPORT:D3DXFillCubeTextureTX %(AdditionalOptions)</AdditionalOptions>
-      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
+ %(AdditionalOptions)</AdditionalOptions>
+      <ImportLibrary>$(OutDir)d3dx9.lib</ImportLibrary>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -1211,6 +1255,8 @@
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">/wd4244 /wd4018 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\d3dx9_36\txc_compress_dxtn.c" />
+    <ClCompile Include="..\..\wine\dlls\d3dx9_36\txc_fetch_dxtn.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\util.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\volume.c" />
     <ClCompile Include="..\..\wine\dlls\d3dx9_36\xfile.c" />
