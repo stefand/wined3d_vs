@@ -270,6 +270,7 @@
   <ItemGroup>
     <CustomBuild Include="..\..\wine\include\d3d12sdklayers.idl" />
     <Midl Include="..\..\wine\include\objidlbase.idl" />
+    <CustomBuild Include="..\..\wine\include\shobjidl_core.idl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

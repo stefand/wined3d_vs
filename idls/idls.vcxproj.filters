@@ -177,6 +177,9 @@
     <CustomBuild Include="..\..\wine\include\d3d12sdklayers.idl">
       <Filter>Headerdateien</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\shobjidl_core.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="..\..\wine\include\objidlbase.idl">

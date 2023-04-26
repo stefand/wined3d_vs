@@ -101,12 +101,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;DECLSPEC_SELECTANY=;__i386__;_DEBUG</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4018;4244;4305</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;4305;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libwine.lib;dxguid.lib;uuid.lib;winmm.lib;ole32.lib;advapi32.lib;user32.lib;ntdll.lib;winecrt0.lib</AdditionalDependencies>
+      <AdditionalDependencies>dxguid.lib;uuid.lib;winmm.lib;ole32.lib;advapi32.lib;user32.lib;ntdll.lib;winecrt0.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:DirectSoundCreate
 /EXPORT:DirectSoundEnumerateA
 /EXPORT:DirectSoundEnumerateW
@@ -129,12 +129,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;DECLSPEC_SELECTANY=;__x86_64__;_DEBUG</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4018;4244;4305</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;4305;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libwine.lib;dxguid.lib;uuid.lib;winmm.lib;ole32.lib;advapi32.lib;user32.lib;ntdll.lib;winecrt0.lib</AdditionalDependencies>
+      <AdditionalDependencies>dxguid.lib;uuid.lib;winmm.lib;ole32.lib;advapi32.lib;user32.lib;ntdll.lib;winecrt0.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:DirectSoundCreate
 /EXPORT:DirectSoundEnumerateA
 /EXPORT:DirectSoundEnumerateW
@@ -159,14 +159,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;DECLSPEC_SELECTANY=;__i386__;_NDEBUG</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4018;4244;4305</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;4305;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libwine.lib;dxguid.lib;uuid.lib;winmm.lib;ole32.lib;advapi32.lib;user32.lib;ntdll.lib;winecrt0.lib</AdditionalDependencies>
+      <AdditionalDependencies>dxguid.lib;uuid.lib;winmm.lib;ole32.lib;advapi32.lib;user32.lib;ntdll.lib;winecrt0.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:DirectSoundCreate
 /EXPORT:DirectSoundEnumerateA
 /EXPORT:DirectSoundEnumerateW
@@ -191,14 +191,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;DECLSPEC_SELECTANY=;__x86_64__;_NDEBUG</PreprocessorDefinitions>
-      <DisableSpecificWarnings>4018;4244;4305</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4018;4244;4305;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libwine.lib;dxguid.lib;uuid.lib;winmm.lib;ole32.lib;advapi32.lib;user32.lib;ntdll.lib;winecrt0.lib</AdditionalDependencies>
+      <AdditionalDependencies>dxguid.lib;uuid.lib;winmm.lib;ole32.lib;advapi32.lib;user32.lib;ntdll.lib;winecrt0.lib</AdditionalDependencies>
       <AdditionalOptions>/EXPORT:DirectSoundCreate
 /EXPORT:DirectSoundEnumerateA
 /EXPORT:DirectSoundEnumerateW
