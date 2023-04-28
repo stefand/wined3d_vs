@@ -57,6 +57,9 @@
     <ClCompile Include="..\..\wine\dlls\d2d1\layer.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\d2d1\command_list.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\wine\dlls\d2d1\d2d1_private.h">
@@ -67,5 +70,10 @@
     <ResourceCompile Include="..\..\wine\dlls\d2d1\version.rc">
       <Filter>Ressourcendateien</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="d2d1.def">
+      <Filter>Quelldateien</Filter>
+    </None>
   </ItemGroup>
 </Project>

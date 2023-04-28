@@ -72,9 +72,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\..\wine\include;..\wined3d;..\idls;$(IncludePath)</IncludePath>
-    <LibraryPath>..\$(Platform)_$(Configuration);$(LibraryPath)</LibraryPath>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)_dll\</OutDir>
+    <LibraryPath>..\$(Platform)_$(Configuration);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -85,10 +85,10 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <LibraryPath>..\$(Platform)_$(Configuration);$(LibraryPath)</LibraryPath>
     <IncludePath>..\..\wine\include;..\wined3d;..\idls;$(IncludePath)</IncludePath>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
     <OutDir>$(SolutionDir)$(Platform)_$(Configuration)_dll\</OutDir>
+    <LibraryPath>..\$(Platform)_$(Configuration);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -103,14 +103,15 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;__i386__;_DEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
-      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
-      <AdditionalOptions>/EXPORT:D3D1CreateFactory /EXPORT:D3D1MakeRotateMatrix %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>winecrt0.lib;uuid.lib;dxguid.lib;gdi32.lib;user32.lib;d3d10_1.lib;advapi32.lib;dwrite.lib;ole32.lib;xmllite.lib;d3d12.lib</AdditionalDependencies>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <ModuleDefinitionFile>d2d1.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -119,10 +120,15 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;__x86_64__;_DEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winecrt0.lib;uuid.lib;dxguid.lib;gdi32.lib;user32.lib;d3d10_1.lib;advapi32.lib;dwrite.lib;ole32.lib;xmllite.lib;d3d12.lib</AdditionalDependencies>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <ModuleDefinitionFile>d2d1.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -133,16 +139,17 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;__i386__;_NDEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
-      <ImportLibrary>$(SolutionDir)$(Configuration)\$(TargetName).lib</ImportLibrary>
-      <AdditionalOptions>/EXPORT:D3D1CreateFactory /EXPORT:D3D1MakeRotateMatrix %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>winecrt0.lib;uuid.lib;dxguid.lib;gdi32.lib;user32.lib;d3d10_1.lib;advapi32.lib;dwrite.lib;ole32.lib;xmllite.lib;d3d12.lib</AdditionalDependencies>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <ModuleDefinitionFile>d2d1.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -153,22 +160,33 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;__WINESRC__;_USE_MATH_DEFINES;_WINDOWS;_USRDLL;_NTSYSTEM_;__x86_64__;_NDEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4244;4996;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winecrt0.lib;uuid.lib;dxguid.lib;gdi32.lib;user32.lib;d3d10_1.lib;advapi32.lib;dwrite.lib;ole32.lib;xmllite.lib;d3d12.lib</AdditionalDependencies>
+      <DelayLoadDLLs>
+      </DelayLoadDLLs>
+      <ModuleDefinitionFile>d2d1.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\d2d1\bitmap.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\bitmap_render_target.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\brush.c" />
+    <ClCompile Include="..\..\wine\dlls\d2d1\command_list.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\dc_render_target.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\device.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\effect.c" />
-    <ClCompile Include="..\..\wine\dlls\d2d1\factory.c" />
+    <ClCompile Include="..\..\wine\dlls\d2d1\factory.c">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">initguid.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">initguid.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">initguid.h</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">initguid.h</ForcedIncludeFiles>
+    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\d2d1\geometry.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\hwnd_render_target.c" />
     <ClCompile Include="..\..\wine\dlls\d2d1\layer.c" />
@@ -182,6 +200,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\..\wine\dlls\d2d1\version.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="d2d1.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

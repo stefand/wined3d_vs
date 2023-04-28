@@ -269,8 +269,19 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\wine\include\d3d12sdklayers.idl" />
-    <Midl Include="..\..\wine\include\objidlbase.idl" />
+    <CustomBuild Include="..\..\wine\include\d2d1effectauthor.idl" />
+    <CustomBuild Include="..\..\wine\include\d2d1effects.idl" />
+    <CustomBuild Include="..\..\wine\include\d2d1effects_1.idl" />
+    <CustomBuild Include="..\..\wine\include\d2d1effects_2.idl" />
+    <CustomBuild Include="..\..\wine\include\d2d1_3.idl" />
+    <CustomBuild Include="..\..\wine\include\objidlbase.idl" />
     <CustomBuild Include="..\..\wine\include\shobjidl_core.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\wine\include\d2d1.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\wine\include\xmllite.idl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

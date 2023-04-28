@@ -180,10 +180,29 @@
     <CustomBuild Include="..\..\wine\include\shobjidl_core.idl">
       <Filter>Headerdateien</Filter>
     </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <Midl Include="..\..\wine\include\objidlbase.idl">
+    <CustomBuild Include="..\..\wine\include\d2d1_3.idl">
       <Filter>Headerdateien</Filter>
-    </Midl>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d2d1effectauthor.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d2d1effects.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d2d1effects_1.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d2d1effects_2.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\objidlbase.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d2d1.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\xmllite.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
