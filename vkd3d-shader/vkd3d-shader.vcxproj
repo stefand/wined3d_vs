@@ -160,16 +160,16 @@
   <ItemGroup>
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\checksum.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\d3dbc.c" />
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\d3d_asm.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\dxbc.c" />
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\dxil.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\glsl.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_codegen.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_constant_ops.c" />
-    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_sm1.c" />
-    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_sm4.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\ir.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\spirv.c" />
-    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\trace.c" />
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\tpf.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\vkd3d_shader_main.c" />
     <ClCompile Include="fakelexer.c" />
   </ItemGroup>
