@@ -204,5 +204,11 @@
     <CustomBuild Include="..\..\wine\include\xmllite.idl">
       <Filter>Headerdateien</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d10shader.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d10effect.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

@@ -101,7 +101,7 @@
       <AdditionalOptions>/cpp_opt "/wd4005 /E /nologo" %(AdditionalOptions)</AdditionalOptions>
     </Midl>
     <CustomBuild>
-      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../wine/include</Command>
     </CustomBuild>
     <CustomBuild>
       <Outputs>%(Filename).h</Outputs>
@@ -122,7 +122,7 @@
       <AdditionalOptions>/cpp_opt "/wd4005 /E /nologo" %(AdditionalOptions)</AdditionalOptions>
     </Midl>
     <CustomBuild>
-      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../wine/include</Command>
     </CustomBuild>
     <CustomBuild>
       <Outputs>%(Filename).h</Outputs>
@@ -147,7 +147,7 @@
       <AdditionalOptions>/cpp_opt "/wd4005 /E /nologo" %(AdditionalOptions)</AdditionalOptions>
     </Midl>
     <CustomBuild>
-      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../wine/include</Command>
     </CustomBuild>
     <CustomBuild>
       <Outputs>%(Filename).h</Outputs>
@@ -172,7 +172,7 @@
       <AdditionalOptions>/cpp_opt "/wd4005 /E /nologo" %(AdditionalOptions)</AdditionalOptions>
     </Midl>
     <CustomBuild>
-      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+      <Command>..\widl\widl.exe -o %(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../wine/include</Command>
     </CustomBuild>
     <CustomBuild>
       <Outputs>%(Filename).h</Outputs>
@@ -226,13 +226,13 @@
       <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">wine</OutputDirectory>
       <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">wine</OutputDirectory>
       <OutputDirectory Condition="'$(Configuration)|$(Platform)'=='Release|x64'">wine</OutputDirectory>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../wine/include</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">wine\%(Filename).h</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../wine/include</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">wine\%(Filename).h</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../wine/include</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">wine\%(Filename).h</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../../wine/include</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\widl\widl.exe -o wine/%(Filename).h --nostdinc %(FullPath) -D__WINESRC__ -I. -I../../wine/include</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">wine\%(Filename).h</Outputs>
     </CustomBuild>
     <CustomBuild Include="..\..\wine\include\wtypes.idl" />
@@ -282,6 +282,12 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\wine\include\xmllite.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\wine\include\d3d10shader.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\wine\include\d3d10effect.idl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

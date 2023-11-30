@@ -15,11 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="..\..\vkd3d\include\vkd3d_unknown.idl">
-      <Filter>Headerdateien</Filter>
-    </Midl>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\..\vkd3d\include\vkd3d.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -69,6 +64,9 @@
     </CustomBuild>
     <CustomBuild Include="..\..\vkd3d\include\vkd3d_d3dx9shader.idl">
       <Filter>Quelldateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_unknown.idl">
+      <Filter>Headerdateien</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>

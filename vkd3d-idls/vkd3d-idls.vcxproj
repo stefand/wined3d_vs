@@ -185,12 +185,16 @@
     <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgiformat.idl" />
     <CustomBuild Include="..\..\vkd3d\include\vkd3d_dxgitype.idl" />
     <CustomBuild Include="..\..\vkd3d\include\vkd3d_d3dx9shader.idl" />
-    <Midl Include="..\..\vkd3d\include\vkd3d_unknown.idl">
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_unknown.idl">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DWORD=int;LONG=long;HRESULT=int;ULONG=long;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">DWORD=int;LONG=long;HRESULT=int;ULONG=long;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">DWORD=int;LONG=long;HRESULT=int;ULONG=long;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">DWORD=int;LONG=long;HRESULT=int;ULONG=long;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </Midl>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vkd3d\include\vkd3d.h" />
