@@ -205,6 +205,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3d12_tests", "d3d12_tests\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "winebuild", "winebuild\winebuild.vcxproj", "{33A4E1E0-5887-4FB3-A210-9AE790332049}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vkd3d-test-d3d12", "vkd3d-test-d3d12\vkd3d-test-d3d12.vcxproj", "{403B5B19-8E7F-4A1F-A536-6D0BA80AD312}"
+	ProjectSection(ProjectDependencies) = postProject
+		{98AC0CF4-1CC4-436C-9488-0627B69CB38D} = {98AC0CF4-1CC4-436C-9488-0627B69CB38D}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -489,6 +494,10 @@ Global
 		{33A4E1E0-5887-4FB3-A210-9AE790332049}.Release|Win32.Build.0 = Release|Win32
 		{33A4E1E0-5887-4FB3-A210-9AE790332049}.Release|x64.ActiveCfg = Release|x64
 		{33A4E1E0-5887-4FB3-A210-9AE790332049}.Release|x64.Build.0 = Release|x64
+		{403B5B19-8E7F-4A1F-A536-6D0BA80AD312}.Debug|Win32.ActiveCfg = Debug|Win32
+		{403B5B19-8E7F-4A1F-A536-6D0BA80AD312}.Debug|x64.ActiveCfg = Debug|x64
+		{403B5B19-8E7F-4A1F-A536-6D0BA80AD312}.Release|Win32.ActiveCfg = Release|Win32
+		{403B5B19-8E7F-4A1F-A536-6D0BA80AD312}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
