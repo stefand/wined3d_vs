@@ -33,6 +33,9 @@
     <ClCompile Include="..\..\vkd3d\libs\vkd3d\vkd3d_main.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d\cache.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vkd3d\libs\vkd3d\vkd3d_private.h">

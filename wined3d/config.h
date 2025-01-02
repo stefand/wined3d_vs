@@ -29,6 +29,8 @@
 #define HAVE_RINTF 1
 #define HAVE_INTF 1
 #define HAVE_STRNLEN 1
+#define HAVE_SHARE_H 1
+#define HAVE__FSOPEN 1
 
 #include <direct.h>
 

@@ -34,6 +34,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "d3d8_test", "d3d8_test\d3d8
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ddraw_test", "ddraw_test\ddraw_test.vcxproj", "{2F8E2FB9-F78B-44B9-AB27-7E52C67FDF36}"
 	ProjectSection(ProjectDependencies) = postProject
+		{0611EAEF-2789-4A47-BC36-F5BD9A9167B1} = {0611EAEF-2789-4A47-BC36-F5BD9A9167B1}
 		{71521DAF-90A8-45F7-81C1-F4A5CE8707DA} = {71521DAF-90A8-45F7-81C1-F4A5CE8707DA}
 	EndProjectSection
 EndProject
