@@ -171,6 +171,7 @@
     <ClCompile Include="..\..\wine\dlls\d3d11\async.c" />
     <ClCompile Include="..\..\wine\dlls\d3d11\buffer.c" />
     <ClCompile Include="..\..\wine\dlls\d3d11\d3d11_main.c" />
+    <ClCompile Include="..\..\wine\dlls\d3d11\decoder.c" />
     <ClCompile Include="..\..\wine\dlls\d3d11\device.c" />
     <ClCompile Include="..\..\wine\dlls\d3d11\inputlayout.c" />
     <ClCompile Include="..\..\wine\dlls\d3d11\shader.c" />
