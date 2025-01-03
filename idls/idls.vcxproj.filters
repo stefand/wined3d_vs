@@ -210,5 +210,8 @@
     <CustomBuild Include="..\..\wine\include\d3d10effect.idl">
       <Filter>Headerdateien</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\..\wine\include\d3d12shader.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

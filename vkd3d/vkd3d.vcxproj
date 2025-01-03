@@ -120,7 +120,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>PATH_MAX=MAX_PATH;_CRT_SECURE_NO_WARNINGS;PACKAGE_NAME="vkd3d-msvc";LIBVKD3D_SOURCE;__alignof__=__alignof;WIN32;_DEBUG;VKD3D_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>PATH_MAX=MAX_PATH;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;PACKAGE_NAME="vkd3d-msvc";LIBVKD3D_SOURCE;__alignof__=__alignof;WIN32;_DEBUG;VKD3D_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <DisableSpecificWarnings>4090;4098;4133;4146;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -139,7 +139,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>PATH_MAX=MAX_PATH;_CRT_SECURE_NO_WARNINGS;PACKAGE_NAME="vkd3d-msvc";LIBVKD3D_SOURCE;__alignof__=__alignof;_DEBUG;VKD3D_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>PATH_MAX=MAX_PATH;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;PACKAGE_NAME="vkd3d-msvc";LIBVKD3D_SOURCE;__alignof__=__alignof;_DEBUG;VKD3D_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <DisableSpecificWarnings>4090;4098;4133;4146;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -160,7 +160,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>PATH_MAX=MAX_PATH;_CRT_SECURE_NO_WARNINGS;PACKAGE_NAME="vkd3d-msvc";LIBVKD3D_SOURCE;__alignof__=__alignof;WIN32;NDEBUG;VKD3D_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>PATH_MAX=MAX_PATH;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;PACKAGE_NAME="vkd3d-msvc";LIBVKD3D_SOURCE;__alignof__=__alignof;WIN32;NDEBUG;VKD3D_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <DisableSpecificWarnings>4090;4098;4133;4146;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -183,7 +183,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>PATH_MAX=MAX_PATH;_CRT_SECURE_NO_WARNINGS;PACKAGE_NAME="vkd3d-msvc";LIBVKD3D_SOURCE;__alignof__=__alignof;NDEBUG;VKD3D_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>PATH_MAX=MAX_PATH;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;PACKAGE_NAME="vkd3d-msvc";LIBVKD3D_SOURCE;__alignof__=__alignof;NDEBUG;VKD3D_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <DisableSpecificWarnings>4090;4098;4133;4146;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>

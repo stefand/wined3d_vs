@@ -57,6 +57,9 @@
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\tpf.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\fx.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\vkd3d\libs\vkd3d-shader\vkd3d_shader_private.h">

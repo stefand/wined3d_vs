@@ -68,5 +68,8 @@
     <CustomBuild Include="..\..\vkd3d\include\vkd3d_unknown.idl">
       <Filter>Headerdateien</Filter>
     </CustomBuild>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_d3d12shader.idl">
+      <Filter>Headerdateien</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

@@ -74,9 +74,6 @@
     <ClCompile Include="..\..\wine\dlls\wined3d\shader_sm4.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\wined3d\state.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\wined3d\stateblock.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -123,6 +120,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\wined3d\shader_spirv.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\wined3d\ffp_gl.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

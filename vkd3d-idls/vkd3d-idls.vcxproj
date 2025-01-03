@@ -203,6 +203,9 @@
     <ClInclude Include="..\..\vkd3d\include\vkd3d_utils.h" />
     <ClInclude Include="..\..\vkd3d\include\vkd3d_windows.h" />
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\vkd3d\include\vkd3d_d3d12shader.idl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

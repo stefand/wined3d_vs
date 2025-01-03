@@ -201,6 +201,7 @@
     <ClCompile Include="..\..\wine\dlls\wined3d\cs.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\device.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\directx.c" />
+    <ClCompile Include="..\..\wine\dlls\wined3d\ffp_gl.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\glsl_shader.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\gl_compat.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\nvidia_texture_shader.c" />
@@ -212,7 +213,6 @@
     <ClCompile Include="..\..\wine\dlls\wined3d\shader_sm1.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\shader_sm4.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\shader_spirv.c" />
-    <ClCompile Include="..\..\wine\dlls\wined3d\state.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\stateblock.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\surface.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\swapchain.c" />
