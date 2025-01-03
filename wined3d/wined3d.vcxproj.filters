@@ -29,12 +29,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\wine\dlls\wined3d\arb_program_shader.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\wined3d\ati_fragment_shader.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\wine\dlls\wined3d\buffer.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -51,9 +45,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\wined3d\glsl_shader.c">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\wine\dlls\wined3d\nvidia_texture_shader.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\wined3d\palette.c">
@@ -123,6 +114,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="..\..\wine\dlls\wined3d\ffp_gl.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\wined3d\ffp_hlsl.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

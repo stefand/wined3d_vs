@@ -192,8 +192,6 @@
   <ItemGroup>
     <ClCompile Include="..\..\wine\dlls\wined3d\adapter_gl.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\adapter_vk.c" />
-    <ClCompile Include="..\..\wine\dlls\wined3d\arb_program_shader.c" />
-    <ClCompile Include="..\..\wine\dlls\wined3d\ati_fragment_shader.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\buffer.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\context.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\context_gl.c" />
@@ -202,9 +200,9 @@
     <ClCompile Include="..\..\wine\dlls\wined3d\device.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\directx.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\ffp_gl.c" />
+    <ClCompile Include="..\..\wine\dlls\wined3d\ffp_hlsl.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\glsl_shader.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\gl_compat.c" />
-    <ClCompile Include="..\..\wine\dlls\wined3d\nvidia_texture_shader.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\palette.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\query.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\resource.c" />
