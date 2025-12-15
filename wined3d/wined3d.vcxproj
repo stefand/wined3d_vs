@@ -216,6 +216,8 @@
     <ClCompile Include="..\..\wine\dlls\wined3d\surface.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\swapchain.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\texture.c" />
+    <ClCompile Include="..\..\wine\dlls\wined3d\texture_gl.c" />
+    <ClCompile Include="..\..\wine\dlls\wined3d\texture_vk.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\utils.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\vertexdeclaration.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\view.c" />
