@@ -169,6 +169,7 @@
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_codegen.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\hlsl_constant_ops.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\ir.c" />
+    <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\msl.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\spirv.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\tpf.c" />
     <ClCompile Include="..\..\vkd3d\libs\vkd3d-shader\vkd3d_shader_main.c" />
