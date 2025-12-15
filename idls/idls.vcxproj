@@ -292,6 +292,9 @@
   <ItemGroup>
     <CustomBuild Include="..\..\wine\include\d3d12shader.idl" />
   </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\wine\include\d3d9on12.idl" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
