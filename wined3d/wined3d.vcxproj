@@ -197,6 +197,7 @@
     <ClCompile Include="..\..\wine\dlls\wined3d\context_gl.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\context_vk.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\cs.c" />
+    <ClCompile Include="..\..\wine\dlls\wined3d\decoder.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\device.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\directx.c" />
     <ClCompile Include="..\..\wine\dlls\wined3d\ffp_gl.c" />

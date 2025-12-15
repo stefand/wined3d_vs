@@ -119,6 +119,9 @@
     <ClCompile Include="..\..\wine\dlls\wined3d\ffp_hlsl.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\wine\dlls\wined3d\decoder.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\..\wine\dlls\wined3d\wined3d.spec">
